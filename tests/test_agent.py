@@ -401,3 +401,37 @@ def test_episode_attaches_the_policy_tokens_to_each_step(make_tools, clinical):
     scripted, _ = episode(tools, setting)
     assert all(s.tokens is None for s in scripted.steps)
 
+
+
+def test_split_model_is_hashed_part_by_part(tmp_path):
+    import hashlib
+
+    from agentic_gateway.agent.policy import describe_model_file, sha256_file
+
+    a = tmp_path / "m-q4_k_m-00001-of-00002.gguf"
+    b = tmp_path / "m-q4_k_m-00002-of-00002.gguf"
+    a.write_bytes(b"first")
+    b.write_bytes(b"second")
+    for given in (a, b):
+        d = describe_model_file(given)
+        assert d["model_file"] == str(a)
+        assert [p["file"] for p in d["model_file_parts"]] == [a.name, b.name]
+        assert d["model_file_sha256"] == hashlib.sha256(
+            (sha256_file(a) + sha256_file(b)).encode()).hexdigest()
+
+
+def test_split_model_with_a_missing_part_is_refused(tmp_path):
+    from agentic_gateway.agent.policy import describe_model_file
+
+    a = tmp_path / "m-00001-of-00002.gguf"
+    a.write_bytes(b"first")
+    with pytest.raises(FileNotFoundError, match="00002-of-00002"):
+        describe_model_file(a)
+
+
+def test_single_model_file_keeps_its_plain_hash(tmp_path):
+    from agentic_gateway.agent.policy import describe_model_file, sha256_file
+
+    f = tmp_path / "m.gguf"
+    f.write_bytes(b"x")
+    assert describe_model_file(f) == {"model_file": str(f), "model_file_sha256": sha256_file(f)}

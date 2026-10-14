@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import urllib.error
 import urllib.request
 from dataclasses import dataclass, field
@@ -39,6 +40,37 @@ def sha256_file(path: Path, chunk: int = 1 << 20) -> str:
         while block := f.read(chunk):
             digest.update(block)
     return digest.hexdigest()
+
+
+SHARD = re.compile(r"^(?P<stem>.+)-(?P<i>\d{5})-of-(?P<n>\d{5})\.gguf$")
+
+
+def model_shards(path: Path) -> list[Path]:
+    """All files of a GGUF model. A split download (``name-00001-of-00002.gguf``) is one model
+    in several files; given any of them, return every part in order. Missing parts are an
+    error, since the hash would not identify the weights."""
+    m = SHARD.match(path.name)
+    if not m:
+        return [path]
+    n = int(m["n"])
+    parts = [path.with_name(f"{m['stem']}-{i:05d}-of-{n:05d}.gguf") for i in range(1, n + 1)]
+    missing = [p.name for p in parts if not p.is_file()]
+    if missing:
+        raise FileNotFoundError(f"split model is missing parts: {', '.join(missing)}")
+    return parts
+
+
+def describe_model_file(path: Path) -> dict[str, Any]:
+    """Identity of the weights. One file: its SHA-256. A split model: the SHA-256 of each part
+    (checkable against the publisher's per-file hashes) and, as ``model_file_sha256``, the
+    SHA-256 of the parts' hashes in order, one value to compare runs by."""
+    parts = model_shards(path)
+    if len(parts) == 1:
+        return {"model_file": str(path), "model_file_sha256": sha256_file(path)}
+    hashes = [sha256_file(p) for p in parts]
+    return {"model_file": str(parts[0]),
+            "model_file_sha256": hashlib.sha256("".join(hashes).encode()).hexdigest(),
+            "model_file_parts": [{"file": p.name, "sha256": h} for p, h in zip(parts, hashes)]}
 
 
 class Policy(Protocol):
@@ -143,8 +175,8 @@ class LLMPolicy:
             "temperature": self.temperature,
             "max_steps": self.max_steps,
             "system_prompt_sha256": hashlib.sha256(self.system_prompt.encode()).hexdigest(),
-            "model_file": str(model_file) if model_file else None,
-            "model_file_sha256": sha256_file(model_file) if model_file else None,
+            **(describe_model_file(model_file) if model_file
+               else {"model_file": None, "model_file_sha256": None}),
             "server_model": self.server_model(),
         }
 
