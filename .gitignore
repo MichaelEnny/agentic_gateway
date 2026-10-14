@@ -3,7 +3,6 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .ruff_cache/
-uv.lock
 # Credentialed PhysioNet data and anything derived from it must never be committed.
 data/
 runs/
