@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+uv.lock
+# Credentialed PhysioNet data and anything derived from it must never be committed.
+data/
+runs/
+*.parquet
+*.csv
+# Also derived from credentialed data, or too large: fitted models, judge caches, LLM weights.
+*.joblib
+*.jsonl
+*.gguf

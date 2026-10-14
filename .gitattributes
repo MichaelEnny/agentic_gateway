@@ -1,0 +1,2 @@
+# Store text with LF line endings so the repository is the same on Windows and the Linux edge boards.
+* text=auto

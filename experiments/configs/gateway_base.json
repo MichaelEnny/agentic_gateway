@@ -1,0 +1,14 @@
+{
+  "_comment": "Starting values before tuning. 05_tune_thresholds.py replaces local_threshold, conformal_coverage and scdi_threshold on the tune part. Cooldown and risk tiers are clinical choices: confirm with a clinician.",
+  "local_threshold": 0.10,
+  "scdi_threshold": 0.15,
+  "conformal_coverage": 0.90,
+  "conformal_max_set_size": 1,
+  "conformal_empty_is_breach": true,
+  "drift_max_age_s": 7200.0,
+  "cooldown_s": 14400.0,
+  "risk_tier_cuts": {"ed": [0.10, 0.30, 0.60], "icu": [0.05, 0.15, 0.30]},
+  "caveat_margin": 0.20,
+  "fail_closed": true,
+  "block_on": ["timing"]
+}

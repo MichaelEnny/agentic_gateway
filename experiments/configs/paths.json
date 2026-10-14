@@ -1,0 +1,13 @@
+{
+  "_comment": "Dataset folders. Relative paths resolve against this repository root. Override the whole file with the AGW_PATHS environment variable.",
+  "demo": {
+    "ed": "datasets/mimic_iv_ed/mimic-iv-ed-demo-2.2/ed",
+    "hosp": "datasets/mimic_iv/mimic-iv-clinical-database-demo-2.2/hosp",
+    "eicu": "datasets/eicu/eicu-crd-demo-2.0.1"
+  },
+  "full": {
+    "ed": "datasets/mimic_iv_ed/mimic_iv_ed_v2_2/ed",
+    "hosp": "datasets/mimic_iv/hosp",
+    "eicu": "datasets/eicu"
+  }
+}
