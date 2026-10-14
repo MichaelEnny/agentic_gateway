@@ -15,7 +15,7 @@ from __future__ import annotations
 import time
 
 import pandas as pd
-from _common import PRIMARY_MODEL, main_guard, parser, setup
+from _common import PRIMARY_MODEL, add_run_arg, main_guard, parser, setup
 
 from agentic_gateway import figures
 from agentic_gateway.workspace import read_json, write_json
@@ -26,10 +26,11 @@ SIGNALS = ("local_calibration", "subgroup_gap", "conformal", "drift")  # timing:
 def main() -> int:
     p = parser("Draw the paper figures.")
     p.add_argument("--model", default=PRIMARY_MODEL, help="model for the E1 coverage figure")
+    add_run_arg(p)
     args = p.parse_args()
     ws, _, params = setup(args)
     started = time.time()
-    root = ws.root
+    root = ws.root  # this agent run's folder; steps 6 to 9 wrote here
     out = root / "figures"
     made, skipped = [], {}
 

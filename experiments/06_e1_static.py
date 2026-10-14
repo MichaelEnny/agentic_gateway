@@ -14,7 +14,7 @@ from collections import Counter
 
 import numpy as np
 import pandas as pd
-from _common import COVERAGE_GRID, main_guard, parser, setup
+from _common import COVERAGE_GRID, add_run_arg, main_guard, parser, setup
 
 from agentic_gateway.assembly import Artifacts, load_config
 from agentic_gateway.gateway import PredictionRequest
@@ -27,6 +27,7 @@ from agentic_gateway.workspace import write_json
 def main() -> int:
     p = parser("E1: gateway on static test predictions.")
     p.add_argument("--models", default=",".join(MODELS))
+    add_run_arg(p)
     args = p.parse_args()
     ws, setting, _ = setup(args)
     started = time.time()

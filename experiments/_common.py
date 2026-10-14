@@ -55,8 +55,15 @@ def parser(description: str) -> argparse.ArgumentParser:
     return p
 
 
+def add_run_arg(p: argparse.ArgumentParser) -> None:
+    """Steps 4 to 10 belong to one agent run, kept in runs/<workspace>/agent_<run>/."""
+    p.add_argument("--run", default="scripted",
+                   help="agent run name (default: scripted); give each LLM run its own, "
+                        "e.g. qwen7b, and pass the same name to steps 4 to 10")
+
+
 def setup(args: argparse.Namespace) -> tuple[Workspace, Setting, Params]:
-    ws = Workspace(args.setting, args.source, args.smoke)
+    ws = Workspace(args.setting, args.source, args.smoke, getattr(args, "run", None))
     return ws, SETTINGS[args.setting], (SMOKE if args.smoke else FULL)
 
 
@@ -86,6 +93,9 @@ def make_policy(args: argparse.Namespace, setting: Setting) -> tuple[Any, dict]:
     if args.policy == "scripted":
         policy = ScriptedPolicy(cited=setting.cited)
         return policy, policy.describe()
+    if getattr(args, "run", None) == "scripted":
+        raise SystemExit("an LLM run needs its own --run name (e.g. --run qwen7b), so it does "
+                         "not overwrite the scripted run")
     policy = LLMPolicy.from_prompt_file(args.llm_model, PROMPTS / f"system_{setting.name}.txt",
                                         base_url=args.llm_url)
     if not policy.available():
