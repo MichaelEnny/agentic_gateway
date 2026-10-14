@@ -394,3 +394,11 @@ def test_duplicate_fault_charges_the_resent_alert(alerting):
     bad = inject(traj, "duplicate", tools, setting, reference)
     assert [s.tokens for s in bad.steps] == [100] * 5
 
+
+
+def test_build_reports_progress_once_per_episode(make_tools, clinical):
+    setting, cohort = clinical[0], clinical[1]
+    seen = []
+    build(make_tools("normal"), ScriptedPolicy(cited=setting.cited), cohort.iloc[:3], setting,
+          cohort.iloc[100:], seeds=[0, 1], kinds=("drift",), progress=seen.append)
+    assert len(seen) == 6 and all(t.completed for t in seen)

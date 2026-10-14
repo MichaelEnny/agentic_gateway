@@ -22,7 +22,15 @@ import time
 import joblib
 import numpy as np
 import pandas as pd
-from _common import COVERAGE_GRID, PRIMARY_MODEL, base_config, main_guard, parser, setup
+from _common import (
+    COVERAGE_GRID,
+    PRIMARY_MODEL,
+    add_run_arg,
+    base_config,
+    main_guard,
+    parser,
+    setup,
+)
 
 from agentic_gateway.assembly import Artifacts
 from agentic_gateway.benchmark import full_factory, pooled_faults, replay
@@ -35,6 +43,7 @@ LOCAL_GRID = (0.05, 0.075, 0.10, 0.125, 0.15, 0.20)
 def main() -> int:
     p = parser("Tune and freeze thresholds.")
     p.add_argument("--fd-cap", type=float, default=0.10)
+    add_run_arg(p)
     args = p.parse_args()
     ws, setting, params = setup(args)
     started = time.time()

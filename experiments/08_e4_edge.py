@@ -19,7 +19,7 @@ from pathlib import Path
 import joblib
 import numpy as np
 import pandas as pd
-from _common import PRIMARY_MODEL, main_guard, parser, setup
+from _common import PRIMARY_MODEL, add_run_arg, main_guard, parser, setup
 
 from agentic_gateway.assembly import Artifacts, load_config
 from agentic_gateway.benchmark import full_factory
@@ -42,6 +42,7 @@ def main() -> int:
     p.add_argument("--warmup", type=int, default=100)
     p.add_argument("--meter-log", type=Path, default=None)
     p.add_argument("--sizes", default="1000,5000,20000,50000")
+    add_run_arg(p)
     args = p.parse_args()
     ws, setting, _ = setup(args)
     started = time.time()

@@ -1,7 +1,7 @@
 """Step 9, RQ2: live gated reruns on clean test cases, to measure task completion.
 
     uv run python experiments/09_live_completion.py --setting ed --source demo --smoke
-    uv run python experiments/09_live_completion.py --setting ed --policy llm --llm-model qwen2.5-7b-instruct --llm-model-file <gguf> --live-patients 100
+    uv run python experiments/09_live_completion.py --setting ed --run qwen7b --policy llm --llm-model <id> --llm-model-file <gguf> --live-patients 100
 
 Replay (step 7) stops a trajectory at its first interception. Here the agent runs live with
 each gate, sees "withheld" when a step is stopped, and decides what to do next. Every case and
@@ -24,6 +24,7 @@ from _common import (
     PRIMARY_MODEL,
     PROMPTS,
     add_policy_args,
+    add_run_arg,
     main_guard,
     make_policy,
     parser,
@@ -42,6 +43,7 @@ LIVE_METHODS = ("no_gate", "output_only", "confidence", "pooled_conformal", "ful
 def main() -> int:
     p = parser("RQ2: live gated reruns for task completion.")
     add_policy_args(p)
+    add_run_arg(p)
     p.add_argument("--live-patients", type=int, default=100,
                    help="patients from the test sample to rerun; 0 = all")
     p.add_argument("--judge-model", default="", help="also rerun with the LLM-as-judge gate")
@@ -51,6 +53,12 @@ def main() -> int:
     started = time.time()
 
     policy, agent = make_policy(args, setting)
+    built_with = read_json(ws.require("summary_benchmark.json"))["test"]["agent"]
+    for key in ("policy", "model", "model_file_sha256", "system_prompt_sha256"):
+        if key in built_with and built_with.get(key) != agent.get(key):
+            raise SystemExit(f"run {args.run!r} was built by step 4 with {key}="
+                             f"{built_with.get(key)!r}, not {agent.get(key)!r}; use the same "
+                             "agent, or another --run")
     judge = None
     if args.judge_model:
         judge = LLMJudge.from_prompt_file(

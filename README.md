@@ -13,7 +13,7 @@ Code for the planned *Electronics* (MDPI) Special Issue paper "A Step-Level Reli
 | Edge measurement harness | `src/agentic_gateway/edge/` | Built; laptop smoke run only |
 | Experiment configs and scripts | `experiments/` | Built; steps 1 to 10 (10 = figures) run end to end on both demos in smoke mode |
 
-153 tests: the gateway core and metrics, and the agent, judge, benchmark, live-rerun, quality, edge and figure modules (on a synthetic cohort with the ED column layout).
+164 tests: the gateway core and metrics, and the agent, judge, benchmark, live-rerun, quality, edge and figure modules (on a synthetic cohort with the ED column layout).
 
 ## Setup
 

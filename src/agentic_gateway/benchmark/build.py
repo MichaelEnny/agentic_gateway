@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections import Counter
+from collections.abc import Callable
 
 import numpy as np
 import pandas as pd
@@ -38,7 +39,8 @@ def sample_cases(cases: pd.DataFrame, n: int, *, min_per_group: int, seed: int) 
 
 def build(tools: ClinicalTools, policy: Policy, sample: pd.DataFrame, setting: Setting,
           reference: pd.DataFrame, *, seeds: list[int],
-          kinds: tuple[str, ...] = KINDS) -> dict:
+          kinds: tuple[str, ...] = KINDS,
+          progress: Callable[[Trajectory], None] | None = None) -> dict:
     clean: list[Trajectory] = []
     incomplete = 0
     for row in sample.itertuples():
@@ -46,6 +48,8 @@ def build(tools: ClinicalTools, policy: Policy, sample: pd.DataFrame, setting: S
             traj, _ = run_episode(policy, tools, str(row.case_id), setting=setting.name,
                                   seed=seed, y=int(row.y), group=str(row.group),
                                   patient_id=str(row.patient_id))
+            if progress is not None:
+                progress(traj)
             if traj.completed and traj.first("risk_score") is not None:
                 clean.append(traj)
             else:

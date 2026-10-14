@@ -27,6 +27,8 @@ uv run python experiments/01_prepare_data.py --setting ed --source demo --smoke
 | RQ4 edge feasibility | step 8 |
 | Supporting: static predictions | step 6 |
 
+Steps 1 to 3 write to `runs/<setting>_<source>[_smoke]/`. Steps 4 to 10 take `--run NAME` (default `scripted`) and write to `agent_<NAME>/` inside it, so each agent run (scripted, or each LLM) keeps its own results. Use the same `--run` for every step of a run.
+
 Every step writes `records/<step>.json` with its arguments, outputs, timing and versions. Steps 6 to 8 read only `configs/gateway_frozen.json`; commit a copy of it before looking at test results.
 
 `_common.py` holds the shared command line and the `FULL` and `SMOKE` parameter sets. `configs/` holds the dataset paths (`paths.json`) and the starting gateway values (`gateway_base.json`).
@@ -34,7 +36,7 @@ Every step writes `records/<step>.json` with its arguments, outputs, timing and 
 ## Before the paper runs
 
 - `--judge-model` (step 7) reads `prompts/judge.txt` and needs the same local server.
-- `--policy llm` reads `prompts/system_{ed,icu}.txt` and needs a local OpenAI-compatible server (LM Studio, `http://localhost:1234/v1`). The prompts have not yet been tried on a real model.
+- `--policy llm` reads `prompts/system_{ed,icu}.txt` and needs a local OpenAI-compatible server (LM Studio, `http://localhost:1234/v1`) and its own `--run` name. Start with `--max-cases 5`. The full first-run checklist is section 8.7 of the guide. The prompts have not yet been tried on a real model.
 - Both demos have run end to end with `--policy scripted --smoke`. Those numbers check the plumbing and mean nothing.
 
 Details, design choices and open items: `../EXPERIMENT_GUIDE.md`.

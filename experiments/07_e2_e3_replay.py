@@ -20,7 +20,7 @@ import time
 import joblib
 import numpy as np
 import pandas as pd
-from _common import PRIMARY_MODEL, PROMPTS, main_guard, parser, setup
+from _common import PRIMARY_MODEL, PROMPTS, add_run_arg, main_guard, parser, setup
 
 from agentic_gateway.agent import LLMJudge
 from agentic_gateway.agent.episode import TASKS
@@ -36,6 +36,7 @@ def main() -> int:
     p.add_argument("--judge-url", default="http://localhost:1234/v1")
     p.add_argument("--judge-patients", type=int, default=100,
                    help="patients whose trajectories the judge reviews; 0 = all")
+    add_run_arg(p)
     args = p.parse_args()
     ws, _, params = setup(args)
     started = time.time()
