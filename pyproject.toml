@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentic-gateway"
+version = "0.1.0"
+description = "Step-level reliability gateway for agentic clinical decision support (Electronics SI paper)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Michael O. Eniolade" }]
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "scikit-learn",
+    "joblib",
+    "pyarrow",
+    "psutil",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+figures = ["matplotlib>=3.8"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agentic_gateway"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
