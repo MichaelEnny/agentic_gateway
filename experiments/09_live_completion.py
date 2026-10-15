@@ -53,7 +53,12 @@ def main() -> int:
     started = time.time()
 
     policy, agent = make_policy(args, setting)
-    built_with = read_json(ws.require("summary_benchmark.json"))["test"]["agent"]
+    test_manifest = read_json(ws.require("summary_benchmark.json"))["test"]
+    built_with = test_manifest["agent"]
+    seeds = tuple(test_manifest["seeds"])  # the benchmark's seeds, not today's defaults
+    if seeds != params.seeds:
+        print(f"note: run {args.run!r} was built with seeds {list(seeds)}; using those, "
+              f"not the current default {list(params.seeds)}")
     for key in ("policy", "model", "model_file_sha256", "system_prompt_sha256"):
         if key in built_with and built_with.get(key) != agent.get(key):
             raise SystemExit(f"run {args.run!r} was built by step 4 with {key}="
@@ -89,7 +94,7 @@ def main() -> int:
     factories = {k: factories[k] for k in keep_methods}
 
     rows = run_live(policy, tools, cases, factories, setting=setting.name,
-                    seeds=params.seeds)
+                    seeds=seeds)
     rows = completion_metrics(rows)
     rows.to_parquet(ws.path("live", "live_rows.parquet"), index=False)
     table = summarise_live(rows, n_boot=params.analysis_boot, seed=args.seed)
@@ -98,7 +103,7 @@ def main() -> int:
     headline = {m: {k: float(v) for k, v in rows[rows["method"] == m][
         ["completed", "same_decision", "alert_lost", "referred"]].mean().items()}
         for m in factories}
-    summary = {"agent": agent, "cases": len(cases), "seeds": list(params.seeds),
+    summary = {"agent": agent, "cases": len(cases), "seeds": list(seeds),
                "methods": headline}
     if judge is not None:
         summary["judge"] = judge.describe()

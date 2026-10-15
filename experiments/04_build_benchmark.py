@@ -62,6 +62,15 @@ def main() -> int:
         bench["manifest"]["part"] = part
         bench["manifest"]["agent"] = agent
         bench["manifest"]["max_cases"] = args.max_cases or None
+        bench["manifest"]["bench_cases"] = params.bench_cases
+        bench["manifest"]["min_per_group"] = params.bench_min_per_group
+        sizes = sample["group"].value_counts().sort_index()
+        bench["manifest"]["sample_groups"] = {str(k): int(v) for k, v in sizes.items()}
+        short = sorted(str(k) for k, v in sizes.items() if v < params.bench_min_per_group)
+        bench["manifest"]["groups_below_minimum"] = short
+        if short:
+            print(f"{part}: groups with fewer than {params.bench_min_per_group} patients, "
+                  f"all taken: {', '.join(short)}")
         joblib.dump(bench, ws.path("benchmark", f"{part}.joblib"))
         sample[["case_id", "patient_id", "group", "weight"]].to_csv(
             ws.path("benchmark", f"{part}_sample.csv"), index=False)
