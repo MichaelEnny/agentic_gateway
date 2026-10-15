@@ -64,6 +64,34 @@ def test_sample_cases_takes_one_case_per_patient_and_a_minimum_per_group():
         .sum() == pytest.approx(1.0)
 
 
+def test_sample_cases_at_full_design_covers_every_stratum_including_unknown():
+    """The full-data design: 11 strata x 30 = 330 guaranteed, 360 in total. A stratum with
+    fewer than 30 patients gives all it has; the shortfall is drawn in proportion."""
+    rng = np.random.default_rng(0)
+    big = [f"{r}|{s}" for r in ("Asian", "Black", "Hispanic", "Other", "White")
+           for s in ("F", "M")] + ["__unknown__"]
+    groups = list(rng.choice(big, 5000, p=[0.03, 0.03, 0.06, 0.06, 0.04, 0.04, 0.02, 0.02,
+                                           0.33, 0.33, 0.04])) + ["Rare|F"] * 12
+    cases = pd.DataFrame({"case_id": range(len(groups)), "patient_id": range(len(groups)),
+                          "group": groups})
+    sample = sample_cases(cases, 360, min_per_group=30, seed=42)
+    counts = sample["group"].value_counts()
+    assert len(sample) == 360 and sample["patient_id"].is_unique
+    assert set(counts.index) == set(cases["group"])
+    assert counts["Rare|F"] == 12
+    assert counts.drop("Rare|F").min() >= 30
+    assert counts["White|M"] > 30  # the proportional share goes mostly to large strata
+
+
+def test_full_params_fix_the_benchmark_design():
+    import sys
+    from pathlib import Path
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "experiments"))
+    from _common import FULL
+    assert FULL.seeds == (0, 1, 2)
+    assert FULL.bench_cases == 360 and FULL.bench_min_per_group == 30
+
+
 def test_sample_cases_is_reproducible():
     cases = pd.DataFrame({"case_id": range(100), "patient_id": range(100),
                           "group": ["A", "B"] * 50})

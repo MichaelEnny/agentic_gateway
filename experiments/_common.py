@@ -36,9 +36,11 @@ class Params:
     null_permutations: int
 
 
+# Benchmark: 11 subgroups (5 race/ethnicity x 2 sexes + unknown) x 30 = 330 guaranteed cases,
+# so 360 leaves a proportional share; 3 agent seeds. Fixed before any full test analysis.
 FULL = Params(min_neighbors=30, scdi_min_size=50, group_cols=None, drift_boot=500,
-              drift_min_group=50, analysis_boot=2000, bench_cases=400, bench_min_per_group=30,
-              seeds=(0, 1, 2, 3, 4), icu_min_events=100, m1_reference_cap=20000,
+              drift_min_group=50, analysis_boot=2000, bench_cases=360, bench_min_per_group=30,
+              seeds=(0, 1, 2), icu_min_events=100, m1_reference_cap=20000,
               null_permutations=200)
 SMOKE = Params(min_neighbors=5, scdi_min_size=5, group_cols=("gender",), drift_boot=100,
                drift_min_group=5, analysis_boot=300, bench_cases=60, bench_min_per_group=10,
