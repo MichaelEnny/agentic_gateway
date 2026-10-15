@@ -17,7 +17,6 @@ from __future__ import annotations
 
 import time
 
-import joblib
 import numpy as np
 import pandas as pd
 from _common import (
@@ -35,6 +34,7 @@ from agentic_gateway.agent import ClinicalTools, LLMJudge
 from agentic_gateway.agent.episode import TASKS
 from agentic_gateway.assembly import Artifacts, load_config
 from agentic_gateway.benchmark import completion_metrics, methods, run_live, summarise_live
+from agentic_gateway.models import load_model
 from agentic_gateway.workspace import read_json, write_json
 
 LIVE_METHODS = ("no_gate", "output_only", "confidence", "pooled_conformal", "full")
@@ -85,7 +85,7 @@ def main() -> int:
         sample = sample[sample["patient_id"].isin(keep)]
     cases = cohort.loc[sample["case_id"], ["case_id", "patient_id", "group", "y"]]
 
-    model = joblib.load(ws.require("models", f"{PRIMARY_MODEL}.joblib"))
+    model = load_model(ws.require("models", f"{PRIMARY_MODEL}.joblib"))
     art = Artifacts(ws, PRIMARY_MODEL)
     tools = ClinicalTools(setting, cohort.reset_index(drop=True), model, art.embedder,
                           tier_cuts=tuple(cfg.risk_tier_cuts))

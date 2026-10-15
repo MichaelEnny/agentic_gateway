@@ -30,6 +30,7 @@ from .gateway import (
     SCDITable,
 )
 from .gateway.embeddings import embedder_for
+from .models import load_model
 from .workspace import Workspace, read_json, subgroup_file
 
 
@@ -53,7 +54,7 @@ class Artifacts:
 
     def __post_init__(self) -> None:
         self.setting = SETTINGS[self.ws.setting]
-        self.model = joblib.load(self.ws.require("models", f"{self.model_name}.joblib"))
+        self.model = load_model(self.ws.require("models", f"{self.model_name}.joblib"))
         self.embedder = embedder_for(self.model)
         self.local = joblib.load(self.ws.require("gateway", self.model_name, "local.joblib"))
         preds = pd.read_parquet(self.ws.require("predictions", f"{self.model_name}.parquet"))

@@ -146,7 +146,7 @@ def _markdown(ws, table: pd.DataFrame, manifest: dict, *,  # type: ignore[no-unt
               name: str = "summary_e2_e3.md", title: str = "E2/E3 replay") -> None:
     lines = [f"# {title} ({ws.setting}, {ws.source}{', smoke' if ws.smoke else ''})", ""]
     if ws.source == "demo":
-        lines += ["**Demo data and scripted policy: these numbers test the code only.**", ""]
+        lines += ["**Demo data: these numbers test the code only.**", ""]
     lines += [(f"Policy: {manifest['policy']}; clean trajectories: "
                f"{manifest['clean_trajectories']}; faulty: {manifest['faulty_trajectories']}"),
               ""]
