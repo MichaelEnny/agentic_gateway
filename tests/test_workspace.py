@@ -60,3 +60,12 @@ def test_bad_run_names_are_refused(name):
 def test_smoke_is_refused_on_full_data():
     with pytest.raises(ValueError):
         Workspace("ed", "full", True)
+
+
+def test_subgroup_file_names_are_windows_safe_and_distinct():
+    labels = ["Asian|F", "White|M", "__unknown__", "F", "Hispanic|Female", "a/b", "a%7Cb"]
+    names = [wsmod.subgroup_file(g) for g in labels]
+    assert len(set(names)) == len(names)
+    assert all(not set(n) & set(r'<>:"/\|?*') for n in names)
+    assert wsmod.subgroup_file("Asian|F") == "subgroup_Asian%7CF"
+    assert wsmod.subgroup_file("F") == "subgroup_F"  # existing smoke files keep their names

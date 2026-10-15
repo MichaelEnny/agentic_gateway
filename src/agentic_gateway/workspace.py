@@ -21,6 +21,7 @@ from dataclasses import dataclass
 from importlib import metadata
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 
 from .data.access import REPO_ROOT
 
@@ -117,3 +118,10 @@ def write_json(path: Path, payload: Any) -> None:
 
 def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def subgroup_file(group: str) -> str:
+    """File stem for one subgroup's artifacts. Labels such as ``Asian|F`` contain characters
+    Windows does not allow in file names, so those are percent-encoded (``Asian%7CF``);
+    the mapping is one-to-one, and writer and reader both go through here."""
+    return "subgroup_" + quote(group, safe=" _-.+")
