@@ -28,7 +28,7 @@ from agentic_gateway.gateway import (
     scdi_null_threshold,
 )
 from agentic_gateway.models import MODELS
-from agentic_gateway.workspace import write_json
+from agentic_gateway.workspace import subgroup_file, write_json
 
 
 def main() -> int:
@@ -71,7 +71,7 @@ def main() -> int:
             shifted = np.where(ref["group"] == g, np.minimum(1.0, ref["prob"] + SUBGROUP_SHIFT),
                                ref["prob"])
             compute_scdi_table(ref["y"], shifted, ref["group"], min_size=params.scdi_min_size) \
-                .save(ws.path("gateway", name, "scdi", f"subgroup_{g}.json"))
+                .save(ws.path("gateway", name, "scdi", f"{subgroup_file(g)}.json"))
 
         # M4
         field, mult, offset = setting.unit_shift

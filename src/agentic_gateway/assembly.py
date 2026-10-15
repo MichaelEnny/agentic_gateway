@@ -30,7 +30,7 @@ from .gateway import (
     SCDITable,
 )
 from .gateway.embeddings import embedder_for
-from .workspace import Workspace, read_json
+from .workspace import Workspace, read_json, subgroup_file
 
 
 def load_config(path: Path) -> GatewayConfig:
@@ -83,7 +83,8 @@ class Artifacts:
     def gateway(self, cfg: GatewayConfig, context: str, part: str, *,
                 pooled: bool = False) -> ReliabilityGateway:
         """Gateway for one context. ``part`` picks the drift window (tune or test)."""
-        scdi_name = context.replace(":", "_") if context.startswith("subgroup:") else "reference"
+        scdi_name = (subgroup_file(context.removeprefix("subgroup:"))
+                     if context.startswith("subgroup:") else "reference")
         drift_name = f"{part}_shifted" if context == "drift" else part
         conformal = self.conformal(cfg.conformal_coverage, pooled)
         if pooled:
