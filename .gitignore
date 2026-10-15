@@ -5,6 +5,7 @@ __pycache__/
 .ruff_cache/
 # Credentialed PhysioNet data and anything derived from it must never be committed.
 data/
+datasets/
 runs/
 *.parquet
 *.csv
