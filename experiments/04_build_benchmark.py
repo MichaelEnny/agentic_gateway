@@ -27,6 +27,7 @@ from _common import (
 from agentic_gateway.agent import ClinicalTools
 from agentic_gateway.benchmark import build, sample_cases
 from agentic_gateway.gateway import embedder_for
+from agentic_gateway.models import load_model
 from agentic_gateway.workspace import write_json
 
 
@@ -43,7 +44,7 @@ def main() -> int:
     started = time.time()
 
     cohort = pd.read_parquet(ws.require("cohort.parquet"))
-    model = joblib.load(ws.require("models", f"{PRIMARY_MODEL}.joblib"))
+    model = load_model(ws.require("models", f"{PRIMARY_MODEL}.joblib"))
     cfg = base_config(params, setting)
     tools = ClinicalTools(setting, cohort, model, embedder_for(model),
                           tier_cuts=tuple(cfg["risk_tier_cuts"]))

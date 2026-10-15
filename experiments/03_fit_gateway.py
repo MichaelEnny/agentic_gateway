@@ -27,7 +27,7 @@ from agentic_gateway.gateway import (
     run_drift_job,
     scdi_null_threshold,
 )
-from agentic_gateway.models import MODELS
+from agentic_gateway.models import MODELS, load_model
 from agentic_gateway.workspace import subgroup_file, write_json
 
 
@@ -41,7 +41,7 @@ def main() -> int:
     summary = {}
 
     for name in args.models.split(","):
-        model = joblib.load(ws.require("models", f"{name}.joblib"))
+        model = load_model(ws.require("models", f"{name}.joblib"))
         emb = embedder_for(model)
         preds = pd.read_parquet(ws.require("predictions", f"{name}.parquet"))
         ref = preds[preds["part"] == "reference"]

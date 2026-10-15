@@ -12,7 +12,7 @@ import pandas as pd
 from _common import main_guard, parser, setup
 
 from agentic_gateway.metrics import auroc, brier, ece
-from agentic_gateway.models import MODELS, make_model
+from agentic_gateway.models import MODELS, for_prediction, make_model
 from agentic_gateway.workspace import write_json
 
 KEEP = ("case_id", "patient_id", "period", "site", "part", "group", "y")
@@ -33,6 +33,7 @@ def main() -> int:
     for name in args.models.split(","):
         model = make_model(name, setting, seed=args.seed, smoke=args.smoke)
         model.fit(fit[list(setting.features)], fit["y"])
+        for_prediction(model)
         joblib.dump(model, ws.path("models", f"{name}.joblib"))
         preds = cohort[list(KEEP)].copy()
         preds["prob"] = model.predict_proba(cohort[list(setting.features)])[:, 1]

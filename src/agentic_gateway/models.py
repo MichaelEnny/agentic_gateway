@@ -50,3 +50,23 @@ def make_model(name: str, setting: Setting, *, seed: int = 42, smoke: bool = Fal
                 n_jobs=-1, random_state=seed)),
         ])
     raise ValueError(f"unknown model {name!r}")
+
+
+def for_prediction(model: Any) -> Any:
+    """Predict on one thread. Fitting stays parallel (``n_jobs=-1``), but scikit-learn's
+    threaded predict calls ``warnings.resetwarnings()`` in each worker, and on Python 3.14
+    without free threading the workers share one filter list: they race, the list can end
+    up empty, and every later prediction then warns that ``delayed`` was used without
+    ``Parallel``. Results agree to rounding (trees are summed in another order); a single
+    row is also faster on one thread. Models saved before this change are fixed on load."""
+    steps = model.steps if hasattr(model, "steps") else [(None, model)]
+    for _, est in steps:
+        if "n_jobs" in getattr(est, "get_params", dict)():
+            est.set_params(n_jobs=1)
+    return model
+
+
+def load_model(path: Any) -> Any:
+    import joblib
+
+    return for_prediction(joblib.load(path))
