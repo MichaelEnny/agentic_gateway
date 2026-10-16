@@ -171,6 +171,16 @@ def test_drift_critical_on_calibration_drift_only():
     assert state.state == "critical"
 
 
+def test_drift_small_calibration_worsening_is_only_a_warning():
+    ref, cur = _windows(0.0, 0.2)
+    # psi_critical out of reach so only the calibration route can escalate
+    state = run_drift_job(ref, cur, features=["x"], n_boot=300, ece_critical=1.0,
+                          psi_critical=1e9)
+    overall = next(t for t in state.tests if t.target == "ece:overall")
+    assert overall.rejected and 0 < overall.delta < 1.0
+    assert state.state == "warning"  # rejected, but below the effect-size floor
+
+
 def test_drift_skips_calibration_without_labels():
     ref, cur = _windows(0.0, 0.0)
     cur["label"] = np.nan
