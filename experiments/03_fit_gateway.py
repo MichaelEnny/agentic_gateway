@@ -87,11 +87,13 @@ def main() -> int:
                 state = run_drift_job(
                     reference, window, features=list(setting.features),
                     n_boot=params.drift_boot, min_group_size=params.drift_min_group,
+                    ece_critical=params.drift_ece_critical,
                     computed_at=0.0, window=label, seed=args.seed)
                 state.save(ws.path("gateway", name, "drift", f"{label}.json"))
                 states[label] = {"state": state.state,
                                  "rejected": [t.target for t in state.tests if t.rejected]}
         out["drift"] = states
+        out["drift_ece_critical"] = params.drift_ece_critical
         summary[name] = out
         drift_text = ", ".join(f"{k}={v['state']}" for k, v in states.items())
         print(f"{name}: M1 n={len(keep)} ({emb.metric}); SCDI {_fmt(table.scdi)} "

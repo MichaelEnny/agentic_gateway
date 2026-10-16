@@ -16,6 +16,8 @@ CONFIGS = Path(__file__).resolve().parent / "configs"
 PROMPTS = Path(__file__).resolve().parent / "prompts"
 PRIMARY_MODEL = "random_forest"
 COVERAGE_GRID = (0.80, 0.85, 0.90, 0.95)  # conformal coverage levels tuned in step 5
+# SCDI thresholds tuned in step 5, as multiples of the permutation null (the lower bound).
+SCDI_GRID = (1.0, 1.25, 1.5, 2.0, 2.5, 3.0)
 
 
 @dataclass(frozen=True)
@@ -34,6 +36,8 @@ class Params:
     icu_min_events: int
     m1_reference_cap: int
     null_permutations: int
+    # Smallest ECE worsening that makes a rejected calibration test escalate drift to critical.
+    drift_ece_critical: float = 0.05
 
 
 # Benchmark: 11 subgroups (5 race/ethnicity x 2 sexes + unknown) x 30 = 330 guaranteed cases,

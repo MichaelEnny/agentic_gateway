@@ -10,10 +10,16 @@ window and corrects them together with Benjamini-Hochberg:
 
 PSI and KL are recorded for every input and output test as effect sizes. The state is:
 
-* ``critical`` if any calibration hypothesis is rejected, or any rejected input/output test has
-  PSI >= ``psi_critical``;
+* ``critical`` if a rejected calibration test shows ECE worse by at least ``ece_critical``, or
+  any rejected input/output test has PSI >= ``psi_critical``;
 * ``warning`` if anything else is rejected;
 * ``none`` otherwise.
+
+Both escalations need an effect size as well as a rejection. With tens of thousands of patients
+per window, a test rejects for changes too small to matter, and the state is one value for the
+whole window: one such rejection would defer every request in it. The ECE floor was added after
+the full ED tune window went critical on a +0.018 change in one subgroup (deviation recorded in
+the experiment guide).
 
 The gateway never runs any of this on the request path; it reads the cached JSON.
 """
@@ -126,6 +132,7 @@ def run_drift_job(
     group: str | None = "group",
     alpha: float = 0.05,
     psi_critical: float = 0.25,
+    ece_critical: float = 0.05,
     n_bins: int = 10,
     n_boot: int = 500,
     min_group_size: int = 50,
@@ -188,8 +195,10 @@ def run_drift_job(
     ]
 
     rejected = [t for t in tests if t.rejected]
-    # A rejected calibration test only escalates when ECE got worse; improvement is not harm.
-    critical = any(t.family == "calibration" and (t.delta or 0.0) > 0 for t in rejected) or any(
+    # A rejected calibration test only escalates when ECE got worse by at least ece_critical;
+    # improvement is not harm, and a smaller worsening leaves the state at warning.
+    critical = any(t.family == "calibration" and (t.delta or 0.0) >= ece_critical
+                   for t in rejected) or any(
         t.psi is not None and t.psi >= psi_critical for t in rejected
     )
     state = "critical" if critical else ("warning" if rejected else "none")

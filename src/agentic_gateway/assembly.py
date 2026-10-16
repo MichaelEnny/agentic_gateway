@@ -17,6 +17,7 @@ from pathlib import Path
 from typing import Any
 
 import joblib
+import numpy as np
 import pandas as pd
 
 from .data.settings import SETTINGS, Setting
@@ -44,6 +45,9 @@ def load_config(path: Path) -> GatewayConfig:
 class Artifacts:
     ws: Workspace
     model_name: str
+    # Reuse M1 results for repeated embeddings. Only for tuning, where the same trajectories
+    # are replayed under many thresholds; never where gate latency is measured.
+    cache_local: bool = False
     setting: Setting = field(init=False)
     model: Any = field(init=False)
     local: LocalCalibration = field(init=False)
@@ -57,6 +61,8 @@ class Artifacts:
         self.model = load_model(self.ws.require("models", f"{self.model_name}.joblib"))
         self.embedder = embedder_for(self.model)
         self.local = joblib.load(self.ws.require("gateway", self.model_name, "local.joblib"))
+        if self.cache_local:
+            self.local = _CachedLocal(self.local)  # type: ignore[assignment]
         preds = pd.read_parquet(self.ws.require("predictions", f"{self.model_name}.parquet"))
         self.conformal_frame = preds[preds["part"] == "conformal"]
 
@@ -92,6 +98,25 @@ class Artifacts:
             conformal = _AllGroups(conformal)
         return ReliabilityGateway(cfg, self.local, self.scdi(scdi_name), conformal,
                                   DriftStateReader(state=self.drift(drift_name)))
+
+
+class _CachedLocal:
+    """M1 with its results memoised by embedding. The neighbour search does not depend on any
+    threshold, so a tuning grid needs it once per distinct patient, not once per grid point."""
+
+    def __init__(self, inner: LocalCalibration) -> None:
+        self.inner = inner
+        self._memo: dict[tuple[tuple[int, ...], bytes], Any] = {}
+
+    def evaluate(self, embedding):  # type: ignore[no-untyped-def]
+        q = np.asarray(embedding, dtype=np.float64)
+        key = (q.shape, q.tobytes())
+        if key not in self._memo:
+            self._memo[key] = self.inner.evaluate(q)
+        return self._memo[key]
+
+    def __getattr__(self, name: str) -> Any:
+        return getattr(self.inner, name)
 
 
 class _AllGroups:
