@@ -86,8 +86,11 @@ class ReliabilityGateway:
         c = self.config
         value = self.scdi.lookup(request.group)
         if value is None:
+            detail: dict = {"group": request.group}
+            if c.scdi_small_group_caveat and request.group in self.scdi.excluded:
+                detail.update(not_assessable=True, n=self.scdi.excluded[request.group])
             return SignalResult("subgroup_gap", Status.UNAVAILABLE, None, c.scdi_threshold,
-                                detail={"group": request.group})
+                                detail=detail)
         return SignalResult(
             "subgroup_gap", grade(value, c.scdi_threshold, c.caveat_margin), value,
             c.scdi_threshold, detail={"group": request.group},

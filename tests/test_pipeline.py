@@ -147,3 +147,28 @@ def test_ablation_disables_signal(reference, calibration):
     out = _gateway(reference, calibration, config=cfg).evaluate(_request(where=(15.0, 15.0)))
     assert out.signals["local_calibration"].status is Status.DISABLED
     assert out.decision is Decision.ALLOW
+
+
+def test_small_subgroup_is_caveat_only_when_enabled(reference, calibration):
+    table = SCDITable(scdi={"A": 0.05}, subgroup_ece={}, subgroup_n={}, overall_ece=0.05,
+                      computed_at=0.0, excluded={"B": 12})
+    strict = _gateway(reference, calibration, scdi=table)
+    assert strict.evaluate(_request(group="B")).decision is Decision.DEFER
+
+    cfg = GatewayConfig(local_threshold=0.15, scdi_small_group_caveat=True)
+    gw = _gateway(reference, calibration, scdi=table, config=cfg)
+    small = gw.evaluate(_request(group="B"))
+    assert small.signals["subgroup_gap"].status is Status.UNAVAILABLE
+    assert small.signals["subgroup_gap"].detail == {"group": "B", "not_assessable": True, "n": 12}
+    assert small.decision is Decision.ALLOW and small.caveat
+    assert "subgroup_gap:not_assessable" in small.reasons
+    # A subgroup the table never saw is still unknown, not small: it stays fail-closed.
+    assert gw.evaluate(_request(group="Z", pid="p2")).decision is Decision.DEFER
+
+
+def test_not_assessable_does_not_hide_another_breach():
+    sig = {"subgroup_gap": _sig("subgroup_gap", Status.UNAVAILABLE, not_assessable=True),
+           "conformal": _sig("conformal", Status.BREACH)}
+    decision, caveat, reasons = fuse(sig, GatewayConfig())
+    assert decision is Decision.DEFER and not caveat
+    assert reasons == ("subgroup_gap:not_assessable", "conformal:breach")

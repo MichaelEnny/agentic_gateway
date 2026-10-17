@@ -10,5 +10,6 @@
   "risk_tier_cuts": {"ed": [0.10, 0.30, 0.60], "icu": [0.05, 0.15, 0.30]},
   "caveat_margin": 0.20,
   "fail_closed": true,
+  "scdi_small_group_caveat": true,
   "block_on": ["timing"]
 }
