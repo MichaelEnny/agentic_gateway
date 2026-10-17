@@ -26,6 +26,10 @@ class GatewayConfig:
 
     # M2, SCDI lookup
     scdi_threshold: float = 0.15  # PATENT, spec para. [0021]
+    # A subgroup left out of the SCDI table only because it is below the minimum size cannot
+    # be assessed. True: caveat ("not_assessable") instead of the fail-closed stop. Unknown
+    # subgroups and every other unavailable signal still stop the action.
+    scdi_small_group_caveat: bool = False
 
     # M3, Mondrian conformal
     conformal_coverage: float = 0.90  # PLACEHOLDER

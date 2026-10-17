@@ -5,6 +5,8 @@ The rule is a conjunction (spec para. [0031], rule-based embodiment):
 * any breach, or any unavailable signal when fail-closed, stops the action. It is BLOCKED if the
   signal is listed in ``config.block_on`` and DEFERRED to a clinician otherwise. BLOCK wins over
   DEFER when both apply;
+* an unavailable signal marked ``not_assessable`` (a subgroup too small for the SCDI table,
+  with ``scdi_small_group_caveat`` on) gives a caveat instead of stopping;
 * otherwise any signal within the caveat margin allows the action with a caveat;
 * otherwise the action is allowed.
 
@@ -38,6 +40,10 @@ def fuse(
 
     for name, result in signals.items():
         if result.status is Status.DISABLED:
+            continue
+        if result.detail.get("not_assessable"):
+            caveat = True
+            reasons.append(f"{name}:not_assessable")
             continue
         stops = result.status is Status.BREACH or (
             result.status is Status.UNAVAILABLE and config.fail_closed
