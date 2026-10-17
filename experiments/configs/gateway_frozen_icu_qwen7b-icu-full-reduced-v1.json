@@ -1,0 +1,42 @@
+{
+  "local_threshold": 0.075,
+  "scdi_threshold": 5.886630684265462,
+  "conformal_coverage": 0.9,
+  "conformal_max_set_size": 1,
+  "conformal_empty_is_breach": true,
+  "drift_max_age_s": 7200.0,
+  "cooldown_s": 14400.0,
+  "risk_tier_cuts": [
+    0.05,
+    0.15,
+    0.3
+  ],
+  "caveat_margin": 0.2,
+  "fail_closed": true,
+  "scdi_small_group_caveat": true,
+  "block_on": [
+    "timing"
+  ],
+  "local_min_neighbors": 30,
+  "_meta": {
+    "tuned_on": "tune",
+    "fd_cap": 0.1,
+    "cap_met": true,
+    "tune_intercepted": 0.620223271790468,
+    "tune_false_intervention": 0.08130841121495327,
+    "scdi_null_threshold": 4.70930454741237,
+    "scdi_multiple": 1.25,
+    "scdi_grid": [
+      1.0,
+      1.25,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "drift_ece_critical": 0.05,
+    "confidence_cut": 0.23003856393700264,
+    "frozen_at": "2026-10-16 19:13:43",
+    "n_tune_trajectories": 5728
+  }
+}
