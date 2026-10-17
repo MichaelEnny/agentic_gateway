@@ -52,7 +52,7 @@ def main() -> int:
         dec.to_parquet(ws.path("e1", f"{name}_decisions.parquet"), index=False)
 
         allowed = dec["outcome"].isin(["allow", "caveat"])
-        reasons = Counter(r.split(":")[0] for rs in dec["reasons"] for r in rs.split("; ") if r)
+        stops, caveats = reason_counts(dec["decision"], dec["reasons"])
         by_group = (dec.groupby("group")["outcome"].value_counts(normalize=True).unstack(
             fill_value=0).round(3).to_dict(orient="index"))
         coverage = _coverage(art, cfg.conformal_coverage, test)
@@ -60,7 +60,8 @@ def main() -> int:
             "n": len(dec),
             "outcomes": dec["outcome"].value_counts(normalize=True).round(4).to_dict(),
             "outcomes_by_group": by_group,
-            "stop_reasons": dict(reasons),
+            "stop_reasons": stops,
+            "caveat_reasons": caveats,
             "allowed": _quality(dec[allowed]),
             "stopped": _quality(dec[~allowed]),
             "conformal_coverage": coverage,
@@ -126,8 +127,29 @@ def _markdown(path, summary: dict, ws) -> None:  # type: ignore[no-untyped-def]
         for g, m in cov["mondrian"].items():
             lines.append(f"| {g} | {m['n']} | {m['coverage']:.3f} | "
                          f"{cov['pooled'][g]['coverage']:.3f} |")
-        lines += ["", f"Stop reasons: {s['stop_reasons']}", ""]
+        stopped = ("Signals that stopped a prediction (one prediction can have several): "
+                   f"{s['stop_reasons']}")
+        caveated = ("Caveat-only signals (near the threshold, or subgroup not assessable), "
+                    f"counted over all predictions: {s['caveat_reasons']}")
+        lines += ["", stopped, "", caveated, ""]
     path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def reason_counts(decisions, reasons) -> tuple[dict[str, int], dict[str, int]]:
+    """Per signal, how many predictions it stopped and how many it only caveated.
+
+    On a stopped prediction (decision not ``allow``) every reason stops it except ``near`` and
+    ``not_assessable``, which only caveat. On an allowed prediction every reason is a caveat.
+    """
+    stops: Counter[str] = Counter()
+    caveats: Counter[str] = Counter()
+    for decision, rs in zip(decisions, reasons, strict=True):
+        for r in filter(None, str(rs).split("; ")):
+            name, _, status = r.partition(":")
+            status = status.split("(")[0]
+            stopping = decision != "allow" and status not in ("near", "not_assessable")
+            (stops if stopping else caveats)[name] += 1
+    return dict(stops), dict(caveats)
 
 
 if __name__ == "__main__":
