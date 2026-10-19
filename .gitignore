@@ -5,6 +5,8 @@ __pycache__/
 .ruff_cache/
 # Credentialed PhysioNet data and anything derived from it must never be committed.
 data/
+# ...except the source package of that name, which is code, not data.
+!src/agentic_gateway/data/
 datasets/
 runs/
 *.parquet
