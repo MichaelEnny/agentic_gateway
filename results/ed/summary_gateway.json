@@ -1,0 +1,204 @@
+{
+  "logistic_regression": {
+    "embedding": "lr_contribution",
+    "metric": "cosine",
+    "m1_reference_size": 20000,
+    "scdi": {
+      "Asian|F": 6.160548590070815,
+      "Asian|M": 8.612795853062297,
+      "Black|F": 8.151976916949874,
+      "Black|M": 7.339004883403663,
+      "Hispanic|F": 4.912412288021206,
+      "Hispanic|M": 9.418028530680616,
+      "Other|F": 7.415073505928274,
+      "Other|M": 9.617366831446377,
+      "White|F": 9.081622701517427,
+      "White|M": 7.877310289936621,
+      "__unknown__": 9.617366831446377
+    },
+    "scdi_excluded": {},
+    "scdi_null_threshold": 5.043548469260822,
+    "drift": {
+      "tune": {
+        "state": "warning",
+        "rejected": [
+          "resprate",
+          "dbp",
+          "pain",
+          "arrival_transport",
+          "probability",
+          "ece:Black|F",
+          "ece:Hispanic|M",
+          "ece:White|M"
+        ]
+      },
+      "tune_shifted": {
+        "state": "critical",
+        "rejected": [
+          "temperature",
+          "heartrate",
+          "resprate",
+          "dbp",
+          "pain",
+          "arrival_transport",
+          "probability",
+          "ece:overall",
+          "ece:Asian|F",
+          "ece:Asian|M",
+          "ece:Black|F",
+          "ece:Black|M",
+          "ece:Hispanic|F",
+          "ece:Hispanic|M",
+          "ece:Other|F",
+          "ece:Other|M",
+          "ece:White|F",
+          "ece:White|M",
+          "ece:__unknown__"
+        ]
+      },
+      "test": {
+        "state": "warning",
+        "rejected": [
+          "age",
+          "temperature",
+          "heartrate",
+          "resprate",
+          "o2sat",
+          "sbp",
+          "dbp",
+          "pain",
+          "acuity",
+          "arrival_transport",
+          "probability",
+          "ece:overall",
+          "ece:Asian|F",
+          "ece:Black|M",
+          "ece:Hispanic|F",
+          "ece:Other|F",
+          "ece:White|M"
+        ]
+      },
+      "test_shifted": {
+        "state": "critical",
+        "rejected": [
+          "age",
+          "temperature",
+          "heartrate",
+          "resprate",
+          "o2sat",
+          "sbp",
+          "dbp",
+          "pain",
+          "acuity",
+          "arrival_transport",
+          "probability",
+          "ece:overall",
+          "ece:Asian|F",
+          "ece:Asian|M",
+          "ece:Black|F",
+          "ece:Black|M",
+          "ece:Hispanic|F",
+          "ece:Hispanic|M",
+          "ece:Other|F",
+          "ece:Other|M",
+          "ece:White|F",
+          "ece:White|M",
+          "ece:__unknown__"
+        ]
+      }
+    },
+    "drift_ece_critical": 0.05
+  },
+  "random_forest": {
+    "embedding": "sklearn_leaf",
+    "metric": "hamming",
+    "m1_reference_size": 20000,
+    "scdi": {
+      "Asian|F": 1.9719892847317,
+      "Asian|M": 2.815025657157471,
+      "Black|F": 2.825803323628094,
+      "Black|M": 2.270477818405519,
+      "Hispanic|F": 2.882088338923138,
+      "Hispanic|M": 2.6292739660009135,
+      "Other|F": 2.277474848979057,
+      "Other|M": 3.5166515512666265,
+      "White|F": 3.763480389499401,
+      "White|M": 2.961669181105604,
+      "__unknown__": 3.763480389499401
+    },
+    "scdi_excluded": {},
+    "scdi_null_threshold": 2.417021699920297,
+    "drift": {
+      "tune": {
+        "state": "warning",
+        "rejected": [
+          "resprate",
+          "dbp",
+          "pain",
+          "arrival_transport",
+          "ece:Black|F",
+          "ece:White|M"
+        ]
+      },
+      "tune_shifted": {
+        "state": "critical",
+        "rejected": [
+          "temperature",
+          "resprate",
+          "dbp",
+          "pain",
+          "arrival_transport",
+          "probability",
+          "ece:overall"
+        ]
+      },
+      "test": {
+        "state": "warning",
+        "rejected": [
+          "age",
+          "temperature",
+          "heartrate",
+          "resprate",
+          "o2sat",
+          "sbp",
+          "dbp",
+          "pain",
+          "acuity",
+          "arrival_transport",
+          "probability",
+          "ece:overall",
+          "ece:Asian|F",
+          "ece:Black|M",
+          "ece:Hispanic|F",
+          "ece:Other|F",
+          "ece:White|F",
+          "ece:White|M"
+        ]
+      },
+      "test_shifted": {
+        "state": "critical",
+        "rejected": [
+          "age",
+          "temperature",
+          "heartrate",
+          "resprate",
+          "o2sat",
+          "sbp",
+          "dbp",
+          "pain",
+          "acuity",
+          "arrival_transport",
+          "probability",
+          "ece:overall",
+          "ece:Asian|F",
+          "ece:Black|M",
+          "ece:Hispanic|F",
+          "ece:Other|F",
+          "ece:White|F",
+          "ece:White|M"
+        ]
+      }
+    },
+    "drift_ece_critical": 0.05
+  }
+}

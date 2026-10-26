@@ -1,0 +1,217 @@
+{
+  "machine": {
+    "platform": "Linux-6.18.50+rpt-rpi-2712-aarch64-with-glibc2.41",
+    "machine": "aarch64",
+    "processor": "",
+    "cpus": 4,
+    "ram_gb": 7.9
+  },
+  "artifacts_load_peak_mb": 23.94745922088623,
+  "variants": {
+    "full": {
+      "latency": [
+        {
+          "tool": "all",
+          "n": 118805,
+          "p50_ms": 0.005926,
+          "p95_ms": 12.118552600000001,
+          "p99_ms": 12.25231024,
+          "local_calibration_p50_ms": 11.9194785,
+          "subgroup_gap_p50_ms": 0.006277,
+          "conformal_p50_ms": 0.016278,
+          "drift_p50_ms": 0.009667,
+          "timing_p50_ms": 0.0
+        },
+        {
+          "tool": "close_case",
+          "n": 20675,
+          "p50_ms": 0.003445,
+          "p95_ms": 0.003741,
+          "p99_ms": 0.003889,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "draft_alert",
+          "n": 9960,
+          "p50_ms": 0.036611,
+          "p95_ms": 0.038222,
+          "p99_ms": 0.04051035999999996,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "fetch_record",
+          "n": 29390,
+          "p50_ms": 0.003111,
+          "p95_ms": 0.003537,
+          "p99_ms": 0.003796,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "prior_alerts",
+          "n": 29390,
+          "p50_ms": 0.006037,
+          "p95_ms": 0.006463,
+          "p99_ms": 0.006703,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "risk_score",
+          "n": 29390,
+          "p50_ms": 12.014505,
+          "p95_ms": 12.237293249999999,
+          "p99_ms": 12.610693810000004,
+          "local_calibration_p50_ms": 11.9194785,
+          "subgroup_gap_p50_ms": 0.006277,
+          "conformal_p50_ms": 0.016278,
+          "drift_p50_ms": 0.009667,
+          "timing_p50_ms": 0.0
+        }
+      ],
+      "energy_mj_per_action": NaN,
+      "window": [
+        1792376780.663134,
+        1792377136.777092
+      ],
+      "process_peak_mb": 408.671875,
+      "check_pass_peak_mb": 0.40479564666748047
+    },
+    "full_without_m1": {
+      "latency": [
+        {
+          "tool": "all",
+          "n": 118805,
+          "p50_ms": 0.002315,
+          "p95_ms": 0.032685,
+          "p99_ms": 0.035,
+          "local_calibration_p50_ms": 0.0,
+          "subgroup_gap_p50_ms": 0.002278,
+          "conformal_p50_ms": 0.00463,
+          "drift_p50_ms": 0.00263,
+          "timing_p50_ms": 0.0
+        },
+        {
+          "tool": "close_case",
+          "n": 20675,
+          "p50_ms": 0.002111,
+          "p95_ms": 0.002482,
+          "p99_ms": 0.002648,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "draft_alert",
+          "n": 9960,
+          "p50_ms": 0.012185,
+          "p95_ms": 0.013444049999999999,
+          "p99_ms": 0.015552169999999995,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "fetch_record",
+          "n": 29390,
+          "p50_ms": 0.002185,
+          "p95_ms": 0.002445,
+          "p99_ms": 0.002611,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "prior_alerts",
+          "n": 29390,
+          "p50_ms": 0.002148,
+          "p95_ms": 0.002445,
+          "p99_ms": 0.002667,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "risk_score",
+          "n": 29390,
+          "p50_ms": 0.031888,
+          "p95_ms": 0.034556,
+          "p99_ms": 0.04353909000000001,
+          "local_calibration_p50_ms": 0.0,
+          "subgroup_gap_p50_ms": 0.002278,
+          "conformal_p50_ms": 0.00463,
+          "drift_p50_ms": 0.00263,
+          "timing_p50_ms": 0.0
+        }
+      ],
+      "energy_mj_per_action": NaN,
+      "window": [
+        1792377230.0075116,
+        1792377232.3573914
+      ],
+      "process_peak_mb": 423.265625,
+      "check_pass_peak_mb": 0.19701862335205078
+    }
+  },
+  "m1_scaling": [
+    {
+      "reference_size": 1000,
+      "p50_ms": 2.6302975,
+      "p95_ms": 2.6629395999999996,
+      "fit_peak_mb": 18.125722885131836,
+      "query_peak_mb": 0.047303199768066406,
+      "process_peak_mb": 597.078125,
+      "resampled": false
+    },
+    {
+      "reference_size": 5000,
+      "p50_ms": 7.4436045,
+      "p95_ms": 7.51731625,
+      "fit_peak_mb": 395.5060634613037,
+      "query_peak_mb": 0.1385049819946289,
+      "process_peak_mb": 978.6875,
+      "resampled": false
+    },
+    {
+      "reference_size": 20000,
+      "p50_ms": 25.4381315,
+      "p95_ms": 25.66219815,
+      "fit_peak_mb": 2100.4384765625,
+      "query_peak_mb": 0.4814462661743164,
+      "process_peak_mb": 2690.9375,
+      "resampled": true
+    },
+    {
+      "reference_size": 50000,
+      "p50_ms": 61.0916225,
+      "p95_ms": 61.710284800000004,
+      "fit_peak_mb": 2186.2767639160156,
+      "query_peak_mb": 1.1673402786254883,
+      "process_peak_mb": 2786.625,
+      "resampled": true
+    }
+  ],
+  "process_peak_mb": 2786.625
+}

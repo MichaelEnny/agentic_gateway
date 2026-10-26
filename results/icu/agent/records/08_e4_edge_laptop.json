@@ -1,0 +1,36 @@
+{
+  "step": "08_e4_edge_laptop",
+  "setting": "icu",
+  "source": "full",
+  "smoke": false,
+  "args": {
+    "setting": "icu",
+    "source": "full",
+    "smoke": false,
+    "seed": 42,
+    "device": "laptop",
+    "repeats": 5,
+    "warmup": 100,
+    "meter_log": null,
+    "sizes": "1000,5000,20000,50000",
+    "run": "qwen7b-icu-full-reduced-v1"
+  },
+  "outputs": {
+    "device": "laptop"
+  },
+  "seconds": 1224.72,
+  "finished": "2026-10-16 20:34:57",
+  "versions": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pyarrow": "26.0.0",
+    "git_commit": "d5fd9b7c3a37b488c20efa43bbf7be3f5d837f2d",
+    "git_dirty": true
+  }
+}

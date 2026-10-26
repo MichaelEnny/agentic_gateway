@@ -1,0 +1,59 @@
+{
+  "agent": {
+    "policy": "llm",
+    "model": "lmstudio-community/qwen2.5-7b-instruct",
+    "base_url": "http://localhost:1234/v1",
+    "temperature": 0.2,
+    "max_steps": 10,
+    "system_prompt_sha256": "f598a4f119824e79e4980741050b14ccf8632945d01cb0928c465b18fc615613",
+    "model_file": "~\\.lmstudio\\models\\lmstudio-community\\Qwen2.5-7B-Instruct-GGUF\\Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+    "model_file_sha256": "3e357ab3eda2c442f25c0080bb8998eedc05fd16ce1728eacff9ccc5c3d240c6",
+    "server_model": {
+      "id": "lmstudio-community/qwen2.5-7b-instruct",
+      "publisher": "lmstudio-community",
+      "arch": "qwen2",
+      "compatibility_type": "gguf",
+      "quantization": "Q4_K_M",
+      "max_context_length": 32768,
+      "loaded_context_length": 4096
+    }
+  },
+  "cases": 30,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "methods": {
+    "no_gate": {
+      "completed": 1.0,
+      "same_decision": 1.0,
+      "alert_lost": 0.0,
+      "referred": 0.0
+    },
+    "output_only": {
+      "completed": 1.0,
+      "same_decision": 0.9,
+      "alert_lost": 0.21428571428571427,
+      "referred": 0.1
+    },
+    "confidence": {
+      "completed": 1.0,
+      "same_decision": 0.8,
+      "alert_lost": 0.42857142857142855,
+      "referred": 0.2
+    },
+    "pooled_conformal": {
+      "completed": 1.0,
+      "same_decision": 0.8,
+      "alert_lost": 0.42857142857142855,
+      "referred": 0.2
+    },
+    "full": {
+      "completed": 1.0,
+      "same_decision": 0.9,
+      "alert_lost": 0.21428571428571427,
+      "referred": 0.1
+    }
+  }
+}

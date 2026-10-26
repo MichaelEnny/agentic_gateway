@@ -1,0 +1,36 @@
+{
+  "step": "08_e4_edge_pi5",
+  "setting": "ed",
+  "source": "full",
+  "smoke": false,
+  "args": {
+    "setting": "ed",
+    "source": "full",
+    "smoke": false,
+    "seed": 42,
+    "device": "pi5",
+    "repeats": 5,
+    "warmup": 100,
+    "meter_log": null,
+    "sizes": "1000,5000,20000,50000",
+    "run": "qwen7b-ed-full-reduced-v1"
+  },
+  "outputs": {
+    "device": "pi5"
+  },
+  "seconds": 3422.77,
+  "finished": "2026-10-18 21:14:32",
+  "versions": {
+    "python": "3.14.6",
+    "platform": "Linux-6.18.50+rpt-rpi-2712-aarch64-with-glibc2.41",
+    "machine": "aarch64",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pyarrow": "26.0.0",
+    "git_commit": "d6b24245517e81a839d6f506b95587559d592ad5",
+    "git_dirty": false
+  }
+}

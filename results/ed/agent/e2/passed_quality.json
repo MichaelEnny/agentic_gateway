@@ -1,0 +1,3315 @@
+{
+  "no_gate": {
+    "clean": {
+      "passed": {
+        "n": 1075,
+        "ece": 0.05111324488734357,
+        "brier": 0.13960341236472676,
+        "auroc": 0.8533640603055627,
+        "coverage": {
+          "_all": 0.8455813953488373,
+          "Asian|F": {
+            "n": 95,
+            "coverage": 0.7263157894736842
+          },
+          "Asian|M": {
+            "n": 92,
+            "coverage": 0.8369565217391305
+          },
+          "Black|F": {
+            "n": 96,
+            "coverage": 0.90625
+          },
+          "Black|M": {
+            "n": 90,
+            "coverage": 0.8666666666666667
+          },
+          "Hispanic|F": {
+            "n": 95,
+            "coverage": 0.8421052631578947
+          },
+          "Hispanic|M": {
+            "n": 92,
+            "coverage": 0.9456521739130435
+          },
+          "Other|F": {
+            "n": 96,
+            "coverage": 0.84375
+          },
+          "Other|M": {
+            "n": 93,
+            "coverage": 0.8064516129032258
+          },
+          "White|F": {
+            "n": 117,
+            "coverage": 0.7692307692307693
+          },
+          "White|M": {
+            "n": 104,
+            "coverage": 0.8269230769230769
+          },
+          "__unknown__": {
+            "n": 105,
+            "coverage": 0.9428571428571428
+          }
+        }
+      },
+      "stopped": {
+        "n": 0,
+        "ece": NaN,
+        "brier": NaN,
+        "auroc": NaN
+      }
+    },
+    "faulty": {
+      "passed": {
+        "n": 5188,
+        "ece": 0.05961734524830145,
+        "brier": 0.18764952285034533,
+        "auroc": 0.77219494662858,
+        "coverage": {
+          "_all": 0.755011565150347,
+          "Asian|F": {
+            "n": 446,
+            "coverage": 0.6838565022421524
+          },
+          "Asian|M": {
+            "n": 446,
+            "coverage": 0.7219730941704036
+          },
+          "Black|F": {
+            "n": 420,
+            "coverage": 0.8214285714285714
+          },
+          "Black|M": {
+            "n": 432,
+            "coverage": 0.7777777777777778
+          },
+          "Hispanic|F": {
+            "n": 440,
+            "coverage": 0.7272727272727273
+          },
+          "Hispanic|M": {
+            "n": 464,
+            "coverage": 0.8318965517241379
+          },
+          "Other|F": {
+            "n": 456,
+            "coverage": 0.706140350877193
+          },
+          "Other|M": {
+            "n": 420,
+            "coverage": 0.6976190476190476
+          },
+          "White|F": {
+            "n": 582,
+            "coverage": 0.7749140893470791
+          },
+          "White|M": {
+            "n": 530,
+            "coverage": 0.7716981132075472
+          },
+          "__unknown__": {
+            "n": 552,
+            "coverage": 0.7753623188405797
+          }
+        }
+      },
+      "stopped": {
+        "n": 0,
+        "ece": NaN,
+        "brier": NaN,
+        "auroc": NaN
+      }
+    },
+    "all": {
+      "passed": {
+        "n": 6263,
+        "ece": 0.0470197400542273,
+        "brier": 0.1794027451444472,
+        "auroc": 0.7870388316993836,
+        "coverage": {
+          "_all": 0.7705572409388471,
+          "Asian|F": {
+            "n": 541,
+            "coverage": 0.6913123844731978
+          },
+          "Asian|M": {
+            "n": 538,
+            "coverage": 0.741635687732342
+          },
+          "Black|F": {
+            "n": 516,
+            "coverage": 0.8372093023255814
+          },
+          "Black|M": {
+            "n": 522,
+            "coverage": 0.7931034482758621
+          },
+          "Hispanic|F": {
+            "n": 535,
+            "coverage": 0.7476635514018691
+          },
+          "Hispanic|M": {
+            "n": 556,
+            "coverage": 0.8507194244604317
+          },
+          "Other|F": {
+            "n": 552,
+            "coverage": 0.730072463768116
+          },
+          "Other|M": {
+            "n": 513,
+            "coverage": 0.7173489278752436
+          },
+          "White|F": {
+            "n": 699,
+            "coverage": 0.7739628040057225
+          },
+          "White|M": {
+            "n": 634,
+            "coverage": 0.7807570977917981
+          },
+          "__unknown__": {
+            "n": 657,
+            "coverage": 0.802130898021309
+          }
+        }
+      },
+      "stopped": {
+        "n": 0,
+        "ece": NaN,
+        "brier": NaN,
+        "auroc": NaN
+      }
+    }
+  },
+  "output_only": {
+    "clean": {
+      "passed": {
+        "n": 1000,
+        "ece": 0.04952071045615578,
+        "brier": 0.13073182138363024,
+        "auroc": 0.8494156147732586,
+        "coverage": {
+          "_all": 0.84,
+          "Asian|F": {
+            "n": 89,
+            "coverage": 0.7078651685393258
+          },
+          "Asian|M": {
+            "n": 89,
+            "coverage": 0.8651685393258427
+          },
+          "Black|F": {
+            "n": 93,
+            "coverage": 0.9032258064516129
+          },
+          "Black|M": {
+            "n": 78,
+            "coverage": 0.8461538461538461
+          },
+          "Hispanic|F": {
+            "n": 95,
+            "coverage": 0.8421052631578947
+          },
+          "Hispanic|M": {
+            "n": 68,
+            "coverage": 0.9264705882352942
+          },
+          "Other|F": {
+            "n": 96,
+            "coverage": 0.84375
+          },
+          "Other|M": {
+            "n": 93,
+            "coverage": 0.8064516129032258
+          },
+          "White|F": {
+            "n": 114,
+            "coverage": 0.7631578947368421
+          },
+          "White|M": {
+            "n": 83,
+            "coverage": 0.7831325301204819
+          },
+          "__unknown__": {
+            "n": 102,
+            "coverage": 0.9705882352941176
+          }
+        }
+      },
+      "stopped": {
+        "n": 75,
+        "ece": 0.19057496630580412,
+        "brier": 0.25789129211268036,
+        "auroc": 0.4632352941176471,
+        "coverage": {
+          "_all": 0.92,
+          "Asian|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Asian|M": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|M": {
+            "n": 12,
+            "coverage": 1.0
+          },
+          "Hispanic|M": {
+            "n": 24,
+            "coverage": 1.0
+          },
+          "White|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "White|M": {
+            "n": 21,
+            "coverage": 1.0
+          },
+          "__unknown__": {
+            "n": "<10",
+            "suppressed": true
+          }
+        }
+      }
+    },
+    "faulty": {
+      "passed": {
+        "n": 3358,
+        "ece": 0.11199956418340982,
+        "brier": 0.18118928056062925,
+        "auroc": 0.7063285355588682,
+        "coverage": {
+          "_all": 0.7564026206075045,
+          "Asian|F": {
+            "n": 309,
+            "coverage": 0.7475728155339806
+          },
+          "Asian|M": {
+            "n": 286,
+            "coverage": 0.7482517482517482
+          },
+          "Black|F": {
+            "n": 345,
+            "coverage": 0.8347826086956521
+          },
+          "Black|M": {
+            "n": 279,
+            "coverage": 0.8172043010752689
+          },
+          "Hispanic|F": {
+            "n": 320,
+            "coverage": 0.709375
+          },
+          "Hispanic|M": {
+            "n": 242,
+            "coverage": 0.8264462809917356
+          },
+          "Other|F": {
+            "n": 312,
+            "coverage": 0.7339743589743589
+          },
+          "Other|M": {
+            "n": 320,
+            "coverage": 0.7
+          },
+          "White|F": {
+            "n": 382,
+            "coverage": 0.7277486910994765
+          },
+          "White|M": {
+            "n": 315,
+            "coverage": 0.7587301587301587
+          },
+          "__unknown__": {
+            "n": 248,
+            "coverage": 0.7338709677419355
+          }
+        }
+      },
+      "stopped": {
+        "n": 1830,
+        "ece": 0.05865266217352249,
+        "brier": 0.19950389094262222,
+        "auroc": 0.729027744854525,
+        "coverage": {
+          "_all": 0.7524590163934426,
+          "Asian|F": {
+            "n": 137,
+            "coverage": 0.5401459854014599
+          },
+          "Asian|M": {
+            "n": 160,
+            "coverage": 0.675
+          },
+          "Black|F": {
+            "n": 75,
+            "coverage": 0.76
+          },
+          "Black|M": {
+            "n": 153,
+            "coverage": 0.7058823529411765
+          },
+          "Hispanic|F": {
+            "n": 120,
+            "coverage": 0.775
+          },
+          "Hispanic|M": {
+            "n": 222,
+            "coverage": 0.8378378378378378
+          },
+          "Other|F": {
+            "n": 144,
+            "coverage": 0.6458333333333334
+          },
+          "Other|M": {
+            "n": 100,
+            "coverage": 0.69
+          },
+          "White|F": {
+            "n": 200,
+            "coverage": 0.865
+          },
+          "White|M": {
+            "n": 215,
+            "coverage": 0.7906976744186046
+          },
+          "__unknown__": {
+            "n": 304,
+            "coverage": 0.8092105263157895
+          }
+        }
+      }
+    },
+    "all": {
+      "passed": {
+        "n": 4358,
+        "ece": 0.08618116195783915,
+        "brier": 0.16961115775727928,
+        "auroc": 0.7430945786478607,
+        "coverage": {
+          "_all": 0.7755851307939422,
+          "Asian|F": {
+            "n": 398,
+            "coverage": 0.7386934673366834
+          },
+          "Asian|M": {
+            "n": 375,
+            "coverage": 0.776
+          },
+          "Black|F": {
+            "n": 438,
+            "coverage": 0.8493150684931506
+          },
+          "Black|M": {
+            "n": 357,
+            "coverage": 0.8235294117647058
+          },
+          "Hispanic|F": {
+            "n": 415,
+            "coverage": 0.7397590361445783
+          },
+          "Hispanic|M": {
+            "n": 310,
+            "coverage": 0.8483870967741935
+          },
+          "Other|F": {
+            "n": 408,
+            "coverage": 0.7598039215686274
+          },
+          "Other|M": {
+            "n": 413,
+            "coverage": 0.7239709443099274
+          },
+          "White|F": {
+            "n": 496,
+            "coverage": 0.7358870967741935
+          },
+          "White|M": {
+            "n": 398,
+            "coverage": 0.7638190954773869
+          },
+          "__unknown__": {
+            "n": 350,
+            "coverage": 0.8028571428571428
+          }
+        }
+      },
+      "stopped": {
+        "n": 1905,
+        "ece": 0.06384645367479336,
+        "brier": 0.20180260752412058,
+        "auroc": 0.7217141849615676,
+        "coverage": {
+          "_all": 0.7590551181102362,
+          "Asian|F": {
+            "n": 143,
+            "coverage": 0.5594405594405595
+          },
+          "Asian|M": {
+            "n": 163,
+            "coverage": 0.6625766871165644
+          },
+          "Black|F": {
+            "n": 78,
+            "coverage": 0.7692307692307693
+          },
+          "Black|M": {
+            "n": 165,
+            "coverage": 0.7272727272727273
+          },
+          "Hispanic|F": {
+            "n": 120,
+            "coverage": 0.775
+          },
+          "Hispanic|M": {
+            "n": 246,
+            "coverage": 0.8536585365853658
+          },
+          "Other|F": {
+            "n": 144,
+            "coverage": 0.6458333333333334
+          },
+          "Other|M": {
+            "n": 100,
+            "coverage": 0.69
+          },
+          "White|F": {
+            "n": 203,
+            "coverage": 0.8669950738916257
+          },
+          "White|M": {
+            "n": 236,
+            "coverage": 0.809322033898305
+          },
+          "__unknown__": {
+            "n": 307,
+            "coverage": 0.8013029315960912
+          }
+        }
+      }
+    }
+  },
+  "confidence": {
+    "clean": {
+      "passed": {
+        "n": 1024,
+        "ece": 0.04059821312731206,
+        "brier": 0.13418220801374614,
+        "auroc": 0.8476579780927607,
+        "coverage": {
+          "_all": 0.84375,
+          "Asian|F": {
+            "n": 89,
+            "coverage": 0.7078651685393258
+          },
+          "Asian|M": {
+            "n": 89,
+            "coverage": 0.8651685393258427
+          },
+          "Black|F": {
+            "n": 93,
+            "coverage": 0.9032258064516129
+          },
+          "Black|M": {
+            "n": 84,
+            "coverage": 0.8571428571428571
+          },
+          "Hispanic|F": {
+            "n": 89,
+            "coverage": 0.8651685393258427
+          },
+          "Hispanic|M": {
+            "n": 83,
+            "coverage": 0.9397590361445783
+          },
+          "Other|F": {
+            "n": 93,
+            "coverage": 0.8387096774193549
+          },
+          "Other|M": {
+            "n": 90,
+            "coverage": 0.8
+          },
+          "White|F": {
+            "n": 114,
+            "coverage": 0.7631578947368421
+          },
+          "White|M": {
+            "n": 95,
+            "coverage": 0.8105263157894737
+          },
+          "__unknown__": {
+            "n": 105,
+            "coverage": 0.9428571428571428
+          }
+        }
+      },
+      "stopped": {
+        "n": 51,
+        "ece": 0.2722148531874207,
+        "brier": 0.24845269188245542,
+        "auroc": 0.6346153846153846,
+        "coverage": {
+          "_all": 0.8823529411764706,
+          "Asian|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Asian|M": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|M": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Hispanic|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Hispanic|M": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Other|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Other|M": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "White|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "White|M": {
+            "n": "<10",
+            "suppressed": true
+          }
+        }
+      }
+    },
+    "faulty": {
+      "passed": {
+        "n": 4755,
+        "ece": 0.06202326199026737,
+        "brier": 0.1819365059354459,
+        "auroc": 0.7823544117161295,
+        "coverage": {
+          "_all": 0.7579390115667718,
+          "Asian|F": {
+            "n": 406,
+            "coverage": 0.6576354679802956
+          },
+          "Asian|M": {
+            "n": 403,
+            "coverage": 0.7766749379652605
+          },
+          "Black|F": {
+            "n": 388,
+            "coverage": 0.8221649484536082
+          },
+          "Black|M": {
+            "n": 393,
+            "coverage": 0.7557251908396947
+          },
+          "Hispanic|F": {
+            "n": 396,
+            "coverage": 0.7626262626262627
+          },
+          "Hispanic|M": {
+            "n": 411,
+            "coverage": 0.8102189781021898
+          },
+          "Other|F": {
+            "n": 425,
+            "coverage": 0.7082352941176471
+          },
+          "Other|M": {
+            "n": 385,
+            "coverage": 0.7168831168831169
+          },
+          "White|F": {
+            "n": 542,
+            "coverage": 0.7583025830258303
+          },
+          "White|M": {
+            "n": 478,
+            "coverage": 0.7468619246861925
+          },
+          "__unknown__": {
+            "n": 528,
+            "coverage": 0.8106060606060606
+          }
+        }
+      },
+      "stopped": {
+        "n": 433,
+        "ece": 0.033196712204312084,
+        "brier": 0.2503871566386751,
+        "auroc": 0.4884442060085837,
+        "coverage": {
+          "_all": 0.7228637413394919,
+          "Asian|F": {
+            "n": 40,
+            "coverage": 0.95
+          },
+          "Asian|M": {
+            "n": 43,
+            "coverage": 0.20930232558139536
+          },
+          "Black|F": {
+            "n": 32,
+            "coverage": 0.8125
+          },
+          "Black|M": {
+            "n": 39,
+            "coverage": 1.0
+          },
+          "Hispanic|F": {
+            "n": 44,
+            "coverage": 0.4090909090909091
+          },
+          "Hispanic|M": {
+            "n": 53,
+            "coverage": 1.0
+          },
+          "Other|F": {
+            "n": 31,
+            "coverage": 0.6774193548387096
+          },
+          "Other|M": {
+            "n": 35,
+            "coverage": 0.4857142857142857
+          },
+          "White|F": {
+            "n": 40,
+            "coverage": 1.0
+          },
+          "White|M": {
+            "n": 52,
+            "coverage": 1.0
+          },
+          "__unknown__": {
+            "n": 24,
+            "coverage": 0.0
+          }
+        }
+      }
+    },
+    "all": {
+      "passed": {
+        "n": 5779,
+        "ece": 0.05087271380649203,
+        "brier": 0.1734747649643747,
+        "auroc": 0.7953884079116151,
+        "coverage": {
+          "_all": 0.7731441425852223,
+          "Asian|F": {
+            "n": 495,
+            "coverage": 0.6666666666666666
+          },
+          "Asian|M": {
+            "n": 492,
+            "coverage": 0.7926829268292683
+          },
+          "Black|F": {
+            "n": 481,
+            "coverage": 0.8378378378378378
+          },
+          "Black|M": {
+            "n": 477,
+            "coverage": 0.7735849056603774
+          },
+          "Hispanic|F": {
+            "n": 485,
+            "coverage": 0.7814432989690722
+          },
+          "Hispanic|M": {
+            "n": 494,
+            "coverage": 0.8319838056680162
+          },
+          "Other|F": {
+            "n": 518,
+            "coverage": 0.7316602316602316
+          },
+          "Other|M": {
+            "n": 475,
+            "coverage": 0.7326315789473684
+          },
+          "White|F": {
+            "n": 656,
+            "coverage": 0.7591463414634146
+          },
+          "White|M": {
+            "n": 573,
+            "coverage": 0.7574171029668412
+          },
+          "__unknown__": {
+            "n": 633,
+            "coverage": 0.8325434439178515
+          }
+        }
+      },
+      "stopped": {
+        "n": 484,
+        "ece": 0.02610981714792354,
+        "brier": 0.25018331841023045,
+        "auroc": 0.5001537016480232,
+        "coverage": {
+          "_all": 0.7396694214876033,
+          "Asian|F": {
+            "n": 46,
+            "coverage": 0.9565217391304348
+          },
+          "Asian|M": {
+            "n": 46,
+            "coverage": 0.1956521739130435
+          },
+          "Black|F": {
+            "n": 35,
+            "coverage": 0.8285714285714286
+          },
+          "Black|M": {
+            "n": 45,
+            "coverage": 1.0
+          },
+          "Hispanic|F": {
+            "n": 50,
+            "coverage": 0.42
+          },
+          "Hispanic|M": {
+            "n": 62,
+            "coverage": 1.0
+          },
+          "Other|F": {
+            "n": 34,
+            "coverage": 0.7058823529411765
+          },
+          "Other|M": {
+            "n": 38,
+            "coverage": 0.5263157894736842
+          },
+          "White|F": {
+            "n": 43,
+            "coverage": 1.0
+          },
+          "White|M": {
+            "n": 61,
+            "coverage": 1.0
+          },
+          "__unknown__": {
+            "n": 24,
+            "coverage": 0.0
+          }
+        }
+      }
+    }
+  },
+  "pooled_conformal": {
+    "clean": {
+      "passed": {
+        "n": 997,
+        "ece": 0.03943967007768031,
+        "brier": 0.13142511971777612,
+        "auroc": 0.8455988455988456,
+        "coverage": {
+          "_all": 0.8425275827482447,
+          "Asian|F": {
+            "n": 89,
+            "coverage": 0.7078651685393258
+          },
+          "Asian|M": {
+            "n": 80,
+            "coverage": 0.8875
+          },
+          "Black|F": {
+            "n": 93,
+            "coverage": 0.9032258064516129
+          },
+          "Black|M": {
+            "n": 81,
+            "coverage": 0.8518518518518519
+          },
+          "Hispanic|F": {
+            "n": 89,
+            "coverage": 0.8651685393258427
+          },
+          "Hispanic|M": {
+            "n": 77,
+            "coverage": 0.935064935064935
+          },
+          "Other|F": {
+            "n": 93,
+            "coverage": 0.8387096774193549
+          },
+          "Other|M": {
+            "n": 87,
+            "coverage": 0.7931034482758621
+          },
+          "White|F": {
+            "n": 114,
+            "coverage": 0.7631578947368421
+          },
+          "White|M": {
+            "n": 89,
+            "coverage": 0.797752808988764
+          },
+          "__unknown__": {
+            "n": 105,
+            "coverage": 0.9428571428571428
+          }
+        }
+      },
+      "stopped": {
+        "n": 78,
+        "ece": 0.2409512068391475,
+        "brier": 0.24413876837767262,
+        "auroc": 0.7368421052631579,
+        "coverage": {
+          "_all": 0.8846153846153846,
+          "Asian|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Asian|M": {
+            "n": 12,
+            "coverage": 0.5
+          },
+          "Black|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|M": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Hispanic|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Hispanic|M": {
+            "n": 15,
+            "coverage": 1.0
+          },
+          "Other|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Other|M": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "White|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "White|M": {
+            "n": 15,
+            "coverage": 1.0
+          }
+        }
+      }
+    },
+    "faulty": {
+      "passed": {
+        "n": 4466,
+        "ece": 0.06424743225462615,
+        "brier": 0.17793978454161233,
+        "auroc": 0.7884807869729827,
+        "coverage": {
+          "_all": 0.7586206896551724,
+          "Asian|F": {
+            "n": 394,
+            "coverage": 0.6573604060913706
+          },
+          "Asian|M": {
+            "n": 355,
+            "coverage": 0.7971830985915493
+          },
+          "Black|F": {
+            "n": 369,
+            "coverage": 0.8346883468834688
+          },
+          "Black|M": {
+            "n": 366,
+            "coverage": 0.7377049180327869
+          },
+          "Hispanic|F": {
+            "n": 376,
+            "coverage": 0.776595744680851
+          },
+          "Hispanic|M": {
+            "n": 375,
+            "coverage": 0.792
+          },
+          "Other|F": {
+            "n": 404,
+            "coverage": 0.7128712871287128
+          },
+          "Other|M": {
+            "n": 365,
+            "coverage": 0.7123287671232876
+          },
+          "White|F": {
+            "n": 516,
+            "coverage": 0.7461240310077519
+          },
+          "White|M": {
+            "n": 439,
+            "coverage": 0.724373576309795
+          },
+          "__unknown__": {
+            "n": 507,
+            "coverage": 0.8441814595660749
+          }
+        }
+      },
+      "stopped": {
+        "n": 722,
+        "ece": 0.03097749958314175,
+        "brier": 0.2477100370979931,
+        "auroc": 0.5543137028038104,
+        "coverage": {
+          "_all": 0.7326869806094183,
+          "Asian|F": {
+            "n": 52,
+            "coverage": 0.8846153846153846
+          },
+          "Asian|M": {
+            "n": 91,
+            "coverage": 0.42857142857142855
+          },
+          "Black|F": {
+            "n": 51,
+            "coverage": 0.7254901960784313
+          },
+          "Black|M": {
+            "n": 66,
+            "coverage": 1.0
+          },
+          "Hispanic|F": {
+            "n": 64,
+            "coverage": 0.4375
+          },
+          "Hispanic|M": {
+            "n": 89,
+            "coverage": 1.0
+          },
+          "Other|F": {
+            "n": 52,
+            "coverage": 0.6538461538461539
+          },
+          "Other|M": {
+            "n": 55,
+            "coverage": 0.6
+          },
+          "White|F": {
+            "n": 66,
+            "coverage": 1.0
+          },
+          "White|M": {
+            "n": 91,
+            "coverage": 1.0
+          },
+          "__unknown__": {
+            "n": 45,
+            "coverage": 0.0
+          }
+        }
+      }
+    },
+    "all": {
+      "passed": {
+        "n": 5463,
+        "ece": 0.053251523227906154,
+        "brier": 0.1694508369250345,
+        "auroc": 0.8003749226256859,
+        "coverage": {
+          "_all": 0.7739337360424675,
+          "Asian|F": {
+            "n": 483,
+            "coverage": 0.6666666666666666
+          },
+          "Asian|M": {
+            "n": 435,
+            "coverage": 0.8137931034482758
+          },
+          "Black|F": {
+            "n": 462,
+            "coverage": 0.8484848484848485
+          },
+          "Black|M": {
+            "n": 447,
+            "coverage": 0.7583892617449665
+          },
+          "Hispanic|F": {
+            "n": 465,
+            "coverage": 0.7935483870967742
+          },
+          "Hispanic|M": {
+            "n": 452,
+            "coverage": 0.8163716814159292
+          },
+          "Other|F": {
+            "n": 497,
+            "coverage": 0.7364185110663984
+          },
+          "Other|M": {
+            "n": 452,
+            "coverage": 0.7278761061946902
+          },
+          "White|F": {
+            "n": 630,
+            "coverage": 0.7492063492063492
+          },
+          "White|M": {
+            "n": 528,
+            "coverage": 0.7367424242424242
+          },
+          "__unknown__": {
+            "n": 612,
+            "coverage": 0.8611111111111112
+          }
+        }
+      },
+      "stopped": {
+        "n": 800,
+        "ece": 0.034106577594969316,
+        "brier": 0.24736183839776182,
+        "auroc": 0.5641631652661064,
+        "coverage": {
+          "_all": 0.7475,
+          "Asian|F": {
+            "n": 58,
+            "coverage": 0.896551724137931
+          },
+          "Asian|M": {
+            "n": 103,
+            "coverage": 0.4368932038834951
+          },
+          "Black|F": {
+            "n": 54,
+            "coverage": 0.7407407407407407
+          },
+          "Black|M": {
+            "n": 75,
+            "coverage": 1.0
+          },
+          "Hispanic|F": {
+            "n": 70,
+            "coverage": 0.44285714285714284
+          },
+          "Hispanic|M": {
+            "n": 104,
+            "coverage": 1.0
+          },
+          "Other|F": {
+            "n": 55,
+            "coverage": 0.6727272727272727
+          },
+          "Other|M": {
+            "n": 61,
+            "coverage": 0.639344262295082
+          },
+          "White|F": {
+            "n": 69,
+            "coverage": 1.0
+          },
+          "White|M": {
+            "n": 106,
+            "coverage": 1.0
+          },
+          "__unknown__": {
+            "n": 45,
+            "coverage": 0.0
+          }
+        }
+      }
+    }
+  },
+  "full": {
+    "clean": {
+      "passed": {
+        "n": 1000,
+        "ece": 0.04952071045615578,
+        "brier": 0.13073182138363024,
+        "auroc": 0.8494156147732586,
+        "coverage": {
+          "_all": 0.84,
+          "Asian|F": {
+            "n": 89,
+            "coverage": 0.7078651685393258
+          },
+          "Asian|M": {
+            "n": 89,
+            "coverage": 0.8651685393258427
+          },
+          "Black|F": {
+            "n": 93,
+            "coverage": 0.9032258064516129
+          },
+          "Black|M": {
+            "n": 78,
+            "coverage": 0.8461538461538461
+          },
+          "Hispanic|F": {
+            "n": 95,
+            "coverage": 0.8421052631578947
+          },
+          "Hispanic|M": {
+            "n": 68,
+            "coverage": 0.9264705882352942
+          },
+          "Other|F": {
+            "n": 96,
+            "coverage": 0.84375
+          },
+          "Other|M": {
+            "n": 93,
+            "coverage": 0.8064516129032258
+          },
+          "White|F": {
+            "n": 114,
+            "coverage": 0.7631578947368421
+          },
+          "White|M": {
+            "n": 83,
+            "coverage": 0.7831325301204819
+          },
+          "__unknown__": {
+            "n": 102,
+            "coverage": 0.9705882352941176
+          }
+        }
+      },
+      "stopped": {
+        "n": 75,
+        "ece": 0.19057496630580412,
+        "brier": 0.25789129211268036,
+        "auroc": 0.4632352941176471,
+        "coverage": {
+          "_all": 0.92,
+          "Asian|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Asian|M": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|M": {
+            "n": 12,
+            "coverage": 1.0
+          },
+          "Hispanic|M": {
+            "n": 24,
+            "coverage": 1.0
+          },
+          "White|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "White|M": {
+            "n": 21,
+            "coverage": 1.0
+          },
+          "__unknown__": {
+            "n": "<10",
+            "suppressed": true
+          }
+        }
+      }
+    },
+    "faulty": {
+      "passed": {
+        "n": 2073,
+        "ece": 0.08106330561656946,
+        "brier": 0.2001079918978066,
+        "auroc": 0.72382064984857,
+        "coverage": {
+          "_all": 0.6970574047274481,
+          "Asian|F": {
+            "n": 177,
+            "coverage": 0.6666666666666666
+          },
+          "Asian|M": {
+            "n": 178,
+            "coverage": 0.6910112359550562
+          },
+          "Black|F": {
+            "n": 183,
+            "coverage": 0.7868852459016393
+          },
+          "Black|M": {
+            "n": 157,
+            "coverage": 0.7133757961783439
+          },
+          "Hispanic|F": {
+            "n": 189,
+            "coverage": 0.671957671957672
+          },
+          "Hispanic|M": {
+            "n": 138,
+            "coverage": 0.7101449275362319
+          },
+          "Other|F": {
+            "n": 192,
+            "coverage": 0.6458333333333334
+          },
+          "Other|M": {
+            "n": 174,
+            "coverage": 0.632183908045977
+          },
+          "White|F": {
+            "n": 286,
+            "coverage": 0.6993006993006993
+          },
+          "White|M": {
+            "n": 234,
+            "coverage": 0.7008547008547008
+          },
+          "__unknown__": {
+            "n": 165,
+            "coverage": 0.7575757575757576
+          }
+        }
+      },
+      "stopped": {
+        "n": 3115,
+        "ece": 0.060586686361140944,
+        "brier": 0.1793585416832868,
+        "auroc": 0.8023043373278332,
+        "coverage": {
+          "_all": 0.7935794542536115,
+          "Asian|F": {
+            "n": 269,
+            "coverage": 0.6951672862453532
+          },
+          "Asian|M": {
+            "n": 268,
+            "coverage": 0.7425373134328358
+          },
+          "Black|F": {
+            "n": 237,
+            "coverage": 0.8481012658227848
+          },
+          "Black|M": {
+            "n": 275,
+            "coverage": 0.8145454545454546
+          },
+          "Hispanic|F": {
+            "n": 251,
+            "coverage": 0.7689243027888446
+          },
+          "Hispanic|M": {
+            "n": 326,
+            "coverage": 0.8834355828220859
+          },
+          "Other|F": {
+            "n": 264,
+            "coverage": 0.75
+          },
+          "Other|M": {
+            "n": 246,
+            "coverage": 0.7439024390243902
+          },
+          "White|F": {
+            "n": 296,
+            "coverage": 0.847972972972973
+          },
+          "White|M": {
+            "n": 296,
+            "coverage": 0.8277027027027027
+          },
+          "__unknown__": {
+            "n": 387,
+            "coverage": 0.7829457364341085
+          }
+        }
+      }
+    },
+    "all": {
+      "passed": {
+        "n": 3073,
+        "ece": 0.05405116045049867,
+        "brier": 0.17753195202986768,
+        "auroc": 0.7678309939640702,
+        "coverage": {
+          "_all": 0.7435730556459486,
+          "Asian|F": {
+            "n": 266,
+            "coverage": 0.6804511278195489
+          },
+          "Asian|M": {
+            "n": 267,
+            "coverage": 0.7490636704119851
+          },
+          "Black|F": {
+            "n": 276,
+            "coverage": 0.8260869565217391
+          },
+          "Black|M": {
+            "n": 235,
+            "coverage": 0.7574468085106383
+          },
+          "Hispanic|F": {
+            "n": 284,
+            "coverage": 0.7288732394366197
+          },
+          "Hispanic|M": {
+            "n": 206,
+            "coverage": 0.7815533980582524
+          },
+          "Other|F": {
+            "n": 288,
+            "coverage": 0.7118055555555556
+          },
+          "Other|M": {
+            "n": 267,
+            "coverage": 0.6928838951310862
+          },
+          "White|F": {
+            "n": 400,
+            "coverage": 0.7175
+          },
+          "White|M": {
+            "n": 317,
+            "coverage": 0.722397476340694
+          },
+          "__unknown__": {
+            "n": 267,
+            "coverage": 0.8389513108614233
+          }
+        }
+      },
+      "stopped": {
+        "n": 3190,
+        "ece": 0.0546816318313537,
+        "brier": 0.18120492296297477,
+        "auroc": 0.7988220903184406,
+        "coverage": {
+          "_all": 0.7965517241379311,
+          "Asian|F": {
+            "n": 275,
+            "coverage": 0.7018181818181818
+          },
+          "Asian|M": {
+            "n": 271,
+            "coverage": 0.7343173431734318
+          },
+          "Black|F": {
+            "n": 240,
+            "coverage": 0.85
+          },
+          "Black|M": {
+            "n": 287,
+            "coverage": 0.8222996515679443
+          },
+          "Hispanic|F": {
+            "n": 251,
+            "coverage": 0.7689243027888446
+          },
+          "Hispanic|M": {
+            "n": 350,
+            "coverage": 0.8914285714285715
+          },
+          "Other|F": {
+            "n": 264,
+            "coverage": 0.75
+          },
+          "Other|M": {
+            "n": 246,
+            "coverage": 0.7439024390243902
+          },
+          "White|F": {
+            "n": 299,
+            "coverage": 0.8494983277591973
+          },
+          "White|M": {
+            "n": 317,
+            "coverage": 0.8391167192429022
+          },
+          "__unknown__": {
+            "n": 390,
+            "coverage": 0.7769230769230769
+          }
+        }
+      }
+    }
+  },
+  "minus_local_calibration": {
+    "clean": {
+      "passed": {
+        "n": 1000,
+        "ece": 0.04952071045615578,
+        "brier": 0.13073182138363024,
+        "auroc": 0.8494156147732586,
+        "coverage": {
+          "_all": 0.84,
+          "Asian|F": {
+            "n": 89,
+            "coverage": 0.7078651685393258
+          },
+          "Asian|M": {
+            "n": 89,
+            "coverage": 0.8651685393258427
+          },
+          "Black|F": {
+            "n": 93,
+            "coverage": 0.9032258064516129
+          },
+          "Black|M": {
+            "n": 78,
+            "coverage": 0.8461538461538461
+          },
+          "Hispanic|F": {
+            "n": 95,
+            "coverage": 0.8421052631578947
+          },
+          "Hispanic|M": {
+            "n": 68,
+            "coverage": 0.9264705882352942
+          },
+          "Other|F": {
+            "n": 96,
+            "coverage": 0.84375
+          },
+          "Other|M": {
+            "n": 93,
+            "coverage": 0.8064516129032258
+          },
+          "White|F": {
+            "n": 114,
+            "coverage": 0.7631578947368421
+          },
+          "White|M": {
+            "n": 83,
+            "coverage": 0.7831325301204819
+          },
+          "__unknown__": {
+            "n": 102,
+            "coverage": 0.9705882352941176
+          }
+        }
+      },
+      "stopped": {
+        "n": 75,
+        "ece": 0.19057496630580412,
+        "brier": 0.25789129211268036,
+        "auroc": 0.4632352941176471,
+        "coverage": {
+          "_all": 0.92,
+          "Asian|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Asian|M": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|M": {
+            "n": 12,
+            "coverage": 1.0
+          },
+          "Hispanic|M": {
+            "n": 24,
+            "coverage": 1.0
+          },
+          "White|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "White|M": {
+            "n": 21,
+            "coverage": 1.0
+          },
+          "__unknown__": {
+            "n": "<10",
+            "suppressed": true
+          }
+        }
+      }
+    },
+    "faulty": {
+      "passed": {
+        "n": 2079,
+        "ece": 0.0802252009235297,
+        "brier": 0.20038608055250764,
+        "auroc": 0.7228934240740817,
+        "coverage": {
+          "_all": 0.6964886964886965,
+          "Asian|F": {
+            "n": 177,
+            "coverage": 0.6666666666666666
+          },
+          "Asian|M": {
+            "n": 178,
+            "coverage": 0.6910112359550562
+          },
+          "Black|F": {
+            "n": 183,
+            "coverage": 0.7868852459016393
+          },
+          "Black|M": {
+            "n": 157,
+            "coverage": 0.7133757961783439
+          },
+          "Hispanic|F": {
+            "n": 189,
+            "coverage": 0.671957671957672
+          },
+          "Hispanic|M": {
+            "n": 138,
+            "coverage": 0.7101449275362319
+          },
+          "Other|F": {
+            "n": 192,
+            "coverage": 0.6458333333333334
+          },
+          "Other|M": {
+            "n": 180,
+            "coverage": 0.6277777777777778
+          },
+          "White|F": {
+            "n": 286,
+            "coverage": 0.6993006993006993
+          },
+          "White|M": {
+            "n": 234,
+            "coverage": 0.7008547008547008
+          },
+          "__unknown__": {
+            "n": 165,
+            "coverage": 0.7575757575757576
+          }
+        }
+      },
+      "stopped": {
+        "n": 3109,
+        "ece": 0.061107612685134864,
+        "brier": 0.17913253878383023,
+        "auroc": 0.803148261476156,
+        "coverage": {
+          "_all": 0.7941460276616276,
+          "Asian|F": {
+            "n": 269,
+            "coverage": 0.6951672862453532
+          },
+          "Asian|M": {
+            "n": 268,
+            "coverage": 0.7425373134328358
+          },
+          "Black|F": {
+            "n": 237,
+            "coverage": 0.8481012658227848
+          },
+          "Black|M": {
+            "n": 275,
+            "coverage": 0.8145454545454546
+          },
+          "Hispanic|F": {
+            "n": 251,
+            "coverage": 0.7689243027888446
+          },
+          "Hispanic|M": {
+            "n": 326,
+            "coverage": 0.8834355828220859
+          },
+          "Other|F": {
+            "n": 264,
+            "coverage": 0.75
+          },
+          "Other|M": {
+            "n": 240,
+            "coverage": 0.75
+          },
+          "White|F": {
+            "n": 296,
+            "coverage": 0.847972972972973
+          },
+          "White|M": {
+            "n": 296,
+            "coverage": 0.8277027027027027
+          },
+          "__unknown__": {
+            "n": 387,
+            "coverage": 0.7829457364341085
+          }
+        }
+      }
+    },
+    "all": {
+      "passed": {
+        "n": 3079,
+        "ece": 0.053537894199822064,
+        "brier": 0.177763716418413,
+        "auroc": 0.7672762323211064,
+        "coverage": {
+          "_all": 0.7430984085742124,
+          "Asian|F": {
+            "n": 266,
+            "coverage": 0.6804511278195489
+          },
+          "Asian|M": {
+            "n": 267,
+            "coverage": 0.7490636704119851
+          },
+          "Black|F": {
+            "n": 276,
+            "coverage": 0.8260869565217391
+          },
+          "Black|M": {
+            "n": 235,
+            "coverage": 0.7574468085106383
+          },
+          "Hispanic|F": {
+            "n": 284,
+            "coverage": 0.7288732394366197
+          },
+          "Hispanic|M": {
+            "n": 206,
+            "coverage": 0.7815533980582524
+          },
+          "Other|F": {
+            "n": 288,
+            "coverage": 0.7118055555555556
+          },
+          "Other|M": {
+            "n": 273,
+            "coverage": 0.6886446886446886
+          },
+          "White|F": {
+            "n": 400,
+            "coverage": 0.7175
+          },
+          "White|M": {
+            "n": 317,
+            "coverage": 0.722397476340694
+          },
+          "__unknown__": {
+            "n": 267,
+            "coverage": 0.8389513108614233
+          }
+        }
+      },
+      "stopped": {
+        "n": 3184,
+        "ece": 0.055179159976491386,
+        "brier": 0.18098772298598595,
+        "auroc": 0.7996214730503869,
+        "coverage": {
+          "_all": 0.7971105527638191,
+          "Asian|F": {
+            "n": 275,
+            "coverage": 0.7018181818181818
+          },
+          "Asian|M": {
+            "n": 271,
+            "coverage": 0.7343173431734318
+          },
+          "Black|F": {
+            "n": 240,
+            "coverage": 0.85
+          },
+          "Black|M": {
+            "n": 287,
+            "coverage": 0.8222996515679443
+          },
+          "Hispanic|F": {
+            "n": 251,
+            "coverage": 0.7689243027888446
+          },
+          "Hispanic|M": {
+            "n": 350,
+            "coverage": 0.8914285714285715
+          },
+          "Other|F": {
+            "n": 264,
+            "coverage": 0.75
+          },
+          "Other|M": {
+            "n": 240,
+            "coverage": 0.75
+          },
+          "White|F": {
+            "n": 299,
+            "coverage": 0.8494983277591973
+          },
+          "White|M": {
+            "n": 317,
+            "coverage": 0.8391167192429022
+          },
+          "__unknown__": {
+            "n": 390,
+            "coverage": 0.7769230769230769
+          }
+        }
+      }
+    }
+  },
+  "minus_subgroup_gap": {
+    "clean": {
+      "passed": {
+        "n": 1000,
+        "ece": 0.04952071045615578,
+        "brier": 0.13073182138363024,
+        "auroc": 0.8494156147732586,
+        "coverage": {
+          "_all": 0.84,
+          "Asian|F": {
+            "n": 89,
+            "coverage": 0.7078651685393258
+          },
+          "Asian|M": {
+            "n": 89,
+            "coverage": 0.8651685393258427
+          },
+          "Black|F": {
+            "n": 93,
+            "coverage": 0.9032258064516129
+          },
+          "Black|M": {
+            "n": 78,
+            "coverage": 0.8461538461538461
+          },
+          "Hispanic|F": {
+            "n": 95,
+            "coverage": 0.8421052631578947
+          },
+          "Hispanic|M": {
+            "n": 68,
+            "coverage": 0.9264705882352942
+          },
+          "Other|F": {
+            "n": 96,
+            "coverage": 0.84375
+          },
+          "Other|M": {
+            "n": 93,
+            "coverage": 0.8064516129032258
+          },
+          "White|F": {
+            "n": 114,
+            "coverage": 0.7631578947368421
+          },
+          "White|M": {
+            "n": 83,
+            "coverage": 0.7831325301204819
+          },
+          "__unknown__": {
+            "n": 102,
+            "coverage": 0.9705882352941176
+          }
+        }
+      },
+      "stopped": {
+        "n": 75,
+        "ece": 0.19057496630580412,
+        "brier": 0.25789129211268036,
+        "auroc": 0.4632352941176471,
+        "coverage": {
+          "_all": 0.92,
+          "Asian|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Asian|M": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|M": {
+            "n": 12,
+            "coverage": 1.0
+          },
+          "Hispanic|M": {
+            "n": 24,
+            "coverage": 1.0
+          },
+          "White|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "White|M": {
+            "n": 21,
+            "coverage": 1.0
+          },
+          "__unknown__": {
+            "n": "<10",
+            "suppressed": true
+          }
+        }
+      }
+    },
+    "faulty": {
+      "passed": {
+        "n": 2835,
+        "ece": 0.12233169887905379,
+        "brier": 0.19602110237554243,
+        "auroc": 0.7456004041991804,
+        "coverage": {
+          "_all": 0.7153439153439154,
+          "Asian|F": {
+            "n": 263,
+            "coverage": 0.688212927756654
+          },
+          "Asian|M": {
+            "n": 270,
+            "coverage": 0.7074074074074074
+          },
+          "Black|F": {
+            "n": 276,
+            "coverage": 0.782608695652174
+          },
+          "Black|M": {
+            "n": 223,
+            "coverage": 0.7174887892376681
+          },
+          "Hispanic|F": {
+            "n": 275,
+            "coverage": 0.6981818181818182
+          },
+          "Hispanic|M": {
+            "n": 210,
+            "coverage": 0.7095238095238096
+          },
+          "Other|F": {
+            "n": 288,
+            "coverage": 0.6701388888888888
+          },
+          "Other|M": {
+            "n": 261,
+            "coverage": 0.685823754789272
+          },
+          "White|F": {
+            "n": 286,
+            "coverage": 0.6993006993006993
+          },
+          "White|M": {
+            "n": 234,
+            "coverage": 0.7008547008547008
+          },
+          "__unknown__": {
+            "n": 249,
+            "coverage": 0.8152610441767069
+          }
+        }
+      },
+      "stopped": {
+        "n": 2353,
+        "ece": 0.038285027520482066,
+        "brier": 0.17756306813129144,
+        "auroc": 0.8072137454640843,
+        "coverage": {
+          "_all": 0.8028049298767531,
+          "Asian|F": {
+            "n": 183,
+            "coverage": 0.6775956284153005
+          },
+          "Asian|M": {
+            "n": 176,
+            "coverage": 0.7443181818181818
+          },
+          "Black|F": {
+            "n": 144,
+            "coverage": 0.8958333333333334
+          },
+          "Black|M": {
+            "n": 209,
+            "coverage": 0.8421052631578947
+          },
+          "Hispanic|F": {
+            "n": 165,
+            "coverage": 0.7757575757575758
+          },
+          "Hispanic|M": {
+            "n": 254,
+            "coverage": 0.9330708661417323
+          },
+          "Other|F": {
+            "n": 168,
+            "coverage": 0.7678571428571429
+          },
+          "Other|M": {
+            "n": 159,
+            "coverage": 0.7169811320754716
+          },
+          "White|F": {
+            "n": 296,
+            "coverage": 0.847972972972973
+          },
+          "White|M": {
+            "n": 296,
+            "coverage": 0.8277027027027027
+          },
+          "__unknown__": {
+            "n": 303,
+            "coverage": 0.7425742574257426
+          }
+        }
+      }
+    },
+    "all": {
+      "passed": {
+        "n": 3835,
+        "ece": 0.08992577570882672,
+        "brier": 0.17899651802302297,
+        "auroc": 0.7713500967117989,
+        "coverage": {
+          "_all": 0.7478487614080834,
+          "Asian|F": {
+            "n": 352,
+            "coverage": 0.6931818181818182
+          },
+          "Asian|M": {
+            "n": 359,
+            "coverage": 0.7465181058495822
+          },
+          "Black|F": {
+            "n": 369,
+            "coverage": 0.8130081300813008
+          },
+          "Black|M": {
+            "n": 301,
+            "coverage": 0.7508305647840532
+          },
+          "Hispanic|F": {
+            "n": 370,
+            "coverage": 0.7351351351351352
+          },
+          "Hispanic|M": {
+            "n": 278,
+            "coverage": 0.762589928057554
+          },
+          "Other|F": {
+            "n": 384,
+            "coverage": 0.7135416666666666
+          },
+          "Other|M": {
+            "n": 354,
+            "coverage": 0.7175141242937854
+          },
+          "White|F": {
+            "n": 400,
+            "coverage": 0.7175
+          },
+          "White|M": {
+            "n": 317,
+            "coverage": 0.722397476340694
+          },
+          "__unknown__": {
+            "n": 351,
+            "coverage": 0.8603988603988604
+          }
+        }
+      },
+      "stopped": {
+        "n": 2428,
+        "ece": 0.036458512554065646,
+        "brier": 0.18004437653269348,
+        "auroc": 0.8026838324898568,
+        "coverage": {
+          "_all": 0.8064250411861614,
+          "Asian|F": {
+            "n": 189,
+            "coverage": 0.6878306878306878
+          },
+          "Asian|M": {
+            "n": 179,
+            "coverage": 0.7318435754189944
+          },
+          "Black|F": {
+            "n": 147,
+            "coverage": 0.8979591836734694
+          },
+          "Black|M": {
+            "n": 221,
+            "coverage": 0.8506787330316742
+          },
+          "Hispanic|F": {
+            "n": 165,
+            "coverage": 0.7757575757575758
+          },
+          "Hispanic|M": {
+            "n": 278,
+            "coverage": 0.9388489208633094
+          },
+          "Other|F": {
+            "n": 168,
+            "coverage": 0.7678571428571429
+          },
+          "Other|M": {
+            "n": 159,
+            "coverage": 0.7169811320754716
+          },
+          "White|F": {
+            "n": 299,
+            "coverage": 0.8494983277591973
+          },
+          "White|M": {
+            "n": 317,
+            "coverage": 0.8391167192429022
+          },
+          "__unknown__": {
+            "n": 306,
+            "coverage": 0.7352941176470589
+          }
+        }
+      }
+    }
+  },
+  "minus_conformal": {
+    "clean": {
+      "passed": {
+        "n": 1072,
+        "ece": 0.05249636565717956,
+        "brier": 0.13944458694979614,
+        "auroc": 0.8542647981267849,
+        "coverage": {
+          "_all": 0.8451492537313433,
+          "Asian|F": {
+            "n": 95,
+            "coverage": 0.7263157894736842
+          },
+          "Asian|M": {
+            "n": 92,
+            "coverage": 0.8369565217391305
+          },
+          "Black|F": {
+            "n": 96,
+            "coverage": 0.90625
+          },
+          "Black|M": {
+            "n": 87,
+            "coverage": 0.8620689655172413
+          },
+          "Hispanic|F": {
+            "n": 95,
+            "coverage": 0.8421052631578947
+          },
+          "Hispanic|M": {
+            "n": 92,
+            "coverage": 0.9456521739130435
+          },
+          "Other|F": {
+            "n": 96,
+            "coverage": 0.84375
+          },
+          "Other|M": {
+            "n": 93,
+            "coverage": 0.8064516129032258
+          },
+          "White|F": {
+            "n": 117,
+            "coverage": 0.7692307692307693
+          },
+          "White|M": {
+            "n": 104,
+            "coverage": 0.8269230769230769
+          },
+          "__unknown__": {
+            "n": 105,
+            "coverage": 0.9428571428571428
+          }
+        }
+      },
+      "stopped": {
+        "n": 3,
+        "ece": 0.4431219102007118,
+        "brier": 0.19635702729992768,
+        "auroc": NaN,
+        "coverage": {
+          "_all": 1.0,
+          "Black|M": {
+            "n": "<10",
+            "suppressed": true
+          }
+        }
+      }
+    },
+    "faulty": {
+      "passed": {
+        "n": 2365,
+        "ece": 0.07938112820427266,
+        "brier": 0.20679410204303342,
+        "auroc": 0.7094189590342371,
+        "coverage": {
+          "_all": 0.7099365750528541,
+          "Asian|F": {
+            "n": 190,
+            "coverage": 0.6894736842105263
+          },
+          "Asian|M": {
+            "n": 184,
+            "coverage": 0.6684782608695652
+          },
+          "Black|F": {
+            "n": 192,
+            "coverage": 0.796875
+          },
+          "Black|M": {
+            "n": 180,
+            "coverage": 0.75
+          },
+          "Hispanic|F": {
+            "n": 190,
+            "coverage": 0.6684210526315789
+          },
+          "Hispanic|M": {
+            "n": 184,
+            "coverage": 0.782608695652174
+          },
+          "Other|F": {
+            "n": 192,
+            "coverage": 0.6458333333333334
+          },
+          "Other|M": {
+            "n": 180,
+            "coverage": 0.6111111111111112
+          },
+          "White|F": {
+            "n": 351,
+            "coverage": 0.7549857549857549
+          },
+          "White|M": {
+            "n": 312,
+            "coverage": 0.7756410256410257
+          },
+          "__unknown__": {
+            "n": 210,
+            "coverage": 0.5952380952380952
+          }
+        }
+      },
+      "stopped": {
+        "n": 2823,
+        "ece": 0.06488189594229372,
+        "brier": 0.17161093631449434,
+        "auroc": 0.8184830735527797,
+        "coverage": {
+          "_all": 0.7927736450584485,
+          "Asian|F": {
+            "n": 256,
+            "coverage": 0.6796875
+          },
+          "Asian|M": {
+            "n": 262,
+            "coverage": 0.7595419847328244
+          },
+          "Black|F": {
+            "n": 228,
+            "coverage": 0.8421052631578947
+          },
+          "Black|M": {
+            "n": 252,
+            "coverage": 0.7976190476190477
+          },
+          "Hispanic|F": {
+            "n": 250,
+            "coverage": 0.772
+          },
+          "Hispanic|M": {
+            "n": 280,
+            "coverage": 0.8642857142857143
+          },
+          "Other|F": {
+            "n": 264,
+            "coverage": 0.75
+          },
+          "Other|M": {
+            "n": 240,
+            "coverage": 0.7625
+          },
+          "White|F": {
+            "n": 231,
+            "coverage": 0.8051948051948052
+          },
+          "White|M": {
+            "n": 218,
+            "coverage": 0.7660550458715596
+          },
+          "__unknown__": {
+            "n": 342,
+            "coverage": 0.8859649122807017
+          }
+        }
+      }
+    },
+    "all": {
+      "passed": {
+        "n": 3437,
+        "ece": 0.049510870969101325,
+        "brier": 0.18578779416408364,
+        "auroc": 0.7575471918090545,
+        "coverage": {
+          "_all": 0.7521093977305789,
+          "Asian|F": {
+            "n": 285,
+            "coverage": 0.7017543859649122
+          },
+          "Asian|M": {
+            "n": 276,
+            "coverage": 0.7246376811594203
+          },
+          "Black|F": {
+            "n": 288,
+            "coverage": 0.8333333333333334
+          },
+          "Black|M": {
+            "n": 267,
+            "coverage": 0.7865168539325843
+          },
+          "Hispanic|F": {
+            "n": 285,
+            "coverage": 0.7263157894736842
+          },
+          "Hispanic|M": {
+            "n": 276,
+            "coverage": 0.8369565217391305
+          },
+          "Other|F": {
+            "n": 288,
+            "coverage": 0.7118055555555556
+          },
+          "Other|M": {
+            "n": 273,
+            "coverage": 0.6776556776556777
+          },
+          "White|F": {
+            "n": 468,
+            "coverage": 0.7585470085470085
+          },
+          "White|M": {
+            "n": 416,
+            "coverage": 0.7884615384615384
+          },
+          "__unknown__": {
+            "n": 315,
+            "coverage": 0.7111111111111111
+          }
+        }
+      },
+      "stopped": {
+        "n": 2826,
+        "ece": 0.06528342461985041,
+        "brier": 0.17163720605014765,
+        "auroc": 0.818382286136367,
+        "coverage": {
+          "_all": 0.7929936305732485,
+          "Asian|F": {
+            "n": 256,
+            "coverage": 0.6796875
+          },
+          "Asian|M": {
+            "n": 262,
+            "coverage": 0.7595419847328244
+          },
+          "Black|F": {
+            "n": 228,
+            "coverage": 0.8421052631578947
+          },
+          "Black|M": {
+            "n": 255,
+            "coverage": 0.8
+          },
+          "Hispanic|F": {
+            "n": 250,
+            "coverage": 0.772
+          },
+          "Hispanic|M": {
+            "n": 280,
+            "coverage": 0.8642857142857143
+          },
+          "Other|F": {
+            "n": 264,
+            "coverage": 0.75
+          },
+          "Other|M": {
+            "n": 240,
+            "coverage": 0.7625
+          },
+          "White|F": {
+            "n": 231,
+            "coverage": 0.8051948051948052
+          },
+          "White|M": {
+            "n": 218,
+            "coverage": 0.7660550458715596
+          },
+          "__unknown__": {
+            "n": 342,
+            "coverage": 0.8859649122807017
+          }
+        }
+      }
+    }
+  },
+  "minus_drift": {
+    "clean": {
+      "passed": {
+        "n": 1000,
+        "ece": 0.04952071045615578,
+        "brier": 0.13073182138363024,
+        "auroc": 0.8494156147732586,
+        "coverage": {
+          "_all": 0.84,
+          "Asian|F": {
+            "n": 89,
+            "coverage": 0.7078651685393258
+          },
+          "Asian|M": {
+            "n": 89,
+            "coverage": 0.8651685393258427
+          },
+          "Black|F": {
+            "n": 93,
+            "coverage": 0.9032258064516129
+          },
+          "Black|M": {
+            "n": 78,
+            "coverage": 0.8461538461538461
+          },
+          "Hispanic|F": {
+            "n": 95,
+            "coverage": 0.8421052631578947
+          },
+          "Hispanic|M": {
+            "n": 68,
+            "coverage": 0.9264705882352942
+          },
+          "Other|F": {
+            "n": 96,
+            "coverage": 0.84375
+          },
+          "Other|M": {
+            "n": 93,
+            "coverage": 0.8064516129032258
+          },
+          "White|F": {
+            "n": 114,
+            "coverage": 0.7631578947368421
+          },
+          "White|M": {
+            "n": 83,
+            "coverage": 0.7831325301204819
+          },
+          "__unknown__": {
+            "n": 102,
+            "coverage": 0.9705882352941176
+          }
+        }
+      },
+      "stopped": {
+        "n": 75,
+        "ece": 0.19057496630580412,
+        "brier": 0.25789129211268036,
+        "auroc": 0.4632352941176471,
+        "coverage": {
+          "_all": 0.92,
+          "Asian|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Asian|M": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|M": {
+            "n": 12,
+            "coverage": 1.0
+          },
+          "Hispanic|M": {
+            "n": 24,
+            "coverage": 1.0
+          },
+          "White|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "White|M": {
+            "n": 21,
+            "coverage": 1.0
+          },
+          "__unknown__": {
+            "n": "<10",
+            "suppressed": true
+          }
+        }
+      }
+    },
+    "faulty": {
+      "passed": {
+        "n": 3082,
+        "ece": 0.048956260867143324,
+        "brier": 0.1793438435143411,
+        "auroc": 0.7652373107713031,
+        "coverage": {
+          "_all": 0.736534717715769,
+          "Asian|F": {
+            "n": 269,
+            "coverage": 0.6728624535315985
+          },
+          "Asian|M": {
+            "n": 267,
+            "coverage": 0.7490636704119851
+          },
+          "Black|F": {
+            "n": 276,
+            "coverage": 0.8260869565217391
+          },
+          "Black|M": {
+            "n": 235,
+            "coverage": 0.7574468085106383
+          },
+          "Hispanic|F": {
+            "n": 284,
+            "coverage": 0.7288732394366197
+          },
+          "Hispanic|M": {
+            "n": 212,
+            "coverage": 0.7594339622641509
+          },
+          "Other|F": {
+            "n": 288,
+            "coverage": 0.6909722222222222
+          },
+          "Other|M": {
+            "n": 267,
+            "coverage": 0.6928838951310862
+          },
+          "White|F": {
+            "n": 391,
+            "coverage": 0.710997442455243
+          },
+          "White|M": {
+            "n": 326,
+            "coverage": 0.7024539877300614
+          },
+          "__unknown__": {
+            "n": 267,
+            "coverage": 0.8389513108614233
+          }
+        }
+      },
+      "stopped": {
+        "n": 2106,
+        "ece": 0.08437402118907583,
+        "brier": 0.19980436791851489,
+        "auroc": 0.7733589511754069,
+        "coverage": {
+          "_all": 0.782051282051282,
+          "Asian|F": {
+            "n": 177,
+            "coverage": 0.7005649717514124
+          },
+          "Asian|M": {
+            "n": 179,
+            "coverage": 0.6815642458100558
+          },
+          "Black|F": {
+            "n": 144,
+            "coverage": 0.8125
+          },
+          "Black|M": {
+            "n": 197,
+            "coverage": 0.8020304568527918
+          },
+          "Hispanic|F": {
+            "n": 156,
+            "coverage": 0.7243589743589743
+          },
+          "Hispanic|M": {
+            "n": 252,
+            "coverage": 0.8928571428571429
+          },
+          "Other|F": {
+            "n": 168,
+            "coverage": 0.7321428571428571
+          },
+          "Other|M": {
+            "n": 153,
+            "coverage": 0.7058823529411765
+          },
+          "White|F": {
+            "n": 191,
+            "coverage": 0.9057591623036649
+          },
+          "White|M": {
+            "n": 204,
+            "coverage": 0.8823529411764706
+          },
+          "__unknown__": {
+            "n": 285,
+            "coverage": 0.7157894736842105
+          }
+        }
+      }
+    },
+    "all": {
+      "passed": {
+        "n": 4082,
+        "ece": 0.03683639472731731,
+        "brier": 0.16743496989094303,
+        "auroc": 0.7875670609988822,
+        "coverage": {
+          "_all": 0.7618814306712396,
+          "Asian|F": {
+            "n": 358,
+            "coverage": 0.6815642458100558
+          },
+          "Asian|M": {
+            "n": 356,
+            "coverage": 0.7780898876404494
+          },
+          "Black|F": {
+            "n": 369,
+            "coverage": 0.8455284552845529
+          },
+          "Black|M": {
+            "n": 313,
+            "coverage": 0.7795527156549521
+          },
+          "Hispanic|F": {
+            "n": 379,
+            "coverage": 0.7572559366754618
+          },
+          "Hispanic|M": {
+            "n": 280,
+            "coverage": 0.8
+          },
+          "Other|F": {
+            "n": 384,
+            "coverage": 0.7291666666666666
+          },
+          "Other|M": {
+            "n": 360,
+            "coverage": 0.7222222222222222
+          },
+          "White|F": {
+            "n": 505,
+            "coverage": 0.7227722772277227
+          },
+          "White|M": {
+            "n": 409,
+            "coverage": 0.7188264058679706
+          },
+          "__unknown__": {
+            "n": 369,
+            "coverage": 0.8753387533875339
+          }
+        }
+      },
+      "stopped": {
+        "n": 2181,
+        "ece": 0.0749191041500496,
+        "brier": 0.20180185499534314,
+        "auroc": 0.7655178801478575,
+        "coverage": {
+          "_all": 0.7867950481430537,
+          "Asian|F": {
+            "n": 183,
+            "coverage": 0.7103825136612022
+          },
+          "Asian|M": {
+            "n": 182,
+            "coverage": 0.6703296703296703
+          },
+          "Black|F": {
+            "n": 147,
+            "coverage": 0.8163265306122449
+          },
+          "Black|M": {
+            "n": 209,
+            "coverage": 0.8133971291866029
+          },
+          "Hispanic|F": {
+            "n": 156,
+            "coverage": 0.7243589743589743
+          },
+          "Hispanic|M": {
+            "n": 276,
+            "coverage": 0.9021739130434783
+          },
+          "Other|F": {
+            "n": 168,
+            "coverage": 0.7321428571428571
+          },
+          "Other|M": {
+            "n": 153,
+            "coverage": 0.7058823529411765
+          },
+          "White|F": {
+            "n": 194,
+            "coverage": 0.9072164948453608
+          },
+          "White|M": {
+            "n": 225,
+            "coverage": 0.8933333333333333
+          },
+          "__unknown__": {
+            "n": 288,
+            "coverage": 0.7083333333333334
+          }
+        }
+      }
+    }
+  },
+  "minus_timing": {
+    "clean": {
+      "passed": {
+        "n": 1000,
+        "ece": 0.04952071045615578,
+        "brier": 0.13073182138363024,
+        "auroc": 0.8494156147732586,
+        "coverage": {
+          "_all": 0.84,
+          "Asian|F": {
+            "n": 89,
+            "coverage": 0.7078651685393258
+          },
+          "Asian|M": {
+            "n": 89,
+            "coverage": 0.8651685393258427
+          },
+          "Black|F": {
+            "n": 93,
+            "coverage": 0.9032258064516129
+          },
+          "Black|M": {
+            "n": 78,
+            "coverage": 0.8461538461538461
+          },
+          "Hispanic|F": {
+            "n": 95,
+            "coverage": 0.8421052631578947
+          },
+          "Hispanic|M": {
+            "n": 68,
+            "coverage": 0.9264705882352942
+          },
+          "Other|F": {
+            "n": 96,
+            "coverage": 0.84375
+          },
+          "Other|M": {
+            "n": 93,
+            "coverage": 0.8064516129032258
+          },
+          "White|F": {
+            "n": 114,
+            "coverage": 0.7631578947368421
+          },
+          "White|M": {
+            "n": 83,
+            "coverage": 0.7831325301204819
+          },
+          "__unknown__": {
+            "n": 102,
+            "coverage": 0.9705882352941176
+          }
+        }
+      },
+      "stopped": {
+        "n": 75,
+        "ece": 0.19057496630580412,
+        "brier": 0.25789129211268036,
+        "auroc": 0.4632352941176471,
+        "coverage": {
+          "_all": 0.92,
+          "Asian|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Asian|M": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|M": {
+            "n": 12,
+            "coverage": 1.0
+          },
+          "Hispanic|M": {
+            "n": 24,
+            "coverage": 1.0
+          },
+          "White|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "White|M": {
+            "n": 21,
+            "coverage": 1.0
+          },
+          "__unknown__": {
+            "n": "<10",
+            "suppressed": true
+          }
+        }
+      }
+    },
+    "faulty": {
+      "passed": {
+        "n": 2442,
+        "ece": 0.062082835023275364,
+        "brier": 0.19566238402469038,
+        "auroc": 0.7498728789350397,
+        "coverage": {
+          "_all": 0.7096642096642096,
+          "Asian|F": {
+            "n": 204,
+            "coverage": 0.6372549019607843
+          },
+          "Asian|M": {
+            "n": 214,
+            "coverage": 0.7009345794392523
+          },
+          "Black|F": {
+            "n": 198,
+            "coverage": 0.7878787878787878
+          },
+          "Black|M": {
+            "n": 181,
+            "coverage": 0.7016574585635359
+          },
+          "Hispanic|F": {
+            "n": 219,
+            "coverage": 0.6894977168949772
+          },
+          "Hispanic|M": {
+            "n": 162,
+            "coverage": 0.7345679012345679
+          },
+          "Other|F": {
+            "n": 228,
+            "coverage": 0.6622807017543859
+          },
+          "Other|M": {
+            "n": 198,
+            "coverage": 0.6464646464646465
+          },
+          "White|F": {
+            "n": 340,
+            "coverage": 0.7205882352941176
+          },
+          "White|M": {
+            "n": 270,
+            "coverage": 0.6962962962962963
+          },
+          "__unknown__": {
+            "n": 228,
+            "coverage": 0.8245614035087719
+          }
+        }
+      },
+      "stopped": {
+        "n": 2746,
+        "ece": 0.06751839557452999,
+        "brier": 0.18052373734861532,
+        "auroc": 0.7941104404668985,
+        "coverage": {
+          "_all": 0.7953386744355426,
+          "Asian|F": {
+            "n": 242,
+            "coverage": 0.7231404958677686
+          },
+          "Asian|M": {
+            "n": 232,
+            "coverage": 0.7413793103448276
+          },
+          "Black|F": {
+            "n": 222,
+            "coverage": 0.8513513513513513
+          },
+          "Black|M": {
+            "n": 251,
+            "coverage": 0.8326693227091634
+          },
+          "Hispanic|F": {
+            "n": 221,
+            "coverage": 0.7647058823529411
+          },
+          "Hispanic|M": {
+            "n": 302,
+            "coverage": 0.8841059602649006
+          },
+          "Other|F": {
+            "n": 228,
+            "coverage": 0.75
+          },
+          "Other|M": {
+            "n": 222,
+            "coverage": 0.7432432432432432
+          },
+          "White|F": {
+            "n": 242,
+            "coverage": 0.8512396694214877
+          },
+          "White|M": {
+            "n": 260,
+            "coverage": 0.85
+          },
+          "__unknown__": {
+            "n": 324,
+            "coverage": 0.7407407407407407
+          }
+        }
+      }
+    },
+    "all": {
+      "passed": {
+        "n": 3442,
+        "ece": 0.04348090257061954,
+        "brier": 0.17679818802205816,
+        "auroc": 0.7828786809567915,
+        "coverage": {
+          "_all": 0.7475305055200465,
+          "Asian|F": {
+            "n": 293,
+            "coverage": 0.658703071672355
+          },
+          "Asian|M": {
+            "n": 303,
+            "coverage": 0.7491749174917491
+          },
+          "Black|F": {
+            "n": 291,
+            "coverage": 0.8247422680412371
+          },
+          "Black|M": {
+            "n": 259,
+            "coverage": 0.7451737451737451
+          },
+          "Hispanic|F": {
+            "n": 314,
+            "coverage": 0.7356687898089171
+          },
+          "Hispanic|M": {
+            "n": 230,
+            "coverage": 0.7913043478260869
+          },
+          "Other|F": {
+            "n": 324,
+            "coverage": 0.7160493827160493
+          },
+          "Other|M": {
+            "n": 291,
+            "coverage": 0.697594501718213
+          },
+          "White|F": {
+            "n": 454,
+            "coverage": 0.7312775330396476
+          },
+          "White|M": {
+            "n": 353,
+            "coverage": 0.71671388101983
+          },
+          "__unknown__": {
+            "n": 330,
+            "coverage": 0.8696969696969697
+          }
+        }
+      },
+      "stopped": {
+        "n": 2821,
+        "ece": 0.06065664366349661,
+        "brier": 0.18258065567803924,
+        "auroc": 0.7903416748529856,
+        "coverage": {
+          "_all": 0.7986529599432826,
+          "Asian|F": {
+            "n": 248,
+            "coverage": 0.7298387096774194
+          },
+          "Asian|M": {
+            "n": 235,
+            "coverage": 0.7319148936170212
+          },
+          "Black|F": {
+            "n": 225,
+            "coverage": 0.8533333333333334
+          },
+          "Black|M": {
+            "n": 263,
+            "coverage": 0.8403041825095057
+          },
+          "Hispanic|F": {
+            "n": 221,
+            "coverage": 0.7647058823529411
+          },
+          "Hispanic|M": {
+            "n": 326,
+            "coverage": 0.8926380368098159
+          },
+          "Other|F": {
+            "n": 228,
+            "coverage": 0.75
+          },
+          "Other|M": {
+            "n": 222,
+            "coverage": 0.7432432432432432
+          },
+          "White|F": {
+            "n": 245,
+            "coverage": 0.8530612244897959
+          },
+          "White|M": {
+            "n": 281,
+            "coverage": 0.8612099644128114
+          },
+          "__unknown__": {
+            "n": 327,
+            "coverage": 0.7339449541284404
+          }
+        }
+      }
+    }
+  },
+  "minus_argcheck": {
+    "clean": {
+      "passed": {
+        "n": 1000,
+        "ece": 0.04952071045615578,
+        "brier": 0.13073182138363024,
+        "auroc": 0.8494156147732586,
+        "coverage": {
+          "_all": 0.84,
+          "Asian|F": {
+            "n": 89,
+            "coverage": 0.7078651685393258
+          },
+          "Asian|M": {
+            "n": 89,
+            "coverage": 0.8651685393258427
+          },
+          "Black|F": {
+            "n": 93,
+            "coverage": 0.9032258064516129
+          },
+          "Black|M": {
+            "n": 78,
+            "coverage": 0.8461538461538461
+          },
+          "Hispanic|F": {
+            "n": 95,
+            "coverage": 0.8421052631578947
+          },
+          "Hispanic|M": {
+            "n": 68,
+            "coverage": 0.9264705882352942
+          },
+          "Other|F": {
+            "n": 96,
+            "coverage": 0.84375
+          },
+          "Other|M": {
+            "n": 93,
+            "coverage": 0.8064516129032258
+          },
+          "White|F": {
+            "n": 114,
+            "coverage": 0.7631578947368421
+          },
+          "White|M": {
+            "n": 83,
+            "coverage": 0.7831325301204819
+          },
+          "__unknown__": {
+            "n": 102,
+            "coverage": 0.9705882352941176
+          }
+        }
+      },
+      "stopped": {
+        "n": 75,
+        "ece": 0.19057496630580412,
+        "brier": 0.25789129211268036,
+        "auroc": 0.4632352941176471,
+        "coverage": {
+          "_all": 0.92,
+          "Asian|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Asian|M": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "Black|M": {
+            "n": 12,
+            "coverage": 1.0
+          },
+          "Hispanic|M": {
+            "n": 24,
+            "coverage": 1.0
+          },
+          "White|F": {
+            "n": "<10",
+            "suppressed": true
+          },
+          "White|M": {
+            "n": 21,
+            "coverage": 1.0
+          },
+          "__unknown__": {
+            "n": "<10",
+            "suppressed": true
+          }
+        }
+      }
+    },
+    "faulty": {
+      "passed": {
+        "n": 2442,
+        "ece": 0.062082835023275364,
+        "brier": 0.19566238402469038,
+        "auroc": 0.7498728789350397,
+        "coverage": {
+          "_all": 0.7096642096642096,
+          "Asian|F": {
+            "n": 204,
+            "coverage": 0.6372549019607843
+          },
+          "Asian|M": {
+            "n": 214,
+            "coverage": 0.7009345794392523
+          },
+          "Black|F": {
+            "n": 198,
+            "coverage": 0.7878787878787878
+          },
+          "Black|M": {
+            "n": 181,
+            "coverage": 0.7016574585635359
+          },
+          "Hispanic|F": {
+            "n": 219,
+            "coverage": 0.6894977168949772
+          },
+          "Hispanic|M": {
+            "n": 162,
+            "coverage": 0.7345679012345679
+          },
+          "Other|F": {
+            "n": 228,
+            "coverage": 0.6622807017543859
+          },
+          "Other|M": {
+            "n": 198,
+            "coverage": 0.6464646464646465
+          },
+          "White|F": {
+            "n": 340,
+            "coverage": 0.7205882352941176
+          },
+          "White|M": {
+            "n": 270,
+            "coverage": 0.6962962962962963
+          },
+          "__unknown__": {
+            "n": 228,
+            "coverage": 0.8245614035087719
+          }
+        }
+      },
+      "stopped": {
+        "n": 2746,
+        "ece": 0.06751839557452999,
+        "brier": 0.18052373734861532,
+        "auroc": 0.7941104404668985,
+        "coverage": {
+          "_all": 0.7953386744355426,
+          "Asian|F": {
+            "n": 242,
+            "coverage": 0.7231404958677686
+          },
+          "Asian|M": {
+            "n": 232,
+            "coverage": 0.7413793103448276
+          },
+          "Black|F": {
+            "n": 222,
+            "coverage": 0.8513513513513513
+          },
+          "Black|M": {
+            "n": 251,
+            "coverage": 0.8326693227091634
+          },
+          "Hispanic|F": {
+            "n": 221,
+            "coverage": 0.7647058823529411
+          },
+          "Hispanic|M": {
+            "n": 302,
+            "coverage": 0.8841059602649006
+          },
+          "Other|F": {
+            "n": 228,
+            "coverage": 0.75
+          },
+          "Other|M": {
+            "n": 222,
+            "coverage": 0.7432432432432432
+          },
+          "White|F": {
+            "n": 242,
+            "coverage": 0.8512396694214877
+          },
+          "White|M": {
+            "n": 260,
+            "coverage": 0.85
+          },
+          "__unknown__": {
+            "n": 324,
+            "coverage": 0.7407407407407407
+          }
+        }
+      }
+    },
+    "all": {
+      "passed": {
+        "n": 3442,
+        "ece": 0.04348090257061954,
+        "brier": 0.17679818802205816,
+        "auroc": 0.7828786809567915,
+        "coverage": {
+          "_all": 0.7475305055200465,
+          "Asian|F": {
+            "n": 293,
+            "coverage": 0.658703071672355
+          },
+          "Asian|M": {
+            "n": 303,
+            "coverage": 0.7491749174917491
+          },
+          "Black|F": {
+            "n": 291,
+            "coverage": 0.8247422680412371
+          },
+          "Black|M": {
+            "n": 259,
+            "coverage": 0.7451737451737451
+          },
+          "Hispanic|F": {
+            "n": 314,
+            "coverage": 0.7356687898089171
+          },
+          "Hispanic|M": {
+            "n": 230,
+            "coverage": 0.7913043478260869
+          },
+          "Other|F": {
+            "n": 324,
+            "coverage": 0.7160493827160493
+          },
+          "Other|M": {
+            "n": 291,
+            "coverage": 0.697594501718213
+          },
+          "White|F": {
+            "n": 454,
+            "coverage": 0.7312775330396476
+          },
+          "White|M": {
+            "n": 353,
+            "coverage": 0.71671388101983
+          },
+          "__unknown__": {
+            "n": 330,
+            "coverage": 0.8696969696969697
+          }
+        }
+      },
+      "stopped": {
+        "n": 2821,
+        "ece": 0.06065664366349661,
+        "brier": 0.18258065567803924,
+        "auroc": 0.7903416748529856,
+        "coverage": {
+          "_all": 0.7986529599432826,
+          "Asian|F": {
+            "n": 248,
+            "coverage": 0.7298387096774194
+          },
+          "Asian|M": {
+            "n": 235,
+            "coverage": 0.7319148936170212
+          },
+          "Black|F": {
+            "n": 225,
+            "coverage": 0.8533333333333334
+          },
+          "Black|M": {
+            "n": 263,
+            "coverage": 0.8403041825095057
+          },
+          "Hispanic|F": {
+            "n": 221,
+            "coverage": 0.7647058823529411
+          },
+          "Hispanic|M": {
+            "n": 326,
+            "coverage": 0.8926380368098159
+          },
+          "Other|F": {
+            "n": 228,
+            "coverage": 0.75
+          },
+          "Other|M": {
+            "n": 222,
+            "coverage": 0.7432432432432432
+          },
+          "White|F": {
+            "n": 245,
+            "coverage": 0.8530612244897959
+          },
+          "White|M": {
+            "n": 281,
+            "coverage": 0.8612099644128114
+          },
+          "__unknown__": {
+            "n": 327,
+            "coverage": 0.7339449541284404
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "step": "10_figures",
+  "setting": "ed",
+  "source": "full",
+  "smoke": false,
+  "args": {
+    "setting": "ed",
+    "source": "full",
+    "smoke": false,
+    "seed": 42,
+    "model": "random_forest",
+    "run": "qwen7b-ed-full-reduced-v1"
+  },
+  "outputs": {
+    "made": [
+      "fig_interception_outcomes",
+      "fig_tradeoff",
+      "fig_ablation",
+      "fig_edge_latency",
+      "fig_m1_scaling",
+      "fig_subgroup_coverage",
+      "fig_live_completion",
+      "fig_passed_quality"
+    ],
+    "skipped": {}
+  },
+  "seconds": 4.53,
+  "finished": "2026-10-18 22:40:58",
+  "versions": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pyarrow": "26.0.0",
+    "git_commit": "b21326725e5e78f5cc0f7a7de667a62b9c40fd8b",
+    "git_dirty": false
+  }
+}

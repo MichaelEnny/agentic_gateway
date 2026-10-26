@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Step-level reliability gateway for agentic clinical decision support (Electronics SI paper)."
 readme = "README.md"
 requires-python = ">=3.11"
-license = { text = "Apache-2.0" }
+license = { text = "MIT" }
 authors = [{ name = "Michael O. Eniolade" }]
 dependencies = [
     "numpy",

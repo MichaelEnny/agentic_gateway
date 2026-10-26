@@ -1,0 +1,30 @@
+{
+  "step": "01_prepare_data",
+  "setting": "ed",
+  "source": "full",
+  "smoke": false,
+  "args": {
+    "setting": "ed",
+    "source": "full",
+    "smoke": false,
+    "seed": 42
+  },
+  "outputs": {
+    "rows": 413315
+  },
+  "seconds": 20.49,
+  "finished": "2026-10-15 15:58:23",
+  "versions": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pyarrow": "26.0.0",
+    "git_commit": "260c5ed2ddcd794310c0ebb5ae78a93dc7458712",
+    "git_dirty": true
+  }
+}

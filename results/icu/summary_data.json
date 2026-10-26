@@ -1,0 +1,146 @@
+{
+  "label": "MIMIC-IV-ED / eICU-CRD, credentialed",
+  "question": "At 24 hours after ICU admission, will this patient die before hospital discharge?",
+  "group_columns": [
+    "ethnicity_group",
+    "gender"
+  ],
+  "flow": {
+    "unit_stays": 200859,
+    "patients": 139367,
+    "first_stay_per_patient": 139367,
+    "after_known_outcome": 138116,
+    "after_adults_only": 137608,
+    "after_24h_in_unit": 95579,
+    "final": 95579,
+    "died": 8887,
+    "hospitals": 207,
+    "missing_apache": 4746,
+    "missing_vitals": 1441
+  },
+  "note": "laboratory values not used",
+  "parts": {
+    "fit": {
+      "cases": 34393,
+      "patients": 34393,
+      "events": 2952,
+      "event_rate": 0.0858,
+      "periods": [
+        "2014",
+        "2015"
+      ],
+      "sites": 185
+    },
+    "reference": {
+      "cases": 8598,
+      "patients": 8598,
+      "events": 742,
+      "event_rate": 0.0863,
+      "periods": [
+        "2014",
+        "2015"
+      ],
+      "sites": 181
+    },
+    "conformal": {
+      "cases": 5732,
+      "patients": 5732,
+      "events": 474,
+      "event_rate": 0.0827,
+      "periods": [
+        "2014",
+        "2015"
+      ],
+      "sites": 175
+    },
+    "tune": {
+      "cases": 8598,
+      "patients": 8598,
+      "events": 723,
+      "event_rate": 0.0841,
+      "periods": [
+        "2014",
+        "2015"
+      ],
+      "sites": 181
+    },
+    "test": {
+      "cases": 38258,
+      "patients": 38258,
+      "events": 3996,
+      "event_rate": 0.1044,
+      "periods": [
+        "2014",
+        "2015"
+      ],
+      "sites": 21
+    }
+  },
+  "group_sizes_by_part": {
+    "conformal": {
+      "Asian|Female": 47,
+      "Asian|Male": 64,
+      "Black|Female": 253,
+      "Black|Male": 279,
+      "Hispanic|Female": 116,
+      "Hispanic|Male": 135,
+      "Other|Female": 18,
+      "Other|Male": 21,
+      "White|Female": 2030,
+      "White|Male": 2372,
+      "__unknown__": 397
+    },
+    "fit": {
+      "Asian|Female": 360,
+      "Asian|Male": 399,
+      "Black|Female": 1608,
+      "Black|Male": 1619,
+      "Hispanic|Female": 646,
+      "Hispanic|Male": 737,
+      "Other|Female": 89,
+      "Other|Male": 123,
+      "White|Female": 12150,
+      "White|Male": 14210,
+      "__unknown__": 2452
+    },
+    "reference": {
+      "Asian|Female": 96,
+      "Asian|Male": 100,
+      "Black|Female": 392,
+      "Black|Male": 413,
+      "Hispanic|Female": 167,
+      "Hispanic|Male": 203,
+      "Other|Female": 27,
+      "Other|Male": 23,
+      "White|Female": 2995,
+      "White|Male": 3549,
+      "__unknown__": 633
+    },
+    "test": {
+      "Asian|Female": 195,
+      "Asian|Male": 228,
+      "Black|Female": 2362,
+      "Black|Male": 2688,
+      "Hispanic|Female": 507,
+      "Hispanic|Male": 641,
+      "Other|Female": 117,
+      "Other|Male": 104,
+      "White|Female": 13478,
+      "White|Male": 16418,
+      "__unknown__": 1520
+    },
+    "tune": {
+      "Asian|Female": 65,
+      "Asian|Male": 86,
+      "Black|Female": 396,
+      "Black|Male": 392,
+      "Hispanic|Female": 186,
+      "Hispanic|Male": 193,
+      "Other|Female": 25,
+      "Other|Male": 29,
+      "White|Female": 3032,
+      "White|Male": 3622,
+      "__unknown__": 572
+    }
+  }
+}

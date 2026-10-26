@@ -1,0 +1,101 @@
+{
+  "confidence": {
+    "intercepted_mean_over_faults": 0.32620817843866173,
+    "early_mean_over_faults": 0.32620817843866173,
+    "eir_mean_over_faults": 0.4988989414908705,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.25808400889804567,
+    "tokens_saved_mean_over_faults": 0.2839022751867771,
+    "false_intervention": 0.11988847583643122
+  },
+  "full": {
+    "intercepted_mean_over_faults": 0.6666666666666666,
+    "early_mean_over_faults": 0.6666666666666666,
+    "eir_mean_over_faults": 1.0,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.5166666666666667,
+    "tokens_saved_mean_over_faults": 0.56781858697079,
+    "false_intervention": 1.0
+  },
+  "minus_argcheck": {
+    "intercepted_mean_over_faults": 0.6666666666666666,
+    "early_mean_over_faults": 0.6666666666666666,
+    "eir_mean_over_faults": 1.0,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.5166666666666667,
+    "tokens_saved_mean_over_faults": 0.56781858697079,
+    "false_intervention": 1.0
+  },
+  "minus_conformal": {
+    "intercepted_mean_over_faults": 0.6666666666666666,
+    "early_mean_over_faults": 0.6666666666666666,
+    "eir_mean_over_faults": 1.0,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.5166666666666667,
+    "tokens_saved_mean_over_faults": 0.56781858697079,
+    "false_intervention": 1.0
+  },
+  "minus_drift": {
+    "intercepted_mean_over_faults": 0.4655070094504412,
+    "early_mean_over_faults": 0.4655070094504412,
+    "eir_mean_over_faults": 0.5940210656753407,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.19962097460473868,
+    "tokens_saved_mean_over_faults": 0.2196368795319298,
+    "false_intervention": 0.1171003717472119
+  },
+  "minus_local_calibration": {
+    "intercepted_mean_over_faults": 0.6666666666666666,
+    "early_mean_over_faults": 0.6666666666666666,
+    "eir_mean_over_faults": 1.0,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.5166666666666667,
+    "tokens_saved_mean_over_faults": 0.56781858697079,
+    "false_intervention": 1.0
+  },
+  "minus_subgroup_gap": {
+    "intercepted_mean_over_faults": 0.6666666666666666,
+    "early_mean_over_faults": 0.6666666666666666,
+    "eir_mean_over_faults": 1.0,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.5166666666666667,
+    "tokens_saved_mean_over_faults": 0.56781858697079,
+    "false_intervention": 1.0
+  },
+  "minus_timing": {
+    "intercepted_mean_over_faults": 0.6666666666666666,
+    "early_mean_over_faults": 0.6666666666666666,
+    "eir_mean_over_faults": 1.0,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.5166666666666667,
+    "tokens_saved_mean_over_faults": 0.56781858697079,
+    "false_intervention": 1.0
+  },
+  "no_gate": {
+    "intercepted_mean_over_faults": 0.0,
+    "early_mean_over_faults": 0.0,
+    "eir_mean_over_faults": 0.0,
+    "intervention_gap_mean_over_faults": NaN,
+    "steps_saved_mean_over_faults": 0.0,
+    "tokens_saved_mean_over_faults": 0.0,
+    "false_intervention": 0.0
+  },
+  "output_only": {
+    "intercepted_mean_over_faults": 0.32094175960346966,
+    "early_mean_over_faults": 0.16666666666666666,
+    "eir_mean_over_faults": 0.3333333333333333,
+    "intervention_gap_mean_over_faults": 1.3333333333333333,
+    "steps_saved_mean_over_faults": 0.033333333333333326,
+    "tokens_saved_mean_over_faults": 0.037680266083829864,
+    "false_intervention": 0.23141263940520446
+  },
+  "pooled_conformal": {
+    "intercepted_mean_over_faults": 0.17394671623296157,
+    "early_mean_over_faults": 0.17394671623296157,
+    "eir_mean_over_faults": 0.26230012988758006,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.13556773562652094,
+    "tokens_saved_mean_over_faults": 0.1493223229814897,
+    "false_intervention": 0.06133828996282528
+  }
+}

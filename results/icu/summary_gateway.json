@@ -1,0 +1,155 @@
+{
+  "logistic_regression": {
+    "embedding": "lr_contribution",
+    "metric": "cosine",
+    "m1_reference_size": 8598,
+    "scdi": {
+      "Asian|Female": 9.865942885612254,
+      "Asian|Male": 5.9946475401753885,
+      "Black|Female": 6.4306426781890575,
+      "Black|Male": 7.392405219413627,
+      "Hispanic|Female": 7.228627791671399,
+      "Hispanic|Male": 4.976499312113547,
+      "White|Female": 9.800165835077937,
+      "White|Male": 9.865942885612254,
+      "__unknown__": 9.7536641074994
+    },
+    "scdi_excluded": {
+      "Other|Female": 27,
+      "Other|Male": 23
+    },
+    "scdi_null_threshold": 12.254576572467998,
+    "drift": {
+      "tune": {
+        "state": "none",
+        "rejected": []
+      },
+      "tune_shifted": {
+        "state": "critical",
+        "rejected": [
+          "admissionweight",
+          "probability"
+        ]
+      },
+      "test": {
+        "state": "critical",
+        "rejected": [
+          "age",
+          "admissionweight",
+          "verbal",
+          "motor",
+          "eyes",
+          "ventday1",
+          "readmit",
+          "rr_mean",
+          "rr_max",
+          "sao2_min",
+          "map_min",
+          "map_mean",
+          "unittype",
+          "unitadmitsource",
+          "ece:overall"
+        ]
+      },
+      "test_shifted": {
+        "state": "critical",
+        "rejected": [
+          "age",
+          "admissionweight",
+          "verbal",
+          "motor",
+          "eyes",
+          "ventday1",
+          "readmit",
+          "rr_mean",
+          "rr_max",
+          "sao2_min",
+          "map_min",
+          "map_mean",
+          "unittype",
+          "unitadmitsource",
+          "probability",
+          "ece:overall",
+          "ece:White|Female",
+          "ece:White|Male"
+        ]
+      }
+    },
+    "drift_ece_critical": 0.05
+  },
+  "random_forest": {
+    "embedding": "sklearn_leaf",
+    "metric": "hamming",
+    "m1_reference_size": 8598,
+    "scdi": {
+      "Asian|Female": 5.42260923170475,
+      "Asian|Male": 3.1694343777857985,
+      "Black|Female": 3.3228113693765224,
+      "Black|Male": 5.2334620906262845,
+      "Hispanic|Female": 3.52194417570596,
+      "Hispanic|Male": 3.943909791405323,
+      "White|Female": 5.106436650088306,
+      "White|Male": 5.42260923170475,
+      "__unknown__": 5.028578328445001
+    },
+    "scdi_excluded": {
+      "Other|Female": 27,
+      "Other|Male": 23
+    },
+    "scdi_null_threshold": 4.70930454741237,
+    "drift": {
+      "tune": {
+        "state": "none",
+        "rejected": []
+      },
+      "tune_shifted": {
+        "state": "critical",
+        "rejected": [
+          "admissionweight",
+          "probability"
+        ]
+      },
+      "test": {
+        "state": "critical",
+        "rejected": [
+          "age",
+          "admissionweight",
+          "verbal",
+          "motor",
+          "eyes",
+          "ventday1",
+          "readmit",
+          "rr_mean",
+          "rr_max",
+          "sao2_min",
+          "map_min",
+          "map_mean",
+          "unittype",
+          "unitadmitsource"
+        ]
+      },
+      "test_shifted": {
+        "state": "critical",
+        "rejected": [
+          "age",
+          "admissionweight",
+          "verbal",
+          "motor",
+          "eyes",
+          "ventday1",
+          "readmit",
+          "rr_mean",
+          "rr_max",
+          "sao2_min",
+          "map_min",
+          "map_mean",
+          "unittype",
+          "unitadmitsource",
+          "probability",
+          "ece:overall"
+        ]
+      }
+    },
+    "drift_ece_critical": 0.05
+  }
+}

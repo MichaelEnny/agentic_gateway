@@ -1,0 +1,153 @@
+{
+  "label": "MIMIC-IV-ED / eICU-CRD, credentialed",
+  "question": "At the end of triage, will this emergency department patient be admitted?",
+  "group_columns": [
+    "race_group",
+    "gender"
+  ],
+  "flow": {
+    "ed_stays": 425087,
+    "after_unobservable_outcome": 413388,
+    "after_patients_link": 413315,
+    "after_adults_only": 413315,
+    "final": 413315,
+    "admitted": 157991
+  },
+  "implausible_set_missing": {
+    "temperature": 603,
+    "heartrate": 27,
+    "resprate": 48,
+    "o2sat": 137,
+    "sbp": 197,
+    "dbp": 570,
+    "pain": 10888,
+    "acuity": 0
+  },
+  "parts": {
+    "fit": {
+      "cases": 202826,
+      "patients": 87049,
+      "events": 76999,
+      "event_rate": 0.3796,
+      "periods": [
+        "2008 - 2010",
+        "2011 - 2013",
+        "2014 - 2016"
+      ],
+      "sites": 1
+    },
+    "reference": {
+      "cases": 51355,
+      "patients": 21762,
+      "events": 19588,
+      "event_rate": 0.3814,
+      "periods": [
+        "2008 - 2010",
+        "2011 - 2013",
+        "2014 - 2016"
+      ],
+      "sites": 1
+    },
+    "conformal": {
+      "cases": 34234,
+      "patients": 14508,
+      "events": 13150,
+      "event_rate": 0.3841,
+      "periods": [
+        "2008 - 2010",
+        "2011 - 2013",
+        "2014 - 2016"
+      ],
+      "sites": 1
+    },
+    "tune": {
+      "cases": 50635,
+      "patients": 21762,
+      "events": 18979,
+      "event_rate": 0.3748,
+      "periods": [
+        "2008 - 2010",
+        "2011 - 2013",
+        "2014 - 2016"
+      ],
+      "sites": 1
+    },
+    "test": {
+      "cases": 74265,
+      "patients": 55520,
+      "events": 29275,
+      "event_rate": 0.3942,
+      "periods": [
+        "2017 - 2019"
+      ],
+      "sites": 1
+    }
+  },
+  "group_sizes_by_part": {
+    "conformal": {
+      "Asian|F": 787,
+      "Asian|M": 474,
+      "Black|F": 4797,
+      "Black|M": 3062,
+      "Hispanic|F": 1809,
+      "Hispanic|M": 1173,
+      "Other|F": 858,
+      "Other|M": 764,
+      "White|F": 10113,
+      "White|M": 9940,
+      "__unknown__": 457
+    },
+    "fit": {
+      "Asian|F": 4403,
+      "Asian|M": 3554,
+      "Black|F": 29164,
+      "Black|M": 18471,
+      "Hispanic|F": 10669,
+      "Hispanic|M": 8086,
+      "Other|F": 5252,
+      "Other|M": 4596,
+      "White|F": 60357,
+      "White|M": 55596,
+      "__unknown__": 2678
+    },
+    "reference": {
+      "Asian|F": 1153,
+      "Asian|M": 851,
+      "Black|F": 7430,
+      "Black|M": 4656,
+      "Hispanic|F": 2554,
+      "Hispanic|M": 1964,
+      "Other|F": 1296,
+      "Other|M": 1180,
+      "White|F": 15191,
+      "White|M": 14408,
+      "__unknown__": 672
+    },
+    "test": {
+      "Asian|F": 2542,
+      "Asian|M": 2293,
+      "Black|F": 6064,
+      "Black|M": 5115,
+      "Hispanic|F": 2459,
+      "Hispanic|M": 2018,
+      "Other|F": 2920,
+      "Other|M": 2564,
+      "White|F": 23402,
+      "White|M": 22335,
+      "__unknown__": 2553
+    },
+    "tune": {
+      "Asian|F": 1169,
+      "Asian|M": 819,
+      "Black|F": 7312,
+      "Black|M": 4714,
+      "Hispanic|F": 2393,
+      "Hispanic|M": 1682,
+      "Other|F": 1462,
+      "Other|M": 1003,
+      "White|F": 14887,
+      "White|M": 14557,
+      "__unknown__": 637
+    }
+  }
+}

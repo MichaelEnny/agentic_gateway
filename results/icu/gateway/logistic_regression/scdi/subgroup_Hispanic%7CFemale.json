@@ -1,0 +1,42 @@
+{
+  "computed_at": 0.0,
+  "excluded": {
+    "Other|Female": 27,
+    "Other|Male": 23
+  },
+  "overall_ece": 0.007412246800834437,
+  "scdi": {
+    "Asian|Female": 23.197883588870187,
+    "Asian|Male": 26.311430123861662,
+    "Black|Female": 28.369823066968678,
+    "Black|Male": 29.1433348144627,
+    "Hispanic|Female": 31.132714064186295,
+    "Hispanic|Male": 27.200306759161805,
+    "White|Female": 31.079811898503046,
+    "White|Male": 31.132714064186295,
+    "__unknown__": 31.042412196373906
+  },
+  "schema_version": 1,
+  "subgroup_ece": {
+    "Asian|Female": 0.0689643050525751,
+    "Asian|Male": 0.04588592970933538,
+    "Black|Female": 0.030628613201930256,
+    "Black|Male": 0.024895153226159813,
+    "Hispanic|Female": 0.24091274347030783,
+    "Hispanic|Male": 0.03929735671299544,
+    "White|Female": 0.010541507155092545,
+    "White|Male": 0.010149383246749681,
+    "__unknown__": 0.010818722977551428
+  },
+  "subgroup_n": {
+    "Asian|Female": 96,
+    "Asian|Male": 100,
+    "Black|Female": 392,
+    "Black|Male": 413,
+    "Hispanic|Female": 167,
+    "Hispanic|Male": 203,
+    "White|Female": 2995,
+    "White|Male": 3549,
+    "__unknown__": 633
+  }
+}
