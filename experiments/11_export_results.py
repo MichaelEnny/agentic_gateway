@@ -5,6 +5,9 @@ stops if it contains a patient identifier column or key. Patient-level outputs
 (cohorts, predictions, trajectories, fitted models, neighbour indexes, judge
 caches, sampled case lists) never match ALLOW.
 
+Home-folder prefixes in file paths (a Windows "Users" folder, /home/<name>,
+/Users/<name>) are replaced with "~", so the records do not carry local user names.
+
 Demographic subgroup cells with fewer than MIN_CELL patients are suppressed in
 the exported JSON: the cell keeps "n": "<10" and loses its other values.
 
@@ -105,6 +108,29 @@ def suppress(obj, key=""):
     return obj, 0
 
 
+HOME_PREFIX = re.compile(r"[A-Za-z]:[\\/]Users[\\/][^\\/]+|/home/[^/\s]+|/Users/[^/\s]+")
+
+
+def scrub(obj):
+    """Return (obj, count) with home-folder prefixes in strings replaced by "~"."""
+    if isinstance(obj, str):
+        return HOME_PREFIX.subn("~", obj)
+    if isinstance(obj, dict):
+        out, total = {}, 0
+        for k, v in obj.items():
+            out[k], c = scrub(v)
+            total += c
+        return out, total
+    if isinstance(obj, list):
+        out, total = [], 0
+        for v in obj:
+            v2, c = scrub(v)
+            out.append(v2)
+            total += c
+        return out, total
+    return obj, 0
+
+
 def candidates() -> list[tuple[Path, Path]]:
     pairs = []
     for name, (run_dir, agent) in SETTINGS.items():
@@ -157,7 +183,7 @@ def main() -> int:
             if item.name == "README.md":
                 continue
             shutil.rmtree(item) if item.is_dir() else item.unlink()
-    manifest, suppressed_total = [], 0
+    manifest, suppressed_total, scrubbed_total = [], 0, 0
     for src, dst in pairs:
         data = src.read_bytes()
         entry = {
@@ -167,10 +193,18 @@ def main() -> int:
         }
         if src.suffix == ".json":
             obj, n_supp = suppress(json.loads(data))
-            if n_supp:
+            obj, n_paths = scrub(obj)
+            if n_supp or n_paths:
                 data = (json.dumps(obj, indent=2) + "\n").encode("utf-8")
+            if n_supp:
                 entry["suppressed_cells"] = n_supp
                 suppressed_total += n_supp
+            scrubbed_total += n_paths
+        else:
+            text, n_paths = HOME_PREFIX.subn("~", data.decode("utf-8", errors="replace"))
+            if n_paths:
+                data = text.encode("utf-8")
+            scrubbed_total += n_paths
         entry["sha256"] = hashlib.sha256(data).hexdigest()
         entry["bytes"] = len(data)
         manifest.append(entry)
@@ -178,6 +212,7 @@ def main() -> int:
             dst.parent.mkdir(parents=True, exist_ok=True)
             dst.write_bytes(data)
     print(f"Suppressed {suppressed_total} subgroup cells with n < {MIN_CELL}")
+    print(f"Replaced {scrubbed_total} home-folder paths with ~")
     if not args.dry_run:
         (OUT / "MANIFEST.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     total = sum(m["bytes"] for m in manifest)
