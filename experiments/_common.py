@@ -8,7 +8,6 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from agentic_gateway.data.access import NotAuthorisedError
 from agentic_gateway.data.settings import SETTINGS, Setting
 from agentic_gateway.workspace import Workspace, read_json
 
@@ -117,9 +116,6 @@ def make_policy(args: argparse.Namespace, setting: Setting) -> tuple[Any, dict]:
 def main_guard(fn) -> None:  # type: ignore[no-untyped-def]
     try:
         raise SystemExit(fn())
-    except NotAuthorisedError as error:
-        print(f"refused: {error}", file=sys.stderr)
-        raise SystemExit(3) from error
     except FileNotFoundError as error:
         print(f"missing input: {error}", file=sys.stderr)
         raise SystemExit(2) from error

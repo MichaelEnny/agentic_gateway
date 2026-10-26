@@ -1,6 +1,6 @@
 # experiments
 
-Numbered scripts, run in order, one setting at a time. Each takes `--setting {ed,icu}`, `--source {demo,full}` (default `demo`), `--smoke` and `--seed` (default 42). `--source full` is refused while `../DATA_ACCESS.md` says credentialed analysis may not begin; `--smoke` is refused with `--source full`.
+Numbered scripts, run in order, one setting at a time. Each takes `--setting {ed,icu}`, `--source {demo,full}` (default `demo`), `--smoke` and `--seed` (default 42). `--smoke` is refused with `--source full`.
 
 ```
 uv run python experiments/01_prepare_data.py --setting ed --source demo --smoke
@@ -33,10 +33,10 @@ Every step writes `records/<step>.json` with its arguments, outputs, timing and 
 
 `_common.py` holds the shared command line and the `FULL` and `SMOKE` parameter sets. `configs/` holds the dataset paths (`paths.json`) and the starting gateway values (`gateway_base.json`).
 
-## Before the paper runs
+## LLM runs
 
-- `--judge-model` (step 7) reads `prompts/judge.txt` and needs the same local server.
-- `--policy llm` reads `prompts/system_{ed,icu}.txt` and needs a local OpenAI-compatible server (LM Studio, `http://localhost:1234/v1`) and its own `--run` name. Start with `--max-cases 5`. The full first-run checklist is section 8.7 of the guide. The prompts have not yet been tried on a real model.
-- Both demos have run end to end with `--policy scripted --smoke`. Those numbers check the plumbing and mean nothing.
+- `--policy llm` reads `prompts/system_{ed,icu}.txt` and needs a local OpenAI-compatible server (for example LM Studio at `http://localhost:1234/v1`) and its own `--run` name. Try `--max-cases 5` first; do not use `--max-cases` for a full run, because it drops whole subgroups.
+- `--judge-model` (step 7) reads `prompts/judge.txt` and uses the same local server.
+- Runs with `--policy scripted --smoke` on the demos check the plumbing only.
 
-Details, design choices and open items: `../EXPERIMENT_GUIDE.md`.
+The full run order is in the repository `README.md`.
