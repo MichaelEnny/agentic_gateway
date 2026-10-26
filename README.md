@@ -15,7 +15,6 @@ The gateway sits between a clinical LLM agent and its tools. Before each propose
 | Edge measurement harness | `src/agentic_gateway/edge/` |
 | Experiment scripts, steps 1 to 11, and frozen configs | `experiments/` |
 | Aggregate results behind the paper | `results/` |
-| Experiment and Raspberry Pi 5 setup guides | `docs/` |
 
 The test suite has 181 tests.
 
@@ -46,11 +45,56 @@ Thresholds marked PLACEHOLDER in `config.py` are defaults only. The values used 
 
 ## Data
 
-No PhysioNet data, or anything derived from it, goes in this folder or in git; `.gitignore` excludes `data/`, `runs/`, CSV and Parquet. Do not send credentialed data to hosted LLM APIs.
+The full runs use MIMIC-IV-ED 2.2, the `hosp` module of MIMIC-IV, and eICU-CRD 2.0. All three are available from PhysioNet to credentialed users who have signed the data use agreements. The open-access demo subsets (MIMIC-IV-ED demo 2.2, MIMIC-IV demo 2.2 and eICU-CRD demo 2.0.1) are enough to test the pipeline.
+
+Put the files where `experiments/configs/paths.json` expects them, under `datasets/`, or point the `AGW_PATHS` environment variable to your own copy of that file. Nothing derived from the data goes into git: `.gitignore` excludes `data/`, `datasets/`, `runs/`, Parquet, model and cache files. Do not send credentialed data to hosted LLM APIs; the agent client accepts only a server on localhost.
 
 ## Running the study
 
-See `docs/EXPERIMENT_GUIDE_REDUCED_ED_ICU.md` for the full run order and `docs/PI5_EDGE_SETUP_UPDATED.md` for the Raspberry Pi 5 measurements. Full-data runs need credentialed PhysioNet access to MIMIC-IV, MIMIC-IV-ED and eICU-CRD.
+The scripts in `experiments/` run in order, one setting at a time (`--setting ed` or `--setting icu`). Steps 1 to 3 write to `runs/<setting>_<source>/`. Steps 4 to 10 belong to one agent run, named with `--run`, and write to `agent_<run>/` inside that folder. Every step writes a record of its arguments, outputs and software versions to `records/`. `experiments/README.md` describes each step and its outputs.
+
+1. Check the pipeline on the demo data with the scripted agent. `--smoke` lowers the minimum sample sizes so the small demos run; its numbers mean nothing.
+
+   ```
+   for s in 01_prepare_data 02_train_models 03_fit_gateway 04_build_benchmark             05_tune_thresholds 06_e1_static 07_e2_e3_replay 09_live_completion 10_figures; do
+     uv run python experiments/$s.py --setting ed --source demo --smoke
+   done
+   uv run python experiments/08_e4_edge.py --setting ed --source demo --smoke --device laptop
+   ```
+
+2. For the LLM agent, start a local OpenAI-compatible server (the paper used LM Studio with Qwen2.5-7B-Instruct, Q4_K_M GGUF, 4096-token context) at `http://localhost:1234/v1`.
+
+3. Build the cohort, models, gateway artifacts and benchmark, then tune and freeze the thresholds on the tune split:
+
+   ```
+   S=ed; RUN=qwen7b-ed-full-reduced-v1; M=<server model id>; F=<path to the .gguf file>
+   uv run python experiments/01_prepare_data.py    --setting $S --source full
+   uv run python experiments/02_train_models.py    --setting $S --source full
+   uv run python experiments/03_fit_gateway.py     --setting $S --source full
+   uv run python experiments/04_build_benchmark.py --setting $S --source full --run $RUN --policy llm --llm-model $M --llm-model-file $F
+   uv run python experiments/05_tune_thresholds.py --setting $S --source full --run $RUN --fd-cap 0.10
+   ```
+
+4. Check `runs/${S}_full/agent_${RUN}/configs/gateway_frozen.json` (`_meta.cap_met` should be true) and keep a copy before opening the test split. The thresholds used in the paper are in `experiments/configs/`.
+
+5. Evaluate on the test split:
+
+   ```
+   uv run python experiments/06_e1_static.py       --setting $S --source full --run $RUN
+   uv run python experiments/07_e2_e3_replay.py    --setting $S --source full --run $RUN --judge-model $M --judge-patients 30
+   uv run python experiments/09_live_completion.py --setting $S --source full --run $RUN --policy llm --llm-model $M --llm-model-file $F --live-patients 30
+   uv run python experiments/10_figures.py         --setting $S --source full --run $RUN
+   ```
+
+6. Measure the gateway on each device with step 8. On an edge board, copy `runs/<setting>_full/` to the device first. It holds patient-level data, so keep it in encrypted storage.
+
+   ```
+   uv run python experiments/08_e4_edge.py --setting $S --source full --run $RUN --device pi5
+   ```
+
+7. Export the aggregate results with `uv run python experiments/11_export_results.py`.
+
+Repeat steps 3 to 6 with `S=icu` and `RUN=qwen7b-icu-full-reduced-v1` for the intensive care setting. The full runs use three agent seeds and 360 sampled cases per split; these are the `FULL` settings in `experiments/_common.py`.
 
 ## Results
 
