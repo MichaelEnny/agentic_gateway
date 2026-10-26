@@ -15,3 +15,5 @@ runs/
 *.joblib
 *.jsonl
 *.gguf
+# ...except the aggregate, non-patient-level results from experiments/11_export_results.py.
+!results/**/*.csv

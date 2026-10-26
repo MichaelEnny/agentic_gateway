@@ -1,0 +1,7 @@
+full             p50 0.006 ms  p95 25.656 ms  p99 25.845 ms over 127480 actions; process peak 682 MiB
+full_without_m1  p50 0.002 ms  p95 0.033 ms  p99 0.035 ms over 127480 actions; process peak 682 MiB
+ reference_size  p50_ms  p95_ms  fit_peak_mb  query_peak_mb  process_peak_mb  resampled
+           1000   2.678   2.710       18.126          0.048         1107.844      False
+           5000   7.462   7.564      395.506          0.138         1466.562      False
+          20000  25.479  25.713     2100.438          0.482         3178.812      False
+          50000  61.215  61.829     2186.277          1.168         3247.312      False

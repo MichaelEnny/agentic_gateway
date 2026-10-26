@@ -1,0 +1,1345 @@
+{
+  "logistic_regression": {
+    "n": 38258,
+    "outcomes": {
+      "defer": 1.0
+    },
+    "outcomes_by_group": {
+      "Asian|Female": {
+        "defer": 1.0
+      },
+      "Asian|Male": {
+        "defer": 1.0
+      },
+      "Black|Female": {
+        "defer": 1.0
+      },
+      "Black|Male": {
+        "defer": 1.0
+      },
+      "Hispanic|Female": {
+        "defer": 1.0
+      },
+      "Hispanic|Male": {
+        "defer": 1.0
+      },
+      "Other|Female": {
+        "defer": 1.0
+      },
+      "Other|Male": {
+        "defer": 1.0
+      },
+      "White|Female": {
+        "defer": 1.0
+      },
+      "White|Male": {
+        "defer": 1.0
+      },
+      "__unknown__": {
+        "defer": 1.0
+      }
+    },
+    "stop_reasons": {
+      "subgroup_gap": 37396,
+      "drift": 38258,
+      "local_calibration": 2681,
+      "conformal": 1407
+    },
+    "caveat_reasons": {
+      "local_calibration": 1585,
+      "subgroup_gap": 862
+    },
+    "allowed": {
+      "n": 0,
+      "ece": NaN,
+      "brier": NaN,
+      "auroc": NaN
+    },
+    "stopped": {
+      "n": 38258,
+      "ece": 0.015754926813909303,
+      "brier": 0.07835178382982516,
+      "auroc": 0.8167743439546019
+    },
+    "conformal_coverage": {
+      "mondrian": {
+        "Asian|Female": {
+          "n": 195,
+          "coverage": 0.8974358974358975
+        },
+        "Asian|Male": {
+          "n": 228,
+          "coverage": 0.8333333333333334
+        },
+        "Black|Female": {
+          "n": 2362,
+          "coverage": 0.8217612193056731
+        },
+        "Black|Male": {
+          "n": 2688,
+          "coverage": 0.8783482142857143
+        },
+        "Hispanic|Female": {
+          "n": 507,
+          "coverage": 0.9191321499013807
+        },
+        "Hispanic|Male": {
+          "n": 641,
+          "coverage": 0.8564742589703588
+        },
+        "Other|Female": {
+          "n": 117,
+          "coverage": 0.9487179487179487
+        },
+        "Other|Male": {
+          "n": 104,
+          "coverage": 0.875
+        },
+        "White|Female": {
+          "n": 13478,
+          "coverage": 0.8881139634960676
+        },
+        "White|Male": {
+          "n": 16418,
+          "coverage": 0.8812888293336582
+        },
+        "__unknown__": {
+          "n": 1520,
+          "coverage": 0.8947368421052632
+        },
+        "_all": {
+          "n": 38258,
+          "coverage": 0.8804171676512103
+        }
+      },
+      "pooled": {
+        "Asian|Female": {
+          "n": 195,
+          "coverage": 0.882051282051282
+        },
+        "Asian|Male": {
+          "n": 228,
+          "coverage": 0.8508771929824561
+        },
+        "Black|Female": {
+          "n": 2362,
+          "coverage": 0.8700254022015241
+        },
+        "Black|Male": {
+          "n": 2688,
+          "coverage": 0.8783482142857143
+        },
+        "Hispanic|Female": {
+          "n": 507,
+          "coverage": 0.8658777120315582
+        },
+        "Hispanic|Male": {
+          "n": 641,
+          "coverage": 0.8673946957878315
+        },
+        "Other|Female": {
+          "n": 117,
+          "coverage": 0.8632478632478633
+        },
+        "Other|Male": {
+          "n": 104,
+          "coverage": 0.8269230769230769
+        },
+        "White|Female": {
+          "n": 13478,
+          "coverage": 0.8786170054904289
+        },
+        "White|Male": {
+          "n": 16418,
+          "coverage": 0.8856133511999026
+        },
+        "__unknown__": {
+          "n": 1520,
+          "coverage": 0.8736842105263158
+        },
+        "_all": {
+          "n": 38258,
+          "coverage": 0.8801819227351142
+        }
+      },
+      "target": 0.9
+    },
+    "conformal_set_sizes": {
+      "0.80": {
+        "mondrian": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.0,
+            "empty": 0.16723299702023106
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.0,
+            "empty": 0.11282051282051282
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.0,
+            "empty": 0.2149122807017544
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.0,
+            "empty": 0.21591871295512277
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.0,
+            "empty": 0.18638392857142858
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.0,
+            "empty": 0.22485207100591717
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.0,
+            "empty": 0.2745709828393136
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 0.0,
+            "empty": 0.05982905982905983
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.0,
+            "empty": 0.18269230769230768
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.0,
+            "empty": 0.15395459266953554
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.0,
+            "empty": 0.16244365939822147
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.0,
+            "empty": 0.16973684210526316
+          }
+        },
+        "pooled": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.0,
+            "empty": 0.16650112394793246
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.0,
+            "empty": 0.11794871794871795
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.0,
+            "empty": 0.17982456140350878
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.0,
+            "empty": 0.1960203217612193
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.0,
+            "empty": 0.17038690476190477
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.0,
+            "empty": 0.23274161735700197
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.0,
+            "empty": 0.1684867394695788
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 0.0,
+            "empty": 0.17094017094017094
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.0,
+            "empty": 0.20192307692307693
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.0,
+            "empty": 0.17836474254340406
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.0,
+            "empty": 0.14953100255816787
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.0,
+            "empty": 0.17039473684210527
+          }
+        }
+      },
+      "0.85": {
+        "mondrian": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.0,
+            "empty": 0.10606931883527629
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.0,
+            "empty": 0.10256410256410256
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.0,
+            "empty": 0.16666666666666666
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.0,
+            "empty": 0.1634208298052498
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.0,
+            "empty": 0.13169642857142858
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.0,
+            "empty": 0.10256410256410256
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.0,
+            "empty": 0.15912636505460218
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 0.0,
+            "empty": 0.03418803418803419
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.0,
+            "empty": 0.07692307692307693
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.0,
+            "empty": 0.09103724588217836
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.0,
+            "empty": 0.1033621634791083
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.0,
+            "empty": 0.1118421052631579
+          }
+        },
+        "pooled": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.0,
+            "empty": 0.10614773380730827
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.0,
+            "empty": 0.07692307692307693
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.0,
+            "empty": 0.14473684210526316
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.0,
+            "empty": 0.13209144792548688
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.0,
+            "empty": 0.1130952380952381
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.0,
+            "empty": 0.15187376725838264
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.0,
+            "empty": 0.10140405616224649
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 0.0,
+            "empty": 0.10256410256410256
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.0,
+            "empty": 0.10576923076923077
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.0,
+            "empty": 0.10936340703368452
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.0,
+            "empty": 0.09684492630040199
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.0,
+            "empty": 0.11052631578947368
+          }
+        }
+      },
+      "0.90": {
+        "mondrian": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.0021694808928851483,
+            "empty": 0.03460714099011972
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.005128205128205128,
+            "empty": 0.0
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.0,
+            "empty": 0.10526315789473684
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.0,
+            "empty": 0.11854360711261643
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.0,
+            "empty": 0.0390625
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.06903353057199212,
+            "empty": 0.0
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.0,
+            "empty": 0.0499219968798752
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 0.24786324786324787,
+            "empty": 0.0
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.07692307692307693,
+            "empty": 0.0
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.0,
+            "empty": 0.019587475886630065
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.0,
+            "empty": 0.03770252162260933
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.006578947368421052,
+            "empty": 0.0
+          }
+        },
+        "pooled": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.0,
+            "empty": 0.03544356735846098
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.0,
+            "empty": 0.020512820512820513
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.0,
+            "empty": 0.06140350877192982
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.0,
+            "empty": 0.04868755292125317
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.0,
+            "empty": 0.0390625
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.0,
+            "empty": 0.04930966469428008
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.0,
+            "empty": 0.029641185647425898
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 0.0,
+            "empty": 0.03418803418803419
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.0,
+            "empty": 0.019230769230769232
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.0,
+            "empty": 0.03724588217836474
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.0,
+            "empty": 0.030758923133146546
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.0,
+            "empty": 0.04013157894736842
+          }
+        }
+      },
+      "0.95": {
+        "mondrian": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.11545297715510482,
+            "empty": 0.0014114694965758796
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.09230769230769231,
+            "empty": 0.0
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.15789473684210525,
+            "empty": 0.0
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.0,
+            "empty": 0.02286198137171888
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.08407738095238096,
+            "empty": 0.0
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.25443786982248523,
+            "empty": 0.0
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.22932917316692666,
+            "empty": 0.0
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 1.0,
+            "empty": 0.0
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.34615384615384615,
+            "empty": 0.0
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.13585101647128653,
+            "empty": 0.0
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.09727128761115848,
+            "empty": 0.0
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.18421052631578946,
+            "empty": 0.0
+          }
+        },
+        "pooled": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.10499764755083904,
+            "empty": 0.0
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.07179487179487179,
+            "empty": 0.0
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.14473684210526316,
+            "empty": 0.0
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.13124470787468248,
+            "empty": 0.0
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.11086309523809523,
+            "empty": 0.0
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.15187376725838264,
+            "empty": 0.0
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.10140405616224649,
+            "empty": 0.0
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 0.10256410256410256,
+            "empty": 0.0
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.10576923076923077,
+            "empty": 0.0
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.10810209229856062,
+            "empty": 0.0
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.09580947740285053,
+            "empty": 0.0
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.10986842105263157,
+            "empty": 0.0
+          }
+        }
+      }
+    }
+  },
+  "random_forest": {
+    "n": 38258,
+    "outcomes": {
+      "defer": 1.0
+    },
+    "outcomes_by_group": {
+      "Asian|Female": {
+        "defer": 1.0
+      },
+      "Asian|Male": {
+        "defer": 1.0
+      },
+      "Black|Female": {
+        "defer": 1.0
+      },
+      "Black|Male": {
+        "defer": 1.0
+      },
+      "Hispanic|Female": {
+        "defer": 1.0
+      },
+      "Hispanic|Male": {
+        "defer": 1.0
+      },
+      "Other|Female": {
+        "defer": 1.0
+      },
+      "Other|Male": {
+        "defer": 1.0
+      },
+      "White|Female": {
+        "defer": 1.0
+      },
+      "White|Male": {
+        "defer": 1.0
+      },
+      "__unknown__": {
+        "defer": 1.0
+      }
+    },
+    "stop_reasons": {
+      "drift": 38258,
+      "conformal": 1462,
+      "local_calibration": 879
+    },
+    "caveat_reasons": {
+      "subgroup_gap": 34520,
+      "local_calibration": 466
+    },
+    "allowed": {
+      "n": 0,
+      "ece": NaN,
+      "brier": NaN,
+      "auroc": NaN
+    },
+    "stopped": {
+      "n": 38258,
+      "ece": 0.01673185433867349,
+      "brier": 0.07881052819244591,
+      "auroc": 0.82097144427131
+    },
+    "conformal_coverage": {
+      "mondrian": {
+        "Asian|Female": {
+          "n": 195,
+          "coverage": 0.9076923076923077
+        },
+        "Asian|Male": {
+          "n": 228,
+          "coverage": 0.8201754385964912
+        },
+        "Black|Female": {
+          "n": 2362,
+          "coverage": 0.8314987298899238
+        },
+        "Black|Male": {
+          "n": 2688,
+          "coverage": 0.8746279761904762
+        },
+        "Hispanic|Female": {
+          "n": 507,
+          "coverage": 0.9092702169625246
+        },
+        "Hispanic|Male": {
+          "n": 641,
+          "coverage": 0.8502340093603744
+        },
+        "Other|Female": {
+          "n": 117,
+          "coverage": 0.9572649572649573
+        },
+        "Other|Male": {
+          "n": 104,
+          "coverage": 0.9038461538461539
+        },
+        "White|Female": {
+          "n": 13478,
+          "coverage": 0.8893752782311916
+        },
+        "White|Male": {
+          "n": 16418,
+          "coverage": 0.8801924716774272
+        },
+        "__unknown__": {
+          "n": 1520,
+          "coverage": 0.8809210526315789
+        },
+        "_all": {
+          "n": 38258,
+          "coverage": 0.8800250927910502
+        }
+      },
+      "pooled": {
+        "Asian|Female": {
+          "n": 195,
+          "coverage": 0.8666666666666667
+        },
+        "Asian|Male": {
+          "n": 228,
+          "coverage": 0.8421052631578947
+        },
+        "Black|Female": {
+          "n": 2362,
+          "coverage": 0.8679085520745131
+        },
+        "Black|Male": {
+          "n": 2688,
+          "coverage": 0.8746279761904762
+        },
+        "Hispanic|Female": {
+          "n": 507,
+          "coverage": 0.8599605522682445
+        },
+        "Hispanic|Male": {
+          "n": 641,
+          "coverage": 0.8564742589703588
+        },
+        "Other|Female": {
+          "n": 117,
+          "coverage": 0.8461538461538461
+        },
+        "Other|Male": {
+          "n": 104,
+          "coverage": 0.7884615384615384
+        },
+        "White|Female": {
+          "n": 13478,
+          "coverage": 0.8786912004748479
+        },
+        "White|Male": {
+          "n": 16418,
+          "coverage": 0.8827506395419661
+        },
+        "__unknown__": {
+          "n": 1520,
+          "coverage": 0.8664473684210526
+        },
+        "_all": {
+          "n": 38258,
+          "coverage": 0.8777510586021224
+        }
+      },
+      "target": 0.9
+    },
+    "conformal_set_sizes": {
+      "0.80": {
+        "mondrian": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.0,
+            "empty": 0.16681478383606044
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.0,
+            "empty": 0.11282051282051282
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.0,
+            "empty": 0.24561403508771928
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.0,
+            "empty": 0.21422523285351397
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.0,
+            "empty": 0.19680059523809523
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.0,
+            "empty": 0.20907297830374755
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.0,
+            "empty": 0.20904836193447737
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 0.0,
+            "empty": 0.02564102564102564
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.0,
+            "empty": 0.27884615384615385
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.0,
+            "empty": 0.14979967354206855
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.0,
+            "empty": 0.16579364112559386
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.0,
+            "empty": 0.16842105263157894
+          }
+        },
+        "pooled": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.0,
+            "empty": 0.16438391970306865
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.0,
+            "empty": 0.16923076923076924
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.0,
+            "empty": 0.20614035087719298
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.0,
+            "empty": 0.1934801016088061
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.0,
+            "empty": 0.18043154761904762
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.0,
+            "empty": 0.23668639053254437
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.0,
+            "empty": 0.16380655226209048
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 0.0,
+            "empty": 0.17094017094017094
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.0,
+            "empty": 0.25
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.0,
+            "empty": 0.1700549042884701
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.0,
+            "empty": 0.1481301011085394
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.0,
+            "empty": 0.17894736842105263
+          }
+        }
+      },
+      "0.85": {
+        "mondrian": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.0,
+            "empty": 0.10870928956035339
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.0,
+            "empty": 0.10256410256410256
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.0,
+            "empty": 0.2324561403508772
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.0,
+            "empty": 0.17781541066892464
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.0,
+            "empty": 0.1328125
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.0,
+            "empty": 0.10256410256410256
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.0,
+            "empty": 0.16380655226209048
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 0.0,
+            "empty": 0.017094017094017096
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.0,
+            "empty": 0.20192307692307693
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.0,
+            "empty": 0.08999851610031162
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.0,
+            "empty": 0.10525033499817274
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.0,
+            "empty": 0.12368421052631579
+          }
+        },
+        "pooled": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.0,
+            "empty": 0.10643525537142559
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.0,
+            "empty": 0.10256410256410256
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.0,
+            "empty": 0.15789473684210525
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.0,
+            "empty": 0.13209144792548688
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.0,
+            "empty": 0.12425595238095238
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.0,
+            "empty": 0.13806706114398423
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.0,
+            "empty": 0.0967238689547582
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 0.0,
+            "empty": 0.13675213675213677
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.0,
+            "empty": 0.17307692307692307
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.0,
+            "empty": 0.1063956076569224
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.0,
+            "empty": 0.0966622000243635
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.0,
+            "empty": 0.12039473684210526
+          }
+        }
+      },
+      "0.90": {
+        "mondrian": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.002221757540906477,
+            "empty": 0.035992472162684926
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.02564102564102564,
+            "empty": 0.0
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.0,
+            "empty": 0.11403508771929824
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.0,
+            "empty": 0.10414902624894158
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.0,
+            "empty": 0.052083333333333336
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.04339250493096647,
+            "empty": 0.0
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.0,
+            "empty": 0.0530421216848674
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 0.358974358974359,
+            "empty": 0.0
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.15384615384615385,
+            "empty": 0.0
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.0,
+            "empty": 0.017435821338477518
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.0,
+            "empty": 0.04117432086734072
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.0,
+            "empty": 0.013157894736842105
+          }
+        },
+        "pooled": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.0,
+            "empty": 0.0394688692561033
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.0,
+            "empty": 0.05128205128205128
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.0,
+            "empty": 0.07017543859649122
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.0,
+            "empty": 0.05165114309906858
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.0,
+            "empty": 0.05171130952380952
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.0,
+            "empty": 0.04930966469428008
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.0,
+            "empty": 0.031201248049921998
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 0.0,
+            "empty": 0.05982905982905983
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.0,
+            "empty": 0.08653846153846154
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.0,
+            "empty": 0.036578127318593265
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.0,
+            "empty": 0.03648434644901937
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.0,
+            "empty": 0.046052631578947366
+          }
+        }
+      },
+      "0.95": {
+        "mondrian": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.11176747346960113,
+            "empty": 0.0030843222332584035
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.26666666666666666,
+            "empty": 0.0
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.17105263157894737,
+            "empty": 0.0
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.0,
+            "empty": 0.04995766299745978
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.06956845238095238,
+            "empty": 0.0
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.2879684418145957,
+            "empty": 0.0
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.15288611544461778,
+            "empty": 0.0
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 1.0,
+            "empty": 0.0
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.5865384615384616,
+            "empty": 0.0
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.137854281050601,
+            "empty": 0.0
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.09446948471190157,
+            "empty": 0.0
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.10986842105263157,
+            "empty": 0.0
+          }
+        },
+        "pooled": {
+          "_all": {
+            "n": 38258,
+            "two_label": 0.10447488107062575,
+            "empty": 0.0
+          },
+          "Asian|Female": {
+            "n": 195,
+            "two_label": 0.10256410256410256,
+            "empty": 0.0
+          },
+          "Asian|Male": {
+            "n": 228,
+            "two_label": 0.15789473684210525,
+            "empty": 0.0
+          },
+          "Black|Female": {
+            "n": 2362,
+            "two_label": 0.13039796782387808,
+            "empty": 0.0
+          },
+          "Black|Male": {
+            "n": 2688,
+            "two_label": 0.12165178571428571,
+            "empty": 0.0
+          },
+          "Hispanic|Female": {
+            "n": 507,
+            "two_label": 0.13609467455621302,
+            "empty": 0.0
+          },
+          "Hispanic|Male": {
+            "n": 641,
+            "two_label": 0.0967238689547582,
+            "empty": 0.0
+          },
+          "Other|Female": {
+            "n": 117,
+            "two_label": 0.13675213675213677,
+            "empty": 0.0
+          },
+          "Other|Male": {
+            "n": 104,
+            "two_label": 0.17307692307692307,
+            "empty": 0.0
+          },
+          "White|Female": {
+            "n": 13478,
+            "two_label": 0.10424395310876984,
+            "empty": 0.0
+          },
+          "White|Male": {
+            "n": 16418,
+            "two_label": 0.09507857229869655,
+            "empty": 0.0
+          },
+          "__unknown__": {
+            "n": 1520,
+            "two_label": 0.11513157894736842,
+            "empty": 0.0
+          }
+        }
+      }
+    }
+  }
+}

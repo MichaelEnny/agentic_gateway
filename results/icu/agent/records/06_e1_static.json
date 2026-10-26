@@ -1,0 +1,35 @@
+{
+  "step": "06_e1_static",
+  "setting": "icu",
+  "source": "full",
+  "smoke": false,
+  "args": {
+    "setting": "icu",
+    "source": "full",
+    "smoke": false,
+    "seed": 42,
+    "models": "logistic_regression,random_forest",
+    "run": "qwen7b-icu-full-reduced-v1"
+  },
+  "outputs": {
+    "models": [
+      "logistic_regression",
+      "random_forest"
+    ]
+  },
+  "seconds": 449.04,
+  "finished": "2026-10-17 08:40:07",
+  "versions": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pyarrow": "26.0.0",
+    "git_commit": "d6b24245517e81a839d6f506b95587559d592ad5",
+    "git_dirty": true
+  }
+}

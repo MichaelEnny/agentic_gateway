@@ -1,0 +1,50 @@
+{
+  "step": "05_tune_thresholds",
+  "setting": "icu",
+  "source": "full",
+  "smoke": false,
+  "args": {
+    "setting": "icu",
+    "source": "full",
+    "smoke": false,
+    "seed": 42,
+    "fd_cap": 0.1,
+    "run": "qwen7b-icu-full-reduced-v1"
+  },
+  "outputs": {
+    "tuned_on": "tune",
+    "fd_cap": 0.1,
+    "cap_met": true,
+    "tune_intercepted": 0.620223271790468,
+    "tune_false_intervention": 0.08130841121495327,
+    "scdi_null_threshold": 4.70930454741237,
+    "scdi_multiple": 1.25,
+    "scdi_grid": [
+      1.0,
+      1.25,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "drift_ece_critical": 0.05,
+    "confidence_cut": 0.23003856393700264,
+    "frozen_at": "2026-10-16 19:13:43",
+    "n_tune_trajectories": 5728
+  },
+  "seconds": 50.59,
+  "finished": "2026-10-16 19:13:43",
+  "versions": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pyarrow": "26.0.0",
+    "git_commit": "f1d0c588f588b3c389979c72a8ec5020ed23d73e",
+    "git_dirty": true
+  }
+}

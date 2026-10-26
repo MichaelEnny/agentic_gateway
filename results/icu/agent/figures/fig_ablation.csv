@@ -1,0 +1,7 @@
+signal,method,diff_vs_ref,diff_low,diff_high,latency_p50_ms
+local_calibration,minus_local_calibration,0.0,0.0,0.0,5.80035
+subgroup_gap,minus_subgroup_gap,0.0,0.0,0.0,0.0037
+conformal,minus_conformal,0.0,0.0,0.0,0.0083
+drift,minus_drift,-0.4820907955018743,-0.5149353048484454,-0.4496866461834086,0.0047
+timing,minus_timing,0.0,0.0,0.0,
+argcheck,minus_argcheck,0.0,0.0,0.0,

@@ -1,0 +1,67 @@
+{
+  "step": "07_e2_e3_replay",
+  "setting": "icu",
+  "source": "full",
+  "smoke": false,
+  "args": {
+    "setting": "icu",
+    "source": "full",
+    "smoke": false,
+    "seed": 42,
+    "judge_model": "lmstudio-community/qwen2.5-7b-instruct",
+    "judge_url": "http://localhost:1234/v1",
+    "judge_patients": 30,
+    "run": "qwen7b-icu-full-reduced-v1"
+  },
+  "outputs": {
+    "methods": [
+      "no_gate",
+      "output_only",
+      "confidence",
+      "pooled_conformal",
+      "full",
+      "minus_local_calibration",
+      "minus_subgroup_gap",
+      "minus_conformal",
+      "minus_drift",
+      "minus_timing",
+      "minus_argcheck"
+    ],
+    "trajectories": 5878,
+    "judge": {
+      "judge": "llm_judge",
+      "model": "lmstudio-community/qwen2.5-7b-instruct",
+      "base_url": "http://localhost:1234/v1",
+      "temperature": 0.0,
+      "seed": 0,
+      "max_tokens": 256,
+      "fail_closed": true,
+      "system_prompt_sha256": "2388071c259cda3ecf312a2d4d27d30862bf5819e4e86a4a5c1461a886691f92",
+      "stats": {
+        "allow": 1880,
+        "cached": 1095,
+        "defer": 76
+      },
+      "uncached_calls": 861,
+      "call_p50_ms": 2909.1094,
+      "call_p95_ms": 3167.1458,
+      "patients": 30,
+      "trajectories": 492
+    }
+  },
+  "seconds": 2776.96,
+  "finished": "2026-10-16 20:14:30",
+  "versions": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pyarrow": "26.0.0",
+    "git_commit": "d5fd9b7c3a37b488c20efa43bbf7be3f5d837f2d",
+    "git_dirty": true
+  }
+}

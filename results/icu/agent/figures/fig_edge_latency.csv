@@ -1,0 +1,13 @@
+device,variant,percentile,latency_ms,n
+laptop,full,50,0.0036,118805
+laptop,full,95,6.4919,118805
+laptop,full,99,7.278591999999998,118805
+laptop,full_without_m1,50,0.0013,118805
+laptop,full_without_m1,95,0.0206,118805
+laptop,full_without_m1,99,0.0242,118805
+pi5,full,50,0.005926,118805
+pi5,full,95,12.118552600000001,118805
+pi5,full,99,12.25231024,118805
+pi5,full_without_m1,50,0.002315,118805
+pi5,full_without_m1,95,0.032685,118805
+pi5,full_without_m1,99,0.035,118805

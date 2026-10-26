@@ -1,0 +1,40 @@
+{
+  "step": "05_tune_thresholds",
+  "setting": "ed",
+  "source": "full",
+  "smoke": false,
+  "args": {
+    "setting": "ed",
+    "source": "full",
+    "smoke": false,
+    "seed": 42,
+    "fd_cap": 0.1,
+    "run": "qwen7b-ed-full-reduced-v1"
+  },
+  "outputs": {
+    "tuned_on": "tune",
+    "fd_cap": 0.1,
+    "cap_met": false,
+    "tune_intercepted": 0.8205714285714286,
+    "tune_false_intervention": 1.0,
+    "scdi_null_threshold": 2.417021699920297,
+    "confidence_cut": 0.010215245643076838,
+    "frozen_at": "2026-10-15 23:59:20",
+    "n_tune_trajectories": 6327
+  },
+  "seconds": 2276.28,
+  "finished": "2026-10-15 23:59:20",
+  "versions": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pyarrow": "26.0.0",
+    "git_commit": "260c5ed2ddcd794310c0ebb5ae78a93dc7458712",
+    "git_dirty": true
+  }
+}

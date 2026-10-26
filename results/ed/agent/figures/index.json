@@ -1,0 +1,14 @@
+{
+  "made": [
+    "fig_interception_outcomes",
+    "fig_tradeoff",
+    "fig_ablation",
+    "fig_edge_latency",
+    "fig_m1_scaling",
+    "fig_subgroup_coverage",
+    "fig_live_completion",
+    "fig_passed_quality"
+  ],
+  "skipped": {},
+  "demo": false
+}

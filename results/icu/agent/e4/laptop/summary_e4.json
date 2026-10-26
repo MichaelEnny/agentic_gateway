@@ -1,0 +1,217 @@
+{
+  "machine": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpus": 16,
+    "ram_gb": 63.6
+  },
+  "artifacts_load_peak_mb": 23.93777084350586,
+  "variants": {
+    "full": {
+      "latency": [
+        {
+          "tool": "all",
+          "n": 118805,
+          "p50_ms": 0.0036,
+          "p95_ms": 6.4919,
+          "p99_ms": 7.278591999999998,
+          "local_calibration_p50_ms": 5.80035,
+          "subgroup_gap_p50_ms": 0.0037,
+          "conformal_p50_ms": 0.0083,
+          "drift_p50_ms": 0.0047,
+          "timing_p50_ms": 0.0
+        },
+        {
+          "tool": "close_case",
+          "n": 20675,
+          "p50_ms": 0.0019,
+          "p95_ms": 0.0023,
+          "p99_ms": 0.0028,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "draft_alert",
+          "n": 9960,
+          "p50_ms": 0.0214,
+          "p95_ms": 0.0251,
+          "p99_ms": 0.03528199999999997,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "fetch_record",
+          "n": 29390,
+          "p50_ms": 0.0017,
+          "p95_ms": 0.0022,
+          "p99_ms": 0.0031,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "prior_alerts",
+          "n": 29390,
+          "p50_ms": 0.0038,
+          "p95_ms": 0.0045,
+          "p99_ms": 0.0056,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "risk_score",
+          "n": 29390,
+          "p50_ms": 5.85625,
+          "p95_ms": 7.177455,
+          "p99_ms": 7.921844,
+          "local_calibration_p50_ms": 5.80035,
+          "subgroup_gap_p50_ms": 0.0037,
+          "conformal_p50_ms": 0.0083,
+          "drift_p50_ms": 0.0047,
+          "timing_p50_ms": 0.0
+        }
+      ],
+      "energy_mj_per_action": NaN,
+      "window": [
+        1792206873.9158287,
+        1792207049.9113533
+      ],
+      "process_peak_mb": 358.03125,
+      "check_pass_peak_mb": 0.4045705795288086
+    },
+    "full_without_m1": {
+      "latency": [
+        {
+          "tool": "all",
+          "n": 118805,
+          "p50_ms": 0.0013,
+          "p95_ms": 0.0206,
+          "p99_ms": 0.0242,
+          "local_calibration_p50_ms": 0.0,
+          "subgroup_gap_p50_ms": 0.0014,
+          "conformal_p50_ms": 0.0031,
+          "drift_p50_ms": 0.0016,
+          "timing_p50_ms": 0.0
+        },
+        {
+          "tool": "close_case",
+          "n": 20675,
+          "p50_ms": 0.0011,
+          "p95_ms": 0.0014,
+          "p99_ms": 0.0016,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "draft_alert",
+          "n": 9960,
+          "p50_ms": 0.0076,
+          "p95_ms": 0.0094,
+          "p99_ms": 0.0142,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "fetch_record",
+          "n": 29390,
+          "p50_ms": 0.0011,
+          "p95_ms": 0.0014,
+          "p99_ms": 0.0017,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "prior_alerts",
+          "n": 29390,
+          "p50_ms": 0.0012,
+          "p95_ms": 0.0015,
+          "p99_ms": 0.0019,
+          "local_calibration_p50_ms": NaN,
+          "subgroup_gap_p50_ms": NaN,
+          "conformal_p50_ms": NaN,
+          "drift_p50_ms": NaN,
+          "timing_p50_ms": NaN
+        },
+        {
+          "tool": "risk_score",
+          "n": 29390,
+          "p50_ms": 0.0193,
+          "p95_ms": 0.0231,
+          "p99_ms": 0.04992200000000012,
+          "local_calibration_p50_ms": 0.0,
+          "subgroup_gap_p50_ms": 0.0014,
+          "conformal_p50_ms": 0.0031,
+          "drift_p50_ms": 0.0016,
+          "timing_p50_ms": 0.0
+        }
+      ],
+      "energy_mj_per_action": NaN,
+      "window": [
+        1792207096.752015,
+        1792207098.0796926
+      ],
+      "process_peak_mb": 373.3828125,
+      "check_pass_peak_mb": 0.19695758819580078
+    }
+  },
+  "m1_scaling": [
+    {
+      "reference_size": 1000,
+      "p50_ms": 1.1558,
+      "p95_ms": 1.5510799999999991,
+      "fit_peak_mb": 18.125802993774414,
+      "query_peak_mb": 0.04729747772216797,
+      "process_peak_mb": 550.98828125,
+      "resampled": false
+    },
+    {
+      "reference_size": 5000,
+      "p50_ms": 3.052,
+      "p95_ms": 3.8612149999999987,
+      "fit_peak_mb": 395.5060558319092,
+      "query_peak_mb": 0.13928890228271484,
+      "process_peak_mb": 928.94921875,
+      "resampled": false
+    },
+    {
+      "reference_size": 20000,
+      "p50_ms": 14.223700000000001,
+      "p95_ms": 15.904895,
+      "fit_peak_mb": 2100.438512802124,
+      "query_peak_mb": 0.4813089370727539,
+      "process_peak_mb": 2634.0703125,
+      "resampled": true
+    },
+    {
+      "reference_size": 50000,
+      "p50_ms": 36.953599999999994,
+      "p95_ms": 43.561395,
+      "fit_peak_mb": 2186.2767124176025,
+      "query_peak_mb": 1.1672906875610352,
+      "process_peak_mb": 2720.38671875,
+      "resampled": true
+    }
+  ],
+  "process_peak_mb": 2720.38671875
+}

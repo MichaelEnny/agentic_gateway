@@ -1,0 +1,36 @@
+{
+  "step": "08_e4_edge_laptop",
+  "setting": "ed",
+  "source": "full",
+  "smoke": false,
+  "args": {
+    "setting": "ed",
+    "source": "full",
+    "smoke": false,
+    "seed": 42,
+    "device": "laptop",
+    "repeats": 5,
+    "warmup": 100,
+    "meter_log": null,
+    "sizes": "1000,5000,20000,50000",
+    "run": "qwen7b-ed-full-reduced-v1"
+  },
+  "outputs": {
+    "device": "laptop"
+  },
+  "seconds": 1602.12,
+  "finished": "2026-10-18 22:40:37",
+  "versions": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pyarrow": "26.0.0",
+    "git_commit": "b21326725e5e78f5cc0f7a7de667a62b9c40fd8b",
+    "git_dirty": false
+  }
+}

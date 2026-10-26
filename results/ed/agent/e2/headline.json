@@ -1,0 +1,101 @@
+{
+  "confidence": {
+    "intercepted_mean_over_faults": 0.05131782945736434,
+    "early_mean_over_faults": 0.05131782945736434,
+    "eir_mean_over_faults": 0.08960611774565264,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.046717473287240734,
+    "tokens_saved_mean_over_faults": 0.05086129709245301,
+    "false_intervention": 0.04744186046511628
+  },
+  "full": {
+    "intercepted_mean_over_faults": 0.6222983448564844,
+    "early_mean_over_faults": 0.6222983448564844,
+    "eir_mean_over_faults": 0.6786046511627907,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.20360412738319714,
+    "tokens_saved_mean_over_faults": 0.22159729079189272,
+    "false_intervention": 0.06976744186046512
+  },
+  "minus_argcheck": {
+    "intercepted_mean_over_faults": 0.48378483134297084,
+    "early_mean_over_faults": 0.48378483134297084,
+    "eir_mean_over_faults": 0.5400911376492772,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.20360412738319714,
+    "tokens_saved_mean_over_faults": 0.22159729079189272,
+    "false_intervention": 0.06976744186046512
+  },
+  "minus_conformal": {
+    "intercepted_mean_over_faults": 0.6310810810810811,
+    "early_mean_over_faults": 0.6310810810810811,
+    "eir_mean_over_faults": 0.6333333333333333,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.15123873873873875,
+    "tokens_saved_mean_over_faults": 0.16455806868560705,
+    "false_intervention": 0.0027906976744186047
+  },
+  "minus_drift": {
+    "intercepted_mean_over_faults": 0.4658642363293526,
+    "early_mean_over_faults": 0.4658642363293526,
+    "eir_mean_over_faults": 0.522170542635659,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.12538707311963126,
+    "tokens_saved_mean_over_faults": 0.13651515261108235,
+    "false_intervention": 0.06976744186046512
+  },
+  "minus_local_calibration": {
+    "intercepted_mean_over_faults": 0.6213681122983449,
+    "early_mean_over_faults": 0.6213681122983449,
+    "eir_mean_over_faults": 0.6776744186046512,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.20313901110412738,
+    "tokens_saved_mean_over_faults": 0.2210939466337333,
+    "false_intervention": 0.06976744186046512
+  },
+  "minus_subgroup_gap": {
+    "intercepted_mean_over_faults": 0.5041588099727634,
+    "early_mean_over_faults": 0.5041588099727634,
+    "eir_mean_over_faults": 0.5604651162790698,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.14453435994133668,
+    "tokens_saved_mean_over_faults": 0.15731552137779514,
+    "false_intervention": 0.06976744186046512
+  },
+  "minus_timing": {
+    "intercepted_mean_over_faults": 0.4837848313429709,
+    "early_mean_over_faults": 0.4837848313429709,
+    "eir_mean_over_faults": 0.5400911376492772,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.20360412738319714,
+    "tokens_saved_mean_over_faults": 0.22159729079189272,
+    "false_intervention": 0.06976744186046512
+  },
+  "no_gate": {
+    "intercepted_mean_over_faults": 0.0,
+    "early_mean_over_faults": 0.0,
+    "eir_mean_over_faults": 0.0,
+    "intervention_gap_mean_over_faults": NaN,
+    "steps_saved_mean_over_faults": 0.0,
+    "tokens_saved_mean_over_faults": 0.0,
+    "false_intervention": 0.0
+  },
+  "output_only": {
+    "intercepted_mean_over_faults": 0.45122669180808717,
+    "early_mean_over_faults": 0.30518018018018017,
+    "eir_mean_over_faults": 0.3333333333333333,
+    "intervention_gap_mean_over_faults": 1.3333333333333333,
+    "steps_saved_mean_over_faults": 0.0056306306306306295,
+    "tokens_saved_mean_over_faults": 0.006284693630452766,
+    "false_intervention": 0.06976744186046512
+  },
+  "pooled_conformal": {
+    "intercepted_mean_over_faults": 0.08775193798449614,
+    "early_mean_over_faults": 0.08775193798449614,
+    "eir_mean_over_faults": 0.1463104965430547,
+    "intervention_gap_mean_over_faults": 0.0,
+    "steps_saved_mean_over_faults": 0.07608317619945527,
+    "tokens_saved_mean_over_faults": 0.08284714618415616,
+    "false_intervention": 0.07255813953488371
+  }
+}
