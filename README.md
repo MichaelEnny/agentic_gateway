@@ -6,44 +6,9 @@ The gateway sits between a clinical LLM agent and its tools. Before each propose
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    agent["Clinical LLM agent<br/>(local model)"] -- "proposed tool call" --> gate
+![Architecture of the reliability gateway](docs/architecture.png)
 
-    subgraph gate["StepGate: checks every proposed step"]
-        direction TB
-        struct["Structural check<br/>known tool, required arguments"]
-        struct -- "risk_score" --> pred
-        struct -- "draft_alert" --> alert
-
-        subgraph pred["Prediction check: ReliabilityGateway"]
-            direction TB
-            m1["M1 local calibration"]
-            m2["M2 subgroup calibration gap (SCDI)"]
-            m3["M3 Mondrian conformal set"]
-            m4["M4 drift state"]
-            fusion["Fusion: any breach stops the action<br/>unavailable signal fails closed<br/>near threshold adds a caveat"]
-            m1 --> fusion
-            m2 --> fusion
-            m3 --> fusion
-            m4 --> fusion
-        end
-
-        subgraph alert["Alert checks"]
-            direction TB
-            args["Argument check<br/>quoted fields match the record and last risk"]
-            tag["Reliability tag<br/>risk was deferred or blocked"]
-            m5["M5 timing<br/>cooldown without escalation"]
-        end
-    end
-
-    offline["Offline artifacts<br/>reference set, SCDI table,<br/>conformal quantiles, drift cache"] -.-> pred
-
-    gate --> allow["ALLOW<br/>(with or without caveat)<br/>tool runs"]
-    gate --> defer["DEFER<br/>to a clinician"]
-    gate --> block["BLOCK"]
-    allow -- "tool output" --> agent
-```
+*Figure 1 of the paper. The LLM agent on the workstation proposes one tool call at a time (1). The step gate on the edge device checks it and either runs the tool (2), returning the result to the agent (3), or withholds it, sending deferred actions to a clinician review queue. M1 to M4 read artifacts fitted offline.*
 
 Every step the agent proposes (`fetch_record`, `risk_score`, `prior_alerts`, `draft_alert`, `close_case`) passes through the gate before it runs, and the most severe outcome wins (BLOCK > DEFER > ALLOW). A malformed call, an alert that misquotes the record, or a repeated alert without escalation is blocked. A prediction that breaches M1 to M4, or an alert built on such a prediction, is deferred to a clinician. M1, M3 and M5 run at request time; M2 and M4 read tables and caches prepared offline, and a missing or stale artifact counts as unavailable, which stops the action.
 
