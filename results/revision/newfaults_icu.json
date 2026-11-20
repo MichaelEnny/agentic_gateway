@@ -1,0 +1,360 @@
+{
+  "setting": "icu",
+  "n_clean": 1076,
+  "n_faulty": {
+    "decimal_slip": 1076,
+    "field_dropout": 1076,
+    "inverted_output": 1076,
+    "stale_risk": 1076
+  },
+  "share_worse": {
+    "decimal_slip": 0.546,
+    "field_dropout": 0.47,
+    "inverted_output": 0.88,
+    "stale_risk": 0.599
+  },
+  "early": {
+    "full": {
+      "decimal_slip": 0.1199,
+      "inverted_output": 0.1115,
+      "stale_risk": 0.1106,
+      "field_dropout": 0.0242,
+      "mean_early": 0.0915,
+      "false_intervention": 0.1171,
+      "fi_low": 0.0861,
+      "fi_high": 0.1532
+    },
+    "output_only": {
+      "decimal_slip": 0.0,
+      "inverted_output": 0.0,
+      "stale_risk": 0.0,
+      "field_dropout": 0.0,
+      "mean_early": 0.0,
+      "false_intervention": 0.092,
+      "fi_low": 0.0642,
+      "fi_high": 0.1227
+    },
+    "confidence": {
+      "decimal_slip": 0.1375,
+      "inverted_output": 0.1199,
+      "stale_risk": 0.1264,
+      "field_dropout": 0.0204,
+      "mean_early": 0.1011,
+      "false_intervention": 0.1199,
+      "fi_low": 0.0864,
+      "fi_high": 0.1561
+    },
+    "pooled_conformal": {
+      "decimal_slip": 0.0678,
+      "inverted_output": 0.0613,
+      "stale_risk": 0.0632,
+      "field_dropout": 0.0019,
+      "mean_early": 0.0486,
+      "false_intervention": 0.0613,
+      "fi_low": 0.039,
+      "fi_high": 0.0891
+    },
+    "minus_local_calibration": {
+      "decimal_slip": 0.1125,
+      "inverted_output": 0.1004,
+      "stale_risk": 0.0901,
+      "field_dropout": 0.0223,
+      "mean_early": 0.0813,
+      "false_intervention": 0.1059,
+      "fi_low": 0.0753,
+      "fi_high": 0.1395
+    },
+    "minus_subgroup_gap": {
+      "decimal_slip": 0.1199,
+      "inverted_output": 0.1115,
+      "stale_risk": 0.1106,
+      "field_dropout": 0.0242,
+      "mean_early": 0.0915,
+      "false_intervention": 0.1171,
+      "fi_low": 0.0861,
+      "fi_high": 0.1532
+    },
+    "minus_conformal": {
+      "decimal_slip": 0.0204,
+      "inverted_output": 0.0223,
+      "stale_risk": 0.0223,
+      "field_dropout": 0.0019,
+      "mean_early": 0.0167,
+      "false_intervention": 0.0279,
+      "fi_low": 0.0139,
+      "fi_high": 0.0447
+    },
+    "minus_drift": {
+      "decimal_slip": 0.1199,
+      "inverted_output": 0.1115,
+      "stale_risk": 0.1106,
+      "field_dropout": 0.0242,
+      "mean_early": 0.0915,
+      "false_intervention": 0.1171,
+      "fi_low": 0.0861,
+      "fi_high": 0.1532
+    },
+    "minus_timing": {
+      "decimal_slip": 0.1199,
+      "inverted_output": 0.1115,
+      "stale_risk": 0.1106,
+      "field_dropout": 0.0242,
+      "mean_early": 0.0915,
+      "false_intervention": 0.1171,
+      "fi_low": 0.0861,
+      "fi_high": 0.1532
+    },
+    "minus_argcheck": {
+      "decimal_slip": 0.1199,
+      "inverted_output": 0.1115,
+      "stale_risk": 0.1106,
+      "field_dropout": 0.0242,
+      "mean_early": 0.0915,
+      "false_intervention": 0.1115,
+      "fi_low": 0.0808,
+      "fi_high": 0.1451
+    },
+    "revised configuration": {
+      "decimal_slip": 0.1125,
+      "inverted_output": 0.1004,
+      "stale_risk": 0.0901,
+      "field_dropout": 0.0223,
+      "mean_early": 0.0813,
+      "false_intervention": 0.1059,
+      "fi_low": 0.0753,
+      "fi_high": 0.1395
+    }
+  },
+  "intercepted": {
+    "full": {
+      "decimal_slip": 0.1199,
+      "inverted_output": 0.1115,
+      "stale_risk": 0.1106,
+      "field_dropout": 0.0242,
+      "mean_intercepted": 0.0915,
+      "false_intervention": 0.1171,
+      "fi_low": 0.0861,
+      "fi_high": 0.1532
+    },
+    "output_only": {
+      "decimal_slip": 0.092,
+      "inverted_output": 0.0864,
+      "stale_risk": 0.0316,
+      "field_dropout": 0.0167,
+      "mean_intercepted": 0.0567,
+      "false_intervention": 0.092,
+      "fi_low": 0.0642,
+      "fi_high": 0.1227
+    },
+    "confidence": {
+      "decimal_slip": 0.1375,
+      "inverted_output": 0.1199,
+      "stale_risk": 0.1264,
+      "field_dropout": 0.0204,
+      "mean_intercepted": 0.1011,
+      "false_intervention": 0.1199,
+      "fi_low": 0.0864,
+      "fi_high": 0.1561
+    },
+    "pooled_conformal": {
+      "decimal_slip": 0.0678,
+      "inverted_output": 0.0613,
+      "stale_risk": 0.0632,
+      "field_dropout": 0.0019,
+      "mean_intercepted": 0.0486,
+      "false_intervention": 0.0613,
+      "fi_low": 0.039,
+      "fi_high": 0.0891
+    },
+    "minus_local_calibration": {
+      "decimal_slip": 0.1125,
+      "inverted_output": 0.1004,
+      "stale_risk": 0.0901,
+      "field_dropout": 0.0223,
+      "mean_intercepted": 0.0813,
+      "false_intervention": 0.1059,
+      "fi_low": 0.0753,
+      "fi_high": 0.1395
+    },
+    "minus_subgroup_gap": {
+      "decimal_slip": 0.1199,
+      "inverted_output": 0.1115,
+      "stale_risk": 0.1106,
+      "field_dropout": 0.0242,
+      "mean_intercepted": 0.0915,
+      "false_intervention": 0.1171,
+      "fi_low": 0.0861,
+      "fi_high": 0.1532
+    },
+    "minus_conformal": {
+      "decimal_slip": 0.0204,
+      "inverted_output": 0.0223,
+      "stale_risk": 0.0223,
+      "field_dropout": 0.0019,
+      "mean_intercepted": 0.0167,
+      "false_intervention": 0.0279,
+      "fi_low": 0.0139,
+      "fi_high": 0.0447
+    },
+    "minus_drift": {
+      "decimal_slip": 0.1199,
+      "inverted_output": 0.1115,
+      "stale_risk": 0.1106,
+      "field_dropout": 0.0242,
+      "mean_intercepted": 0.0915,
+      "false_intervention": 0.1171,
+      "fi_low": 0.0861,
+      "fi_high": 0.1532
+    },
+    "minus_timing": {
+      "decimal_slip": 0.1199,
+      "inverted_output": 0.1115,
+      "stale_risk": 0.1106,
+      "field_dropout": 0.0242,
+      "mean_intercepted": 0.0915,
+      "false_intervention": 0.1171,
+      "fi_low": 0.0861,
+      "fi_high": 0.1532
+    },
+    "minus_argcheck": {
+      "decimal_slip": 0.1199,
+      "inverted_output": 0.1115,
+      "stale_risk": 0.1106,
+      "field_dropout": 0.0242,
+      "mean_intercepted": 0.0915,
+      "false_intervention": 0.1115,
+      "fi_low": 0.0808,
+      "fi_high": 0.1451
+    },
+    "revised configuration": {
+      "decimal_slip": 0.1125,
+      "inverted_output": 0.1004,
+      "stale_risk": 0.0901,
+      "field_dropout": 0.0223,
+      "mean_intercepted": 0.0813,
+      "false_intervention": 0.1059,
+      "fi_low": 0.0753,
+      "fi_high": 0.1395
+    }
+  },
+  "early_ci": [
+    {
+      "kind": "decimal_slip",
+      "method": "full",
+      "estimate": 0.1199,
+      "ci_low": 0.0903,
+      "ci_high": 0.1504,
+      "p_holm": NaN
+    },
+    {
+      "kind": "decimal_slip",
+      "method": "output_only",
+      "estimate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_holm": 0.01
+    },
+    {
+      "kind": "decimal_slip",
+      "method": "revised configuration",
+      "estimate": 0.1125,
+      "ci_low": 0.0835,
+      "ci_high": 0.143,
+      "p_holm": 0.1329
+    },
+    {
+      "kind": "field_dropout",
+      "method": "full",
+      "estimate": 0.0242,
+      "ci_low": 0.0121,
+      "ci_high": 0.0389,
+      "p_holm": NaN
+    },
+    {
+      "kind": "field_dropout",
+      "method": "output_only",
+      "estimate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_holm": 0.01
+    },
+    {
+      "kind": "field_dropout",
+      "method": "revised configuration",
+      "estimate": 0.0223,
+      "ci_low": 0.0102,
+      "ci_high": 0.0363,
+      "p_holm": 1.0
+    },
+    {
+      "kind": "inverted_output",
+      "method": "full",
+      "estimate": 0.1115,
+      "ci_low": 0.0807,
+      "ci_high": 0.145,
+      "p_holm": NaN
+    },
+    {
+      "kind": "inverted_output",
+      "method": "output_only",
+      "estimate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_holm": 0.01
+    },
+    {
+      "kind": "inverted_output",
+      "method": "revised configuration",
+      "estimate": 0.1004,
+      "ci_low": 0.0723,
+      "ci_high": 0.1337,
+      "p_holm": 0.2519
+    },
+    {
+      "kind": "stale_risk",
+      "method": "full",
+      "estimate": 0.1106,
+      "ci_low": 0.0883,
+      "ci_high": 0.1338,
+      "p_holm": NaN
+    },
+    {
+      "kind": "stale_risk",
+      "method": "output_only",
+      "estimate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_holm": 0.01
+    },
+    {
+      "kind": "stale_risk",
+      "method": "revised configuration",
+      "estimate": 0.0901,
+      "ci_low": 0.0726,
+      "ci_high": 0.1087,
+      "p_holm": 0.014
+    }
+  ],
+  "natural_errors": {
+    "tune": {
+      "n_clean": 1070,
+      "n_with_error": 3,
+      "by_type": {
+        "misquoted_value": 3
+      },
+      "patients": 1
+    },
+    "test": {
+      "n_clean": 1076,
+      "n_with_error": 6,
+      "by_type": {
+        "misquoted_value": 6
+      },
+      "patients": 2,
+      "stopped_by_full": 6,
+      "stop_reasons": {
+        "argument:mismatch": 6
+      }
+    }
+  }
+}

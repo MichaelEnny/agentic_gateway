@@ -1,6 +1,6 @@
 # agentic_gateway
 
-Code for the paper "A Step-Level Reliability Gateway for Agentic Clinical Decision Support: Architecture and Edge Deployment" by Michael O. Eniolade, submitted to the *Electronics* (MDPI) Special Issue "Agentic AI Systems: Architectures, Edge Intelligence, and Real-World Applications".
+Code for the paper "A Step-Level Reliability Gateway for Agentic Clinical Decision Support: Architecture, Edge Deployment and Retrospective Evaluation on Targeted Fault Classes" by Michael O. Eniolade, submitted to the *Electronics* (MDPI) Special Issue "Agentic AI Systems: Architectures, Edge Intelligence, and Real-World Applications".
 
 The gateway sits between a clinical LLM agent and its tools. Before each proposed action runs, it allows the action, defers it to a clinician or blocks it, using five run-time signals (local calibration, subgroup calibration gap, group-conditional conformal sets, drift state, alert timing) and a check that alerts quote tool outputs correctly.
 
@@ -23,6 +23,7 @@ Every step the agent proposes (`fetch_record`, `risk_score`, `prior_alerts`, `dr
 | Edge measurement harness | `src/agentic_gateway/edge/` |
 | Experiment scripts, steps 1 to 11, and frozen configs | `experiments/` |
 | Aggregate results behind the paper | `results/` |
+| Post hoc analyses added in peer review, and their aggregate results | `experiments/revision/`, `results/revision/` |
 
 The test suite has 181 tests.
 
@@ -107,6 +108,10 @@ Repeat steps 3 to 6 with `S=icu` and `RUN=qwen7b-icu-full-reduced-v1` for the in
 ## Results
 
 `results/` holds the aggregate numbers behind the paper: summary statistics, confidence intervals, tuning grids, frozen thresholds, edge latency and run records with model and system-prompt hashes. It contains no patient-level data. It is produced by `experiments/11_export_results.py`; see `results/README.md`.
+
+## Analyses added in peer review
+
+`experiments/revision/` holds the post hoc analyses added during peer review: M1 and M3 net benefit and its sensitivity to the harm weight and fault weights, alternatives to the SCDI denominator, an outcome-anchored drift rule and a simulated ICU shadow period (window length and recalibration), and four faults not designed around any signal, compared with the same clean trajectories. They replay the stored trajectories and leave the frozen primary analysis unchanged. Their aggregate results are in `results/revision/`; see `experiments/revision/README.md`. The frozen configurations in `experiments/configs/` remain the system the paper evaluates; the revised per-site configurations studied there are unconfirmed.
 
 ## License
 

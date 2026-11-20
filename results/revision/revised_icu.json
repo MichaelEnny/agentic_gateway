@@ -1,0 +1,198 @@
+{
+  "wide": {
+    "full": {
+      "drift": 1.0,
+      "subgroup": 0.8439,
+      "sparse": 0.5697,
+      "uncertainty": 0.0474,
+      "duplicate": 0.6024,
+      "ungrounded": 0.6265,
+      "mean_early": 0.615,
+      "false_intervention": 0.1171,
+      "fi_low": 0.0861,
+      "fi_high": 0.1532
+    },
+    "revised configuration": {
+      "drift": 1.0,
+      "subgroup": 1.0,
+      "sparse": 0.5697,
+      "uncertainty": 0.0474,
+      "duplicate": 0.6145,
+      "ungrounded": 0.6386,
+      "mean_early": 0.645,
+      "false_intervention": 0.1059,
+      "fi_low": 0.0753,
+      "fi_high": 0.1395
+    }
+  },
+  "ci": [
+    {
+      "kind": "clean",
+      "metric": "false_intervention",
+      "method": "full",
+      "estimate": 0.1171,
+      "ci_low": 0.0861,
+      "ci_high": 0.1532,
+      "diff_vs_ref": NaN,
+      "diff_low": NaN,
+      "diff_high": NaN,
+      "p_holm": NaN
+    },
+    {
+      "kind": "clean",
+      "metric": "false_intervention",
+      "method": "revised configuration",
+      "estimate": 0.1059,
+      "ci_low": 0.0753,
+      "ci_high": 0.1395,
+      "diff_vs_ref": -0.0112,
+      "diff_low": -0.0224,
+      "diff_high": -0.0028,
+      "p_holm": 0.024
+    },
+    {
+      "kind": "drift",
+      "metric": "early",
+      "method": "full",
+      "estimate": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "diff_vs_ref": NaN,
+      "diff_low": NaN,
+      "diff_high": NaN,
+      "p_holm": NaN
+    },
+    {
+      "kind": "drift",
+      "metric": "early",
+      "method": "revised configuration",
+      "estimate": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "diff_vs_ref": 0.0,
+      "diff_low": 0.0,
+      "diff_high": 0.0,
+      "p_holm": 1.0
+    },
+    {
+      "kind": "duplicate",
+      "metric": "early",
+      "method": "full",
+      "estimate": 0.6024,
+      "ci_low": 0.506,
+      "ci_high": 0.7108,
+      "diff_vs_ref": NaN,
+      "diff_low": NaN,
+      "diff_high": NaN,
+      "p_holm": NaN
+    },
+    {
+      "kind": "duplicate",
+      "metric": "early",
+      "method": "revised configuration",
+      "estimate": 0.6145,
+      "ci_low": 0.506,
+      "ci_high": 0.7229,
+      "diff_vs_ref": 0.012,
+      "diff_low": 0.0,
+      "diff_high": 0.0361,
+      "p_holm": 0.7386
+    },
+    {
+      "kind": "sparse",
+      "metric": "early",
+      "method": "full",
+      "estimate": 0.5697,
+      "ci_low": 0.5343,
+      "ci_high": 0.6054,
+      "diff_vs_ref": NaN,
+      "diff_low": NaN,
+      "diff_high": NaN,
+      "p_holm": NaN
+    },
+    {
+      "kind": "sparse",
+      "metric": "early",
+      "method": "revised configuration",
+      "estimate": 0.5697,
+      "ci_low": 0.5343,
+      "ci_high": 0.6054,
+      "diff_vs_ref": 0.0,
+      "diff_low": 0.0,
+      "diff_high": 0.0,
+      "p_holm": 1.0
+    },
+    {
+      "kind": "subgroup",
+      "metric": "early",
+      "method": "full",
+      "estimate": 0.8439,
+      "ci_low": 0.8076,
+      "ci_high": 0.8802,
+      "diff_vs_ref": NaN,
+      "diff_low": NaN,
+      "diff_high": NaN,
+      "p_holm": NaN
+    },
+    {
+      "kind": "subgroup",
+      "metric": "early",
+      "method": "revised configuration",
+      "estimate": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "diff_vs_ref": 0.1561,
+      "diff_low": 0.1198,
+      "diff_high": 0.1924,
+      "p_holm": 0.001
+    },
+    {
+      "kind": "uncertainty",
+      "metric": "early",
+      "method": "full",
+      "estimate": 0.0474,
+      "ci_low": 0.0277,
+      "ci_high": 0.0723,
+      "diff_vs_ref": NaN,
+      "diff_low": NaN,
+      "diff_high": NaN,
+      "p_holm": NaN
+    },
+    {
+      "kind": "uncertainty",
+      "metric": "early",
+      "method": "revised configuration",
+      "estimate": 0.0474,
+      "ci_low": 0.0277,
+      "ci_high": 0.0723,
+      "diff_vs_ref": 0.0,
+      "diff_low": 0.0,
+      "diff_high": 0.0,
+      "p_holm": 1.0
+    },
+    {
+      "kind": "ungrounded",
+      "metric": "early",
+      "method": "full",
+      "estimate": 0.6265,
+      "ci_low": 0.5181,
+      "ci_high": 0.7229,
+      "diff_vs_ref": NaN,
+      "diff_low": NaN,
+      "diff_high": NaN,
+      "p_holm": NaN
+    },
+    {
+      "kind": "ungrounded",
+      "metric": "early",
+      "method": "revised configuration",
+      "estimate": 0.6386,
+      "ci_low": 0.5301,
+      "ci_high": 0.7349,
+      "diff_vs_ref": 0.012,
+      "diff_low": 0.0,
+      "diff_high": 0.0361,
+      "p_holm": 0.7666
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+kind,metric,method,n,estimate,ci_low,ci_high,diff_vs_ref,diff_low,diff_high,p_vs_ref,p_holm
+clean,false_intervention,"full (SCDI, frozen)",1076,0.1171003717472119,0.08605917366946779,0.15320690217560134,,,,,
+clean,false_intervention,full (M2 = one-sided complement gap),1076,0.1171003717472119,0.08605917366946779,0.15320690217560134,0.0,0.0,0.0,1.0,1.0
+drift,intercepted,"full (SCDI, frozen)",1076,1.0,1.0,1.0,,,,,
+drift,intercepted,full (M2 = one-sided complement gap),1076,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0
+drift,early,"full (SCDI, frozen)",1076,1.0,1.0,1.0,,,,,
+drift,early,full (M2 = one-sided complement gap),1076,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0
+drift,premature,"full (SCDI, frozen)",1076,0.0,0.0,0.0,,,,,
+drift,premature,full (M2 = one-sided complement gap),1076,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+drift,steps_to_intercept,"full (SCDI, frozen)",1076,0.0,0.0,0.0,,,,,
+drift,steps_to_intercept,full (M2 = one-sided complement gap),1076,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+drift,eir,"full (SCDI, frozen)",1076,1.0,1.0,1.0,,,,,
+drift,eir,full (M2 = one-sided complement gap),1076,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0
+drift,intervention_gap,"full (SCDI, frozen)",1076,0.0,0.0,0.0,,,,,
+drift,intervention_gap,full (M2 = one-sided complement gap),1076,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+drift,steps_saved,"full (SCDI, frozen)",1076,0.5,0.5,0.5,,,,,
+drift,steps_saved,full (M2 = one-sided complement gap),1076,0.5,0.5,0.5,0.0,0.0,0.0,1.0,1.0
+drift,tokens_saved,"full (SCDI, frozen)",1076,0.5488901626495748,0.5485153595226424,0.5492883219968973,,,,,
+drift,tokens_saved,full (M2 = one-sided complement gap),1076,0.5488901626495748,0.5485153595226424,0.5492883219968973,0.0,0.0,0.0,1.0,1.0
+duplicate,intercepted,"full (SCDI, frozen)",249,0.6024096385542169,0.4939759036144578,0.7108433734939759,,,,,
+duplicate,intercepted,full (M2 = one-sided complement gap),249,0.6024096385542169,0.4939759036144578,0.7108433734939759,0.0,0.0,0.0,1.0,1.0
+duplicate,early,"full (SCDI, frozen)",249,0.6024096385542169,0.5060240963855421,0.7108433734939759,,,,,
+duplicate,early,full (M2 = one-sided complement gap),249,0.6024096385542169,0.5060240963855421,0.7108433734939759,0.0,0.0,0.0,1.0,1.0
+duplicate,premature,"full (SCDI, frozen)",249,0.39759036144578314,0.2891566265060241,0.4939759036144578,,,,,
+duplicate,premature,full (M2 = one-sided complement gap),249,0.39759036144578314,0.2891566265060241,0.4939759036144578,0.0,0.0,0.0,1.0,1.0
+duplicate,steps_to_intercept,"full (SCDI, frozen)",150,0.0,0.0,0.0,,,,,
+duplicate,steps_to_intercept,full (M2 = one-sided complement gap),150,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+duplicate,eir,"full (SCDI, frozen)",249,1.0,1.0,1.0,,,,,
+duplicate,eir,full (M2 = one-sided complement gap),249,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0
+duplicate,intervention_gap,"full (SCDI, frozen)",249,0.0,0.0,0.0,,,,,
+duplicate,intervention_gap,full (M2 = one-sided complement gap),249,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+duplicate,steps_saved,"full (SCDI, frozen)",249,0.2289156626506024,0.16867469879518068,0.2915662650602408,,,,,
+duplicate,steps_saved,full (M2 = one-sided complement gap),249,0.2289156626506024,0.16867469879518068,0.2915662650602408,0.0,0.0,0.0,1.0,1.0
+duplicate,tokens_saved,"full (SCDI, frozen)",249,0.2505790163071031,0.1821340971824382,0.3193893760956047,,,,,
+duplicate,tokens_saved,full (M2 = one-sided complement gap),249,0.2505790163071031,0.1821340971824382,0.3193893760956047,0.0,0.0,0.0,1.0,1.0
+sparse,intercepted,"full (SCDI, frozen)",1076,0.5697026022304833,0.5319646616204595,0.6061824352252703,,,,,
+sparse,intercepted,full (M2 = one-sided complement gap),1076,0.5697026022304833,0.5319646616204595,0.6061824352252703,0.0,0.0,0.0,1.0,1.0
+sparse,early,"full (SCDI, frozen)",1076,0.5697026022304833,0.5335179954725758,0.6057824360702196,,,,,
+sparse,early,full (M2 = one-sided complement gap),1076,0.5697026022304833,0.5335179954725758,0.6057824360702196,0.0,0.0,0.0,1.0,1.0
+sparse,premature,"full (SCDI, frozen)",1076,0.0,0.0,0.0,,,,,
+sparse,premature,full (M2 = one-sided complement gap),1076,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+sparse,steps_to_intercept,"full (SCDI, frozen)",613,0.0,0.0,0.0,,,,,
+sparse,steps_to_intercept,full (M2 = one-sided complement gap),613,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+sparse,eir,"full (SCDI, frozen)",1076,0.5697026022304833,0.5338904363974002,0.6052184321231643,,,,,
+sparse,eir,full (M2 = one-sided complement gap),1076,0.5697026022304833,0.5338904363974002,0.6052184321231643,0.0,0.0,0.0,1.0,1.0
+sparse,intervention_gap,"full (SCDI, frozen)",613,0.0,0.0,0.0,,,,,
+sparse,intervention_gap,full (M2 = one-sided complement gap),613,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+sparse,steps_saved,"full (SCDI, frozen)",1076,0.28485130111524165,0.26604576666450735,0.30335924672235426,,,,,
+sparse,steps_saved,full (M2 = one-sided complement gap),1076,0.28485130111524165,0.26604576666450735,0.30335924672235426,0.0,0.0,0.0,1.0,1.0
+sparse,tokens_saved,"full (SCDI, frozen)",1076,0.31282218593887834,0.29281941892002566,0.3326055991975209,,,,,
+sparse,tokens_saved,full (M2 = one-sided complement gap),1076,0.31282218593887834,0.29281941892002566,0.3326055991975209,0.0,0.0,0.0,1.0,1.0
+subgroup,intercepted,"full (SCDI, frozen)",1076,0.8438661710037175,0.8074418604651162,0.88,,,,,
+subgroup,intercepted,full (M2 = one-sided complement gap),1076,1.0,1.0,1.0,0.15613382899628248,0.12,0.19255813953488377,0.0009995002498750624,0.0009995002498750624
+subgroup,early,"full (SCDI, frozen)",1076,0.8438661710037175,0.80668900553734,0.8800027881040892,,,,,
+subgroup,early,full (M2 = one-sided complement gap),1076,1.0,1.0,1.0,0.15613382899628248,0.11999721189591078,0.19331099446265973,0.0009995002498750624,0.0009995002498750624
+subgroup,premature,"full (SCDI, frozen)",1076,0.0,0.0,0.0,,,,,
+subgroup,premature,full (M2 = one-sided complement gap),1076,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+subgroup,steps_to_intercept,"full (SCDI, frozen)",908,0.0,0.0,0.0,,,,,
+subgroup,steps_to_intercept,full (M2 = one-sided complement gap),1076,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+subgroup,eir,"full (SCDI, frozen)",1076,0.8438661710037175,0.8044692737430168,0.8802228412256268,,,,,
+subgroup,eir,full (M2 = one-sided complement gap),1076,1.0,1.0,1.0,0.15613382899628248,0.11977715877437323,0.1955307262569832,0.0009995002498750624,0.0009995002498750624
+subgroup,intervention_gap,"full (SCDI, frozen)",908,0.0,0.0,0.0,,,,,
+subgroup,intervention_gap,full (M2 = one-sided complement gap),1076,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+subgroup,steps_saved,"full (SCDI, frozen)",1076,0.42193308550185876,0.4038081719546987,0.4401669758812616,,,,,
+subgroup,steps_saved,full (M2 = one-sided complement gap),1076,0.5,0.5,0.5,0.07806691449814124,0.05983302411873842,0.09619182804530127,0.0009995002498750624,0.0009995002498750624
+subgroup,tokens_saved,"full (SCDI, frozen)",1076,0.46348660971197353,0.4421923700945679,0.48347503359382193,,,,,
+subgroup,tokens_saved,full (M2 = one-sided complement gap),1076,0.5488901626495748,0.5485223516523197,0.5492868377454195,0.08540355293760127,0.06551905289577183,0.10663766243265642,0.0009995002498750624,0.0009995002498750624
+uncertainty,intercepted,"full (SCDI, frozen)",1076,0.047397769516728624,0.02782866874949491,0.07235621521335807,,,,,
+uncertainty,intercepted,full (M2 = one-sided complement gap),1076,0.047397769516728624,0.02782866874949491,0.07235621521335807,0.0,0.0,0.0,1.0,1.0
+uncertainty,early,"full (SCDI, frozen)",1076,0.047397769516728624,0.027829313543599257,0.06983240223463687,,,,,
+uncertainty,early,full (M2 = one-sided complement gap),1076,0.047397769516728624,0.027829313543599257,0.06983240223463687,0.0,0.0,0.0,1.0,1.0
+uncertainty,premature,"full (SCDI, frozen)",1076,0.0,0.0,0.0,,,,,
+uncertainty,premature,full (M2 = one-sided complement gap),1076,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+uncertainty,steps_to_intercept,"full (SCDI, frozen)",51,0.0,0.0,0.0,,,,,
+uncertainty,steps_to_intercept,full (M2 = one-sided complement gap),51,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+uncertainty,eir,"full (SCDI, frozen)",1076,0.047397769516728624,0.027881040892193308,0.06976744186046512,,,,,
+uncertainty,eir,full (M2 = one-sided complement gap),1076,0.047397769516728624,0.027881040892193308,0.06976744186046512,0.0,0.0,0.0,1.0,1.0
+uncertainty,intervention_gap,"full (SCDI, frozen)",51,0.0,0.0,0.0,,,,,
+uncertainty,intervention_gap,full (M2 = one-sided complement gap),51,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+uncertainty,steps_saved,"full (SCDI, frozen)",1076,0.023698884758364312,0.01391401257472686,0.0348845329349097,,,,,
+uncertainty,steps_saved,full (M2 = one-sided complement gap),1076,0.023698884758364312,0.01391401257472686,0.0348845329349097,0.0,0.0,0.0,1.0,1.0
+uncertainty,tokens_saved,"full (SCDI, frozen)",1076,0.02617929491632461,0.01533642033008049,0.038558923082379494,,,,,
+uncertainty,tokens_saved,full (M2 = one-sided complement gap),1076,0.02617929491632461,0.01533642033008049,0.038558923082379494,0.0,0.0,0.0,1.0,1.0
+ungrounded,intercepted,"full (SCDI, frozen)",249,0.6265060240963856,0.5301204819277109,0.7349397590361446,,,,,
+ungrounded,intercepted,full (M2 = one-sided complement gap),249,0.6265060240963856,0.5301204819277109,0.7349397590361446,0.0,0.0,0.0,1.0,1.0
+ungrounded,early,"full (SCDI, frozen)",249,0.6265060240963856,0.5180722891566265,0.7228915662650602,,,,,
+ungrounded,early,full (M2 = one-sided complement gap),249,0.6265060240963856,0.5180722891566265,0.7228915662650602,0.0,0.0,0.0,1.0,1.0
+ungrounded,premature,"full (SCDI, frozen)",249,0.37349397590361444,0.27710843373493976,0.4819277108433735,,,,,
+ungrounded,premature,full (M2 = one-sided complement gap),249,0.37349397590361444,0.27710843373493976,0.4819277108433735,0.0,0.0,0.0,1.0,1.0
+ungrounded,steps_to_intercept,"full (SCDI, frozen)",156,0.0,0.0,0.0,,,,,
+ungrounded,steps_to_intercept,full (M2 = one-sided complement gap),156,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+ungrounded,eir,"full (SCDI, frozen)",249,1.0,1.0,1.0,,,,,
+ungrounded,eir,full (M2 = one-sided complement gap),249,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0
+ungrounded,intervention_gap,"full (SCDI, frozen)",249,0.0,0.0,0.0,,,,,
+ungrounded,intervention_gap,full (M2 = one-sided complement gap),249,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+ungrounded,steps_saved,"full (SCDI, frozen)",249,0.18674698795180722,0.13855421686746988,0.23493975903614459,,,,,
+ungrounded,steps_saved,full (M2 = one-sided complement gap),249,0.18674698795180722,0.13855421686746988,0.23493975903614459,0.0,0.0,0.0,1.0,1.0
+ungrounded,tokens_saved,"full (SCDI, frozen)",249,0.20760964507741894,0.15389336466380615,0.26797352590180895,,,,,
+ungrounded,tokens_saved,full (M2 = one-sided complement gap),249,0.20760964507741894,0.15389336466380615,0.26797352590180895,0.0,0.0,0.0,1.0,1.0

@@ -1,0 +1,152 @@
+{
+  "setting": "icu",
+  "states": {
+    "tune": {
+      "frozen": "none",
+      "outcome_anchored": "none"
+    },
+    "tune_shifted": {
+      "frozen": "critical",
+      "outcome_anchored": "warning"
+    },
+    "test": {
+      "frozen": "critical",
+      "outcome_anchored": "warning"
+    },
+    "test_shifted": {
+      "frozen": "critical",
+      "outcome_anchored": "warning"
+    }
+  },
+  "shadow": {
+    "n_shadow": 18943,
+    "n_live": 19315,
+    "n_live_benchmark_patients": 360,
+    "ece_reference": 0.01372558184868643,
+    "ece_shadow": 0.018567025553503518,
+    "ece_live": 0.01499522167123664,
+    "event_rate_shadow": 0.1040489890724806,
+    "calibration_recheck_pass": true,
+    "test_state": "none",
+    "test_rejected": [],
+    "test_shifted_state": "critical",
+    "test_shifted_rejected": [
+      [
+        "input",
+        "admissionweight",
+        5.994,
+        null
+      ],
+      [
+        "output",
+        "probability",
+        0.103,
+        null
+      ]
+    ],
+    "anchored_states": {
+      "test": "none",
+      "test_shifted": "warning"
+    }
+  },
+  "test": {
+    "full (frozen)": {
+      "drift": 1.0,
+      "subgroup": 1.0,
+      "sparse": 1.0,
+      "uncertainty": 1.0,
+      "duplicate": 0.0,
+      "ungrounded": 0.0,
+      "mean_early": 0.6667,
+      "false_intervention": 1.0,
+      "fi_low": 1.0,
+      "fi_high": 1.0
+    },
+    "without M4": {
+      "drift": 0.1032,
+      "subgroup": 0.8439,
+      "sparse": 0.5697,
+      "uncertainty": 0.0474,
+      "duplicate": 0.6024,
+      "ungrounded": 0.6265,
+      "mean_early": 0.4655,
+      "false_intervention": 0.1171,
+      "fi_low": 0.0861,
+      "fi_high": 0.1532
+    },
+    "M4 outcome-anchored": {
+      "drift": 0.1032,
+      "subgroup": 0.8439,
+      "sparse": 0.5697,
+      "uncertainty": 0.0474,
+      "duplicate": 0.6024,
+      "ungrounded": 0.6265,
+      "mean_early": 0.4655,
+      "false_intervention": 0.1171,
+      "fi_low": 0.0861,
+      "fi_high": 0.1532
+    },
+    "M4 shadow refresh": {
+      "drift": 1.0,
+      "subgroup": 0.8439,
+      "sparse": 0.5697,
+      "uncertainty": 0.0474,
+      "duplicate": 0.6024,
+      "ungrounded": 0.6265,
+      "mean_early": 0.615,
+      "false_intervention": 0.1171,
+      "fi_low": 0.0861,
+      "fi_high": 0.1532
+    },
+    "M4 shadow + anchored": {
+      "drift": 0.1032,
+      "subgroup": 0.8439,
+      "sparse": 0.5697,
+      "uncertainty": 0.0474,
+      "duplicate": 0.6024,
+      "ungrounded": 0.6265,
+      "mean_early": 0.4655,
+      "false_intervention": 0.1171,
+      "fi_low": 0.0861,
+      "fi_high": 0.1532
+    }
+  },
+  "tune": {
+    "full (frozen)": {
+      "drift": 1.0,
+      "subgroup": 0.8607,
+      "sparse": 0.5589,
+      "uncertainty": 0.0421,
+      "duplicate": 0.6667,
+      "ungrounded": 0.6825,
+      "mean_early": 0.6351,
+      "false_intervention": 0.0813,
+      "fi_low": 0.0559,
+      "fi_high": 0.1097
+    },
+    "without M4": {
+      "drift": 0.072,
+      "subgroup": 0.8607,
+      "sparse": 0.5589,
+      "uncertainty": 0.0421,
+      "duplicate": 0.6667,
+      "ungrounded": 0.6825,
+      "mean_early": 0.4805,
+      "false_intervention": 0.0813,
+      "fi_low": 0.0559,
+      "fi_high": 0.1097
+    },
+    "M4 outcome-anchored": {
+      "drift": 0.072,
+      "subgroup": 0.8607,
+      "sparse": 0.5589,
+      "uncertainty": 0.0421,
+      "duplicate": 0.6667,
+      "ungrounded": 0.6825,
+      "mean_early": 0.4805,
+      "false_intervention": 0.0813,
+      "fi_low": 0.0559,
+      "fi_high": 0.1097
+    }
+  }
+}

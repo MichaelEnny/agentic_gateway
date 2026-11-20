@@ -1,0 +1,97 @@
+{
+  "setting": "ed",
+  "states": {
+    "tune": {
+      "frozen": "warning",
+      "outcome_anchored": "warning"
+    },
+    "tune_shifted": {
+      "frozen": "critical",
+      "outcome_anchored": "warning"
+    },
+    "test": {
+      "frozen": "warning",
+      "outcome_anchored": "warning"
+    },
+    "test_shifted": {
+      "frozen": "critical",
+      "outcome_anchored": "warning"
+    }
+  },
+  "test": {
+    "full (frozen)": {
+      "drift": 1.0,
+      "subgroup": 0.8521,
+      "sparse": 0.1414,
+      "uncertainty": 0.0781,
+      "duplicate": 0.8311,
+      "ungrounded": 0.8311,
+      "mean_early": 0.6223,
+      "false_intervention": 0.0698,
+      "fi_low": 0.0445,
+      "fi_high": 0.0979
+    },
+    "without M4": {
+      "drift": 0.0614,
+      "subgroup": 0.8521,
+      "sparse": 0.1414,
+      "uncertainty": 0.0781,
+      "duplicate": 0.8311,
+      "ungrounded": 0.8311,
+      "mean_early": 0.4659,
+      "false_intervention": 0.0698,
+      "fi_low": 0.0445,
+      "fi_high": 0.0979
+    },
+    "M4 outcome-anchored": {
+      "drift": 0.0614,
+      "subgroup": 0.8521,
+      "sparse": 0.1414,
+      "uncertainty": 0.0781,
+      "duplicate": 0.8311,
+      "ungrounded": 0.8311,
+      "mean_early": 0.4659,
+      "false_intervention": 0.0698,
+      "fi_low": 0.0445,
+      "fi_high": 0.0979
+    }
+  },
+  "tune": {
+    "full (frozen)": {
+      "drift": 1.0,
+      "subgroup": 0.8496,
+      "sparse": 0.1123,
+      "uncertainty": 0.1058,
+      "duplicate": 0.8535,
+      "ungrounded": 0.8535,
+      "mean_early": 0.6291,
+      "false_intervention": 0.0669,
+      "fi_low": 0.0418,
+      "fi_high": 0.0946
+    },
+    "without M4": {
+      "drift": 0.0669,
+      "subgroup": 0.8496,
+      "sparse": 0.1123,
+      "uncertainty": 0.1058,
+      "duplicate": 0.8535,
+      "ungrounded": 0.8535,
+      "mean_early": 0.4736,
+      "false_intervention": 0.0669,
+      "fi_low": 0.0418,
+      "fi_high": 0.0946
+    },
+    "M4 outcome-anchored": {
+      "drift": 0.0669,
+      "subgroup": 0.8496,
+      "sparse": 0.1123,
+      "uncertainty": 0.1058,
+      "duplicate": 0.8535,
+      "ungrounded": 0.8535,
+      "mean_early": 0.4736,
+      "false_intervention": 0.0669,
+      "fi_low": 0.0418,
+      "fi_high": 0.0946
+    }
+  }
+}

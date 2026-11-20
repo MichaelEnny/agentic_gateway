@@ -1,0 +1,272 @@
+{
+ "n_shadow_pool": 18943,
+ "n_live": 19315,
+ "hospitals": 21,
+ "recal": {
+  "B0 shadow M4, frozen M1-M3": {
+   "drift": 1.0,
+   "subgroup": 0.8439,
+   "sparse": 0.5697,
+   "uncertainty": 0.0474,
+   "duplicate": 0.6024,
+   "ungrounded": 0.6265,
+   "mean_early": 0.615,
+   "false_intervention": 0.1171,
+   "fi_low": 0.0861,
+   "fi_high": 0.1532
+  },
+  "B1 + M3 refitted on shadow": {
+   "drift": 1.0,
+   "subgroup": 0.777,
+   "sparse": 0.4442,
+   "uncertainty": 0.0716,
+   "duplicate": 0.6386,
+   "ungrounded": 0.6627,
+   "mean_early": 0.599,
+   "false_intervention": 0.1134,
+   "fi_low": 0.082,
+   "fi_high": 0.1468
+  },
+  "B2 + M2 complement gap on shadow": {
+   "drift": 1.0,
+   "subgroup": 1.0,
+   "sparse": 0.4442,
+   "uncertainty": 0.0716,
+   "duplicate": 0.6386,
+   "ungrounded": 0.6627,
+   "mean_early": 0.6362,
+   "false_intervention": 0.1134,
+   "fi_low": 0.082,
+   "fi_high": 0.1468
+  },
+  "B2 without M1": {
+   "drift": 1.0,
+   "subgroup": 1.0,
+   "sparse": 0.4442,
+   "uncertainty": 0.0716,
+   "duplicate": 0.6506,
+   "ungrounded": 0.6747,
+   "mean_early": 0.6402,
+   "false_intervention": 0.1022,
+   "fi_low": 0.0724,
+   "fi_high": 0.1337
+  }
+ },
+ "coverage_live": {
+  "frozen": {
+   "Asian|Female": {
+    "n": 113,
+    "coverage": 0.9115,
+    "two_label": 0.0265
+   },
+   "Asian|Male": {
+    "n": 129,
+    "coverage": 0.8295,
+    "two_label": 0.0
+   },
+   "Black|Female": {
+    "n": 1171,
+    "coverage": 0.8249,
+    "two_label": 0.0
+   },
+   "Black|Male": {
+    "n": 1350,
+    "coverage": 0.8644,
+    "two_label": 0.0
+   },
+   "Hispanic|Female": {
+    "n": 269,
+    "coverage": 0.9257,
+    "two_label": 0.0446
+   },
+   "Hispanic|Male": {
+    "n": 318,
+    "coverage": 0.8491,
+    "two_label": 0.0
+   },
+   "Other|Female": {
+    "n": 66,
+    "coverage": 0.9697,
+    "two_label": 0.3636
+   },
+   "Other|Male": {
+    "n": 66,
+    "coverage": 0.9242,
+    "two_label": 0.197
+   },
+   "White|Female": {
+    "n": 6816,
+    "coverage": 0.8867,
+    "two_label": 0.0
+   },
+   "White|Male": {
+    "n": 8234,
+    "coverage": 0.8815,
+    "two_label": 0.0
+   },
+   "__unknown__": {
+    "n": 783,
+    "coverage": 0.8863,
+    "two_label": 0.0
+   }
+  },
+  "shadow": {
+   "Asian|Female": {
+    "n": 113,
+    "coverage": 0.9204,
+    "two_label": 0.0531
+   },
+   "Asian|Male": {
+    "n": 129,
+    "coverage": 0.9535,
+    "two_label": 0.1163
+   },
+   "Black|Female": {
+    "n": 1171,
+    "coverage": 0.8873,
+    "two_label": 0.0
+   },
+   "Black|Male": {
+    "n": 1350,
+    "coverage": 0.8844,
+    "two_label": 0.0
+   },
+   "Hispanic|Female": {
+    "n": 269,
+    "coverage": 0.9294,
+    "two_label": 0.0669
+   },
+   "Hispanic|Male": {
+    "n": 318,
+    "coverage": 0.9025,
+    "two_label": 0.0535
+   },
+   "Other|Female": {
+    "n": 66,
+    "coverage": 0.9394,
+    "two_label": 0.1818
+   },
+   "Other|Male": {
+    "n": 66,
+    "coverage": 0.9848,
+    "two_label": 0.5
+   },
+   "White|Female": {
+    "n": 6816,
+    "coverage": 0.8955,
+    "two_label": 0.0028
+   },
+   "White|Male": {
+    "n": 8234,
+    "coverage": 0.9038,
+    "two_label": 0.0038
+   },
+   "__unknown__": {
+    "n": 783,
+    "coverage": 0.9183,
+    "two_label": 0.046
+   }
+  }
+ },
+ "m2_shadow_reference": {
+  "reference": {
+   "Asian|Female": 0.0264,
+   "Asian|Male": 0.0443,
+   "Black|Female": -0.0009,
+   "Black|Male": 0.0079,
+   "Hispanic|Female": 0.0372,
+   "Hispanic|Male": 0.0253,
+   "Other|Female": 0.0382,
+   "White|Female": -0.0016,
+   "White|Male": -0.0005,
+   "__unknown__": 0.0163
+  }
+ },
+ "length": [
+  {
+   "n": 251,
+   "draws": 20,
+   "events_median": 25.5,
+   "ece_median": 0.032,
+   "ece_max": 0.0493,
+   "recheck_pass": 1.0,
+   "live_not_critical": 1.0,
+   "live_none": 0.8,
+   "shifted_critical": 1.0,
+   "usable": 1.0
+  },
+  {
+   "n": 501,
+   "draws": 20,
+   "events_median": 54.5,
+   "ece_median": 0.0254,
+   "ece_max": 0.0537,
+   "recheck_pass": 1.0,
+   "live_not_critical": 1.0,
+   "live_none": 1.0,
+   "shifted_critical": 1.0,
+   "usable": 1.0
+  },
+  {
+   "n": 999,
+   "draws": 20,
+   "events_median": 105.0,
+   "ece_median": 0.0237,
+   "ece_max": 0.0332,
+   "recheck_pass": 1.0,
+   "live_not_critical": 1.0,
+   "live_none": 0.9,
+   "shifted_critical": 1.0,
+   "usable": 1.0
+  },
+  {
+   "n": 2000,
+   "draws": 20,
+   "events_median": 207.0,
+   "ece_median": 0.0188,
+   "ece_max": 0.0275,
+   "recheck_pass": 1.0,
+   "live_not_critical": 1.0,
+   "live_none": 1.0,
+   "shifted_critical": 1.0,
+   "usable": 1.0
+  },
+  {
+   "n": 4001,
+   "draws": 20,
+   "events_median": 424.0,
+   "ece_median": 0.0188,
+   "ece_max": 0.0236,
+   "recheck_pass": 1.0,
+   "live_not_critical": 1.0,
+   "live_none": 1.0,
+   "shifted_critical": 1.0,
+   "usable": 1.0
+  },
+  {
+   "n": 7999,
+   "draws": 20,
+   "events_median": 823.5,
+   "ece_median": 0.0183,
+   "ece_max": 0.0206,
+   "recheck_pass": 1.0,
+   "live_not_critical": 1.0,
+   "live_none": 1.0,
+   "shifted_critical": 1.0,
+   "usable": 1.0
+  },
+  {
+   "n": 18943,
+   "draws": 1,
+   "events_median": 1971.0,
+   "ece_median": 0.0186,
+   "ece_max": 0.0186,
+   "recheck_pass": 1.0,
+   "live_not_critical": 1.0,
+   "live_none": 1.0,
+   "shifted_critical": 1.0,
+   "usable": 1.0
+  }
+ ],
+ "ece_reference": 0.01372558184868643
+}
